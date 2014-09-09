@@ -28,6 +28,9 @@
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="cameraButtonClicked:" destination="-1" eventType="touchUpInside" id="JLY-kc-DHk"/>
+                    </connections>
                 </button>
                 <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWQ-46-dU7">
                     <rect key="frame" x="263" y="152" width="52" height="52"/>
@@ -38,6 +41,9 @@
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="downloadButtonClicked:" destination="-1" eventType="touchUpInside" id="MNF-Bs-4cO"/>
+                    </connections>
                 </button>
                 <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QT5-pp-c7X">
                     <rect key="frame" x="0.0" y="526" width="37" height="37"/>
@@ -48,6 +54,9 @@
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="aboutButtonClicked:" destination="-1" eventType="touchUpInside" id="KoC-8Z-pJo"/>
+                    </connections>
                 </button>
                 <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Oe-B2-5TZ">
                     <rect key="frame" x="42" y="212" width="236" height="234"/>
@@ -58,6 +67,9 @@
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="listButtonClicked:" destination="-1" eventType="touchUpInside" id="KTr-Oc-nJe"/>
+                    </connections>
                 </button>
                 <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="請輸入下載密碼" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHU-w3-GaM">
                     <rect key="frame" x="20" y="125" width="235" height="30"/>

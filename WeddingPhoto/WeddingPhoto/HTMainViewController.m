@@ -30,4 +30,24 @@
     passwordTextField.placeholder = NSLocalizedString(@"請輸入下載密碼", nil);
 }
 
+-(IBAction)downloadButtonClicked:(UIButton *)button
+{
+    
+}
+
+-(IBAction)listButtonClicked:(UIButton *)button
+{
+    
+}
+
+-(IBAction)cameraButtonClicked:(UIButton *)button
+{
+    
+}
+
+-(IBAction)aboutButtonClicked:(UIButton *)button
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://google.com.tw"]];
+}
+
 @end
