@@ -27,6 +27,7 @@
 		96E3F3B719BF521E00E88F98 /* HTBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3B619BF521E00E88F98 /* HTBasicViewController.m */; };
 		96E3F3BB19BF539F00E88F98 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3BA19BF539F00E88F98 /* bg.png */; };
 		96E3F3BD19BF54E100E88F98 /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3BC19BF54E100E88F98 /* main.png */; };
+		96E3F3C619BF67CE00E88F98 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3C819BF67CE00E88F98 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,9 @@
 		96E3F3C119BF675300E88F98 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		96E3F3C219BF675300E88F98 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		96E3F3C319BF675300E88F98 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		96E3F3C719BF67CE00E88F98 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		96E3F3C919BF67D500E88F98 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		96E3F3CA19BF67D600E88F98 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F24060E1F594420FB11FF167 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -151,6 +155,7 @@
 				96E3F3B219BF4CC500E88F98 /* HTConstant.h */,
 				96E3F3B519BF521E00E88F98 /* HTBasicViewController.h */,
 				96E3F3B619BF521E00E88F98 /* HTBasicViewController.m */,
+				96E3F3C819BF67CE00E88F98 /* Localizable.strings */,
 			);
 			path = WeddingPhoto;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 				96E3F3BB19BF539F00E88F98 /* bg.png in Resources */,
 				9683A4DB19B8C96A001DE84C /* Images.xcassets in Resources */,
 				96E3F3BD19BF54E100E88F98 /* main.png in Resources */,
+				96E3F3C619BF67CE00E88F98 /* Localizable.strings in Resources */,
 				96E3F3AE19BF4BE700E88F98 /* HTMainViewController.xib in Resources */,
 				9683A4CD19B8C96A001DE84C /* InfoPlist.strings in Resources */,
 				9683A4D619B8C96A001DE84C /* Main.storyboard in Resources */,
@@ -394,6 +400,16 @@
 				96E3F3C319BF675300E88F98 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		96E3F3C819BF67CE00E88F98 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96E3F3C719BF67CE00E88F98 /* zh-Hant */,
+				96E3F3C919BF67D500E88F98 /* zh-Hans */,
+				96E3F3CA19BF67D600E88F98 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
