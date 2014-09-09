@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HTMainViewController : HTBasicViewController
+@interface HTMainViewController : UIViewController
 
 @end

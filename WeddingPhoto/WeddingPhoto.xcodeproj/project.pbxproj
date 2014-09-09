@@ -26,6 +26,7 @@
 		96E3F3B119BF4C9200E88F98 /* HTNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3B019BF4C9200E88F98 /* HTNetworkManager.m */; };
 		96E3F3B719BF521E00E88F98 /* HTBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3B619BF521E00E88F98 /* HTBasicViewController.m */; };
 		96E3F3BB19BF539F00E88F98 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3BA19BF539F00E88F98 /* bg.png */; };
+		96E3F3BD19BF54E100E88F98 /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3BC19BF54E100E88F98 /* main.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		96E3F3B519BF521E00E88F98 /* HTBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBasicViewController.h; sourceTree = "<group>"; };
 		96E3F3B619BF521E00E88F98 /* HTBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBasicViewController.m; sourceTree = "<group>"; };
 		96E3F3BA19BF539F00E88F98 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		96E3F3BC19BF54E100E88F98 /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main.png; sourceTree = "<group>"; };
 		F24060E1F594420FB11FF167 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -187,6 +189,7 @@
 		96E3F3B919BF539F00E88F98 /* pic */ = {
 			isa = PBXGroup;
 			children = (
+				96E3F3BC19BF54E100E88F98 /* main.png */,
 				96E3F3BA19BF539F00E88F98 /* bg.png */,
 			);
 			path = pic;
@@ -273,6 +276,7 @@
 			files = (
 				96E3F3BB19BF539F00E88F98 /* bg.png in Resources */,
 				9683A4DB19B8C96A001DE84C /* Images.xcassets in Resources */,
+				96E3F3BD19BF54E100E88F98 /* main.png in Resources */,
 				96E3F3AE19BF4BE700E88F98 /* HTMainViewController.xib in Resources */,
 				9683A4CD19B8C96A001DE84C /* InfoPlist.strings in Resources */,
 				9683A4D619B8C96A001DE84C /* Main.storyboard in Resources */,
@@ -460,6 +464,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeddingPhoto/WeddingPhoto-Prefix.pch";
 				INFOPLIST_FILE = "WeddingPhoto/WeddingPhoto-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -474,6 +479,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeddingPhoto/WeddingPhoto-Prefix.pch";
 				INFOPLIST_FILE = "WeddingPhoto/WeddingPhoto-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
