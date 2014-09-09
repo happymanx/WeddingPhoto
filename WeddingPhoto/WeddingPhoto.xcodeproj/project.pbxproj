@@ -23,6 +23,7 @@
 		9683A4EE19B8C96A001DE84C /* WeddingPhotoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9683A4ED19B8C96A001DE84C /* WeddingPhotoTests.m */; };
 		96E3F3AD19BF4BE700E88F98 /* HTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3AB19BF4BE700E88F98 /* HTMainViewController.m */; };
 		96E3F3AE19BF4BE700E88F98 /* HTMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3AC19BF4BE700E88F98 /* HTMainViewController.xib */; };
+		96E3F3B119BF4C9200E88F98 /* HTNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3B019BF4C9200E88F98 /* HTNetworkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,9 @@
 		96E3F3AA19BF4BE700E88F98 /* HTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMainViewController.h; sourceTree = "<group>"; };
 		96E3F3AB19BF4BE700E88F98 /* HTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMainViewController.m; sourceTree = "<group>"; };
 		96E3F3AC19BF4BE700E88F98 /* HTMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTMainViewController.xib; sourceTree = "<group>"; };
+		96E3F3AF19BF4C9200E88F98 /* HTNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNetworkManager.h; sourceTree = "<group>"; };
+		96E3F3B019BF4C9200E88F98 /* HTNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNetworkManager.m; sourceTree = "<group>"; };
+		96E3F3B219BF4CC500E88F98 /* HTConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTConstant.h; sourceTree = "<group>"; };
 		F24060E1F594420FB11FF167 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -128,6 +132,9 @@
 				96E3F3AA19BF4BE700E88F98 /* HTMainViewController.h */,
 				96E3F3AB19BF4BE700E88F98 /* HTMainViewController.m */,
 				96E3F3AC19BF4BE700E88F98 /* HTMainViewController.xib */,
+				96E3F3AF19BF4C9200E88F98 /* HTNetworkManager.h */,
+				96E3F3B019BF4C9200E88F98 /* HTNetworkManager.m */,
+				96E3F3B219BF4CC500E88F98 /* HTConstant.h */,
 			);
 			path = WeddingPhoto;
 			sourceTree = "<group>";
@@ -297,6 +304,7 @@
 			files = (
 				9683A4D319B8C96A001DE84C /* HTAppDelegate.m in Sources */,
 				9683A4CF19B8C96A001DE84C /* main.m in Sources */,
+				96E3F3B119BF4C9200E88F98 /* HTNetworkManager.m in Sources */,
 				96E3F3AD19BF4BE700E88F98 /* HTMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
