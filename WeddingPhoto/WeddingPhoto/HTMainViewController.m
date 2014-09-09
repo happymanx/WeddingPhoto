@@ -7,6 +7,8 @@
 //
 
 #import "HTMainViewController.h"
+#import "HTListViewController.h"
+#import "HTAdViewController.h"
 
 @interface HTMainViewController ()
 
@@ -37,12 +39,14 @@
 
 -(IBAction)listButtonClicked:(UIButton *)button
 {
-    
+    HTListViewController *vc = [[HTListViewController alloc] initWithEventArr:@[]];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(IBAction)cameraButtonClicked:(UIButton *)button
 {
-    
+    HTAdViewController *vc = [[HTAdViewController alloc] initWithAdArr:@[]];
+    [self.navigationController presentViewController:vc animated:YES completion:nil];
 }
 
 -(IBAction)aboutButtonClicked:(UIButton *)button

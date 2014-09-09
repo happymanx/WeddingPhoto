@@ -28,6 +28,12 @@
 		96E3F3BB19BF539F00E88F98 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3BA19BF539F00E88F98 /* bg.png */; };
 		96E3F3BD19BF54E100E88F98 /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3BC19BF54E100E88F98 /* main.png */; };
 		96E3F3C619BF67CE00E88F98 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3C819BF67CE00E88F98 /* Localizable.strings */; };
+		96E3F3CE19BF6F0600E88F98 /* HTListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3CC19BF6F0600E88F98 /* HTListViewController.m */; };
+		96E3F3CF19BF6F0600E88F98 /* HTListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3CD19BF6F0600E88F98 /* HTListViewController.xib */; };
+		96E3F3D319BF71BA00E88F98 /* HTEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3D119BF71BA00E88F98 /* HTEventCell.m */; };
+		96E3F3D419BF71BA00E88F98 /* HTEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3D219BF71BA00E88F98 /* HTEventCell.xib */; };
+		96E3F3D819BF88AC00E88F98 /* HTAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3D619BF88AC00E88F98 /* HTAdViewController.m */; };
+		96E3F3D919BF88AC00E88F98 /* HTAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3D719BF88AC00E88F98 /* HTAdViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +84,15 @@
 		96E3F3C719BF67CE00E88F98 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		96E3F3C919BF67D500E88F98 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		96E3F3CA19BF67D600E88F98 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		96E3F3CB19BF6F0600E88F98 /* HTListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTListViewController.h; sourceTree = "<group>"; };
+		96E3F3CC19BF6F0600E88F98 /* HTListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTListViewController.m; sourceTree = "<group>"; };
+		96E3F3CD19BF6F0600E88F98 /* HTListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTListViewController.xib; sourceTree = "<group>"; };
+		96E3F3D019BF71BA00E88F98 /* HTEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTEventCell.h; sourceTree = "<group>"; };
+		96E3F3D119BF71BA00E88F98 /* HTEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTEventCell.m; sourceTree = "<group>"; };
+		96E3F3D219BF71BA00E88F98 /* HTEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTEventCell.xib; sourceTree = "<group>"; };
+		96E3F3D519BF88AC00E88F98 /* HTAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAdViewController.h; sourceTree = "<group>"; };
+		96E3F3D619BF88AC00E88F98 /* HTAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTAdViewController.m; sourceTree = "<group>"; };
+		96E3F3D719BF88AC00E88F98 /* HTAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTAdViewController.xib; sourceTree = "<group>"; };
 		F24060E1F594420FB11FF167 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -147,15 +162,24 @@
 				9683A4D119B8C96A001DE84C /* HTAppDelegate.h */,
 				9683A4D219B8C96A001DE84C /* HTAppDelegate.m */,
 				9683A4D419B8C96A001DE84C /* Main.storyboard */,
-				96E3F3AA19BF4BE700E88F98 /* HTMainViewController.h */,
-				96E3F3AB19BF4BE700E88F98 /* HTMainViewController.m */,
-				96E3F3AC19BF4BE700E88F98 /* HTMainViewController.xib */,
+				96E3F3C819BF67CE00E88F98 /* Localizable.strings */,
 				96E3F3AF19BF4C9200E88F98 /* HTNetworkManager.h */,
 				96E3F3B019BF4C9200E88F98 /* HTNetworkManager.m */,
 				96E3F3B219BF4CC500E88F98 /* HTConstant.h */,
 				96E3F3B519BF521E00E88F98 /* HTBasicViewController.h */,
 				96E3F3B619BF521E00E88F98 /* HTBasicViewController.m */,
-				96E3F3C819BF67CE00E88F98 /* Localizable.strings */,
+				96E3F3AA19BF4BE700E88F98 /* HTMainViewController.h */,
+				96E3F3AB19BF4BE700E88F98 /* HTMainViewController.m */,
+				96E3F3AC19BF4BE700E88F98 /* HTMainViewController.xib */,
+				96E3F3CB19BF6F0600E88F98 /* HTListViewController.h */,
+				96E3F3CC19BF6F0600E88F98 /* HTListViewController.m */,
+				96E3F3CD19BF6F0600E88F98 /* HTListViewController.xib */,
+				96E3F3D019BF71BA00E88F98 /* HTEventCell.h */,
+				96E3F3D119BF71BA00E88F98 /* HTEventCell.m */,
+				96E3F3D219BF71BA00E88F98 /* HTEventCell.xib */,
+				96E3F3D519BF88AC00E88F98 /* HTAdViewController.h */,
+				96E3F3D619BF88AC00E88F98 /* HTAdViewController.m */,
+				96E3F3D719BF88AC00E88F98 /* HTAdViewController.xib */,
 			);
 			path = WeddingPhoto;
 			sourceTree = "<group>";
@@ -287,11 +311,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E3F3CF19BF6F0600E88F98 /* HTListViewController.xib in Resources */,
+				96E3F3D419BF71BA00E88F98 /* HTEventCell.xib in Resources */,
 				96E3F3BB19BF539F00E88F98 /* bg.png in Resources */,
 				9683A4DB19B8C96A001DE84C /* Images.xcassets in Resources */,
 				96E3F3BD19BF54E100E88F98 /* main.png in Resources */,
 				96E3F3C619BF67CE00E88F98 /* Localizable.strings in Resources */,
 				96E3F3AE19BF4BE700E88F98 /* HTMainViewController.xib in Resources */,
+				96E3F3D919BF88AC00E88F98 /* HTAdViewController.xib in Resources */,
 				9683A4CD19B8C96A001DE84C /* InfoPlist.strings in Resources */,
 				9683A4D619B8C96A001DE84C /* Main.storyboard in Resources */,
 			);
@@ -345,11 +372,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E3F3CE19BF6F0600E88F98 /* HTListViewController.m in Sources */,
+				96E3F3D319BF71BA00E88F98 /* HTEventCell.m in Sources */,
 				9683A4D319B8C96A001DE84C /* HTAppDelegate.m in Sources */,
 				9683A4CF19B8C96A001DE84C /* main.m in Sources */,
 				96E3F3B119BF4C9200E88F98 /* HTNetworkManager.m in Sources */,
 				96E3F3AD19BF4BE700E88F98 /* HTMainViewController.m in Sources */,
 				96E3F3B719BF521E00E88F98 /* HTBasicViewController.m in Sources */,
+				96E3F3D819BF88AC00E88F98 /* HTAdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
