@@ -1,5 +1,5 @@
 //
-//  HTMainViewController.h
+//  HTBasicViewController.h
 //  WeddingPhoto
 //
 //  Created by Jason on 2014/9/9.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HTMainViewController : HTBasicViewController
+@interface HTBasicViewController : UIViewController
 
 @end

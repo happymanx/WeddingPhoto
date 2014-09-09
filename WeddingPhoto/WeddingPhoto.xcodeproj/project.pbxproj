@@ -24,6 +24,8 @@
 		96E3F3AD19BF4BE700E88F98 /* HTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3AB19BF4BE700E88F98 /* HTMainViewController.m */; };
 		96E3F3AE19BF4BE700E88F98 /* HTMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3AC19BF4BE700E88F98 /* HTMainViewController.xib */; };
 		96E3F3B119BF4C9200E88F98 /* HTNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3B019BF4C9200E88F98 /* HTNetworkManager.m */; };
+		96E3F3B719BF521E00E88F98 /* HTBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3B619BF521E00E88F98 /* HTBasicViewController.m */; };
+		96E3F3BB19BF539F00E88F98 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3BA19BF539F00E88F98 /* bg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,9 @@
 		96E3F3AF19BF4C9200E88F98 /* HTNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNetworkManager.h; sourceTree = "<group>"; };
 		96E3F3B019BF4C9200E88F98 /* HTNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNetworkManager.m; sourceTree = "<group>"; };
 		96E3F3B219BF4CC500E88F98 /* HTConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTConstant.h; sourceTree = "<group>"; };
+		96E3F3B519BF521E00E88F98 /* HTBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBasicViewController.h; sourceTree = "<group>"; };
+		96E3F3B619BF521E00E88F98 /* HTBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBasicViewController.m; sourceTree = "<group>"; };
+		96E3F3BA19BF539F00E88F98 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		F24060E1F594420FB11FF167 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -125,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				9683A4DA19B8C96A001DE84C /* Images.xcassets */,
+				96E3F3B819BF539F00E88F98 /* Resource */,
 				9683A4C919B8C96A001DE84C /* Supporting Files */,
 				9683A4D119B8C96A001DE84C /* HTAppDelegate.h */,
 				9683A4D219B8C96A001DE84C /* HTAppDelegate.m */,
@@ -135,6 +141,8 @@
 				96E3F3AF19BF4C9200E88F98 /* HTNetworkManager.h */,
 				96E3F3B019BF4C9200E88F98 /* HTNetworkManager.m */,
 				96E3F3B219BF4CC500E88F98 /* HTConstant.h */,
+				96E3F3B519BF521E00E88F98 /* HTBasicViewController.h */,
+				96E3F3B619BF521E00E88F98 /* HTBasicViewController.m */,
 			);
 			path = WeddingPhoto;
 			sourceTree = "<group>";
@@ -166,6 +174,22 @@
 				9683A4EA19B8C96A001DE84C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96E3F3B819BF539F00E88F98 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				96E3F3B919BF539F00E88F98 /* pic */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		96E3F3B919BF539F00E88F98 /* pic */ = {
+			isa = PBXGroup;
+			children = (
+				96E3F3BA19BF539F00E88F98 /* bg.png */,
+			);
+			path = pic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E3F3BB19BF539F00E88F98 /* bg.png in Resources */,
 				9683A4DB19B8C96A001DE84C /* Images.xcassets in Resources */,
 				96E3F3AE19BF4BE700E88F98 /* HTMainViewController.xib in Resources */,
 				9683A4CD19B8C96A001DE84C /* InfoPlist.strings in Resources */,
@@ -306,6 +331,7 @@
 				9683A4CF19B8C96A001DE84C /* main.m in Sources */,
 				96E3F3B119BF4C9200E88F98 /* HTNetworkManager.m in Sources */,
 				96E3F3AD19BF4BE700E88F98 /* HTMainViewController.m in Sources */,
+				96E3F3B719BF521E00E88F98 /* HTBasicViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
