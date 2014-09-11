@@ -45,10 +45,10 @@
 
 -(IBAction)cameraButtonClicked:(UIButton *)button
 {
-    HTCustomCamera *camera = [HTCustomCamera initWithFrame:[[UIScreen mainScreen] bounds]];
-    [camera buildInterface];
-
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[DBCameraViewController alloc] initWithDelegate:self cameraView:camera]];
+    DBCameraContainerViewController *cameraContainer = [[DBCameraContainerViewController alloc] initWithDelegate:self];
+    [cameraContainer setFullScreenMode];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:cameraContainer];
     [nav setNavigationBarHidden:YES];
     [self presentViewController:nav animated:YES completion:nil];
 }

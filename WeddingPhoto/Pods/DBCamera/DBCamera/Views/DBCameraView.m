@@ -14,8 +14,8 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 
 
-#define previewFrameRetina (CGRect){ 0, 65, 320, 342 }
-#define previewFrameRetina_4 (CGRect){ 0, 65, 320, 430 }
+#define previewFrameRetina (CGRect){ 0, 0, 320, 380 }
+#define previewFrameRetina_4 (CGRect){ 0, 0, 320, 480 }
 
 // pinch
 #define MAX_PINCH_SCALE_NUM   3.f
@@ -87,15 +87,15 @@
     [exposeView.layer addSublayer:self.exposeBox];
     [self addSubview:exposeView];
     
-    [self addSubview:self.topContainerBar];
+//    [self addSubview:self.topContainerBar];
     [self addSubview:self.bottomContainerBar];
     
-    [self.topContainerBar addSubview:self.cameraButton];
-    [self.topContainerBar addSubview:self.flashButton];
-    [self.topContainerBar addSubview:self.gridButton];
+    [self.bottomContainerBar addSubview:self.cameraButton];
+//    [self.topContainerBar addSubview:self.flashButton];
+//    [self.topContainerBar addSubview:self.gridButton];
     
     [self.bottomContainerBar addSubview:self.triggerButton];
-    [self.bottomContainerBar addSubview:self.closeButton];
+    [self addSubview:self.closeButton];
     [self.bottomContainerBar addSubview:self.photoLibraryButton];
     
     [self createGesture];
@@ -118,7 +118,7 @@
         CGFloat newY = CGRectGetMaxY( IS_RETINA_4 ? previewFrameRetina_4 : previewFrameRetina );
         _bottomContainerBar = [[UIView alloc] initWithFrame:(CGRect){ 0, newY, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) - newY }];
         [_bottomContainerBar setUserInteractionEnabled:YES];
-        [_bottomContainerBar setBackgroundColor:RGBColor(0x000000, 1)];
+        [_bottomContainerBar setBackgroundColor:[UIColor blueColor]];
     }
     return _bottomContainerBar;
 }
@@ -133,7 +133,7 @@
         [_photoLibraryButton.layer setCornerRadius:4];
         [_photoLibraryButton.layer setBorderWidth:1];
         [_photoLibraryButton.layer setBorderColor:RGBColor(0xffffff, .3).CGColor];
-        [_photoLibraryButton setFrame:(CGRect){ CGRectGetWidth(self.bounds) - 59, CGRectGetMidY(self.bottomContainerBar.bounds) - 22, 44, 44 }];
+        [_photoLibraryButton setFrame:(CGRect){ 25,  CGRectGetMidY(self.bottomContainerBar.bounds) - 25, 50, 50 }];
         [_photoLibraryButton addTarget:self action:@selector(libraryAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     
@@ -161,7 +161,7 @@
         _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_closeButton setBackgroundColor:[UIColor clearColor]];
         [_closeButton setImage:[[UIImage imageNamed:@"close"] tintImageWithColor:self.tintColor] forState:UIControlStateNormal];
-        [_closeButton setFrame:(CGRect){ 25,  CGRectGetMidY(self.bottomContainerBar.bounds) - 15, 30, 30 }];
+        [_closeButton setFrame:(CGRect){ 25, 25, 50, 50 }];
         [_closeButton addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
     }
     
@@ -175,7 +175,7 @@
         [_cameraButton setBackgroundColor:[UIColor clearColor]];
         [_cameraButton setImage:[[UIImage imageNamed:@"flip"] tintImageWithColor:self.tintColor] forState:UIControlStateNormal];
         [_cameraButton setImage:[[UIImage imageNamed:@"flip"] tintImageWithColor:self.selectedTintColor] forState:UIControlStateSelected];
-        [_cameraButton setFrame:(CGRect){ 25, 17.5f, 30, 30 }];
+        [_cameraButton setFrame:(CGRect){ CGRectGetWidth(self.bounds) - 59, CGRectGetMidY(self.bottomContainerBar.bounds) - 22, 50, 50 }];
         [_cameraButton addTarget:self action:@selector(changeCamera:) forControlEvents:UIControlEventTouchUpInside];
     }
     

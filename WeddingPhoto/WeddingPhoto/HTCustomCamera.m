@@ -7,19 +7,37 @@
 //
 
 #import "HTCustomCamera.h"
+#import "DBCameraMacros.h"
+
+#define previewFrameRetina (CGRect){ 0, 65, 320, 342 }
+#define previewFrameRetina_4 (CGRect){ 0, 65, 320, 430 }
 
 @implementation HTCustomCamera
 
+@synthesize bottomContainerBar = _bottomContainerBar;
 @synthesize closeButton = _closeButton;
 
 - (void) buildInterface
 {
+    [self addSubview:self.bottomContainerBar];
     [self addSubview:self.closeButton];
-    
+    [self.bottomContainerBar addSubview:self.cameraButton];
+
     [self.previewLayer addSublayer:self.focusBox];
     [self.previewLayer addSublayer:self.exposeBox];
     
     [self createGesture];
+}
+
+- (UIView *) bottomContainerBar
+{
+    if ( !_bottomContainerBar ) {
+        CGFloat newY = CGRectGetMaxY( IS_RETINA_4 ? previewFrameRetina_4 : previewFrameRetina );
+        _bottomContainerBar = [[UIView alloc] initWithFrame:(CGRect){ 0, newY, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) - newY }];
+        [_bottomContainerBar setUserInteractionEnabled:YES];
+        [_bottomContainerBar setBackgroundColor:[UIColor greenColor]];
+    }
+    return _bottomContainerBar;
 }
 
 - (UIButton *) closeButton

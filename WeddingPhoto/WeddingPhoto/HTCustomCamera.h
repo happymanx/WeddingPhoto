@@ -10,6 +10,7 @@
 
 @interface HTCustomCamera : DBCameraView
 
+@property (nonatomic, strong) UIView *bottomContainerBar;
 @property (nonatomic, strong) UIButton *closeButton;
 @property (nonatomic, strong) CALayer *focusBox, *exposeBox;
 
