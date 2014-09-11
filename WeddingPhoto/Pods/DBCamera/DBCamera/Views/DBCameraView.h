@@ -50,6 +50,9 @@
  */
 @property (nonatomic, strong) UIButton *flashButton;
 
+
+@property (nonatomic, strong) UIImageView *frameImageView;
+
 /**
  *  The camera preview layer
  */
@@ -74,6 +77,13 @@
  *  The pinch gesture recognizes the pinch to zoom action
  */
 @property (nonatomic, strong) UIPinchGestureRecognizer *pinch;
+
+
+@property (nonatomic, strong) UISwipeGestureRecognizer *swipeLeft;
+@property (nonatomic, strong) UISwipeGestureRecognizer *swipeRight;
+
+@property (nonatomic, strong) NSArray *frameArr;
+@property (nonatomic) NSInteger frameNumber;
 
 /**
  *  Class method to create the view with a frame

@@ -87,6 +87,17 @@
     [exposeView.layer addSublayer:self.exposeBox];
     [self addSubview:exposeView];
     
+#pragma mark - Frame Image View
+    
+    self.frameArr = @[@"1.png", @"2.png", @"3.png"];
+    self.frameNumber = 0;
+    
+    self.frameImageView = [[UIImageView alloc] initWithFrame:previewFrameRetina_4];
+    self.frameImageView.image = [UIImage imageNamed:self.frameArr[self.frameNumber]];
+    self.frameImageView.userInteractionEnabled = YES;
+    
+    [self addSubview:self.frameImageView];
+    
 //    [self addSubview:self.topContainerBar];
     [self addSubview:self.bottomContainerBar];
     
@@ -97,7 +108,7 @@
     [self.bottomContainerBar addSubview:self.triggerButton];
     [self addSubview:self.closeButton];
     [self.bottomContainerBar addSubview:self.photoLibraryButton];
-    
+
     [self createGesture];
 }
 
@@ -282,30 +293,42 @@
 
 - (void) createGesture
 {
-    _singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector( tapToFocus: )];
-    [_singleTap setDelaysTouchesEnded:NO];
-    [_singleTap setNumberOfTapsRequired:1];
-    [_singleTap setNumberOfTouchesRequired:1];
-    [self addGestureRecognizer:_singleTap];
+    _swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+    [_swipeLeft setDelaysTouchesEnded:NO];
+    [_swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.frameImageView addGestureRecognizer:_swipeLeft];
     
-    _doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector( tapToExpose: )];
-    [_doubleTap setDelaysTouchesEnded:NO];
-    [_doubleTap setNumberOfTapsRequired:2];
-    [_doubleTap setNumberOfTouchesRequired:1];
-    [self addGestureRecognizer:_doubleTap];
+    _swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+    [_swipeRight setDelaysTouchesEnded:NO];
+    [_swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
+    [self.frameImageView addGestureRecognizer:_swipeRight];
+
+//    _singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector( tapToFocus: )];
+//    [_singleTap setDelaysTouchesEnded:NO];
+//    [_singleTap setNumberOfTapsRequired:1];
+//    [_singleTap setNumberOfTouchesRequired:1];
+//    [self addGestureRecognizer:_singleTap];
+//    
+//    _doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector( tapToExpose: )];
+//    [_doubleTap setDelaysTouchesEnded:NO];
+//    [_doubleTap setNumberOfTapsRequired:2];
+//    [_doubleTap setNumberOfTouchesRequired:1];
+//    [self addGestureRecognizer:_doubleTap];
+//    
+//    [_singleTap requireGestureRecognizerToFail:_doubleTap];
+//    
+//    _pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
+//    [_pinch setDelaysTouchesEnded:NO];
+//    [self addGestureRecognizer:_pinch];
+//    
+//    _panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector( hanldePanGestureRecognizer: )];
+//    [_panGestureRecognizer setDelaysTouchesEnded:NO];
+//    [_panGestureRecognizer setMinimumNumberOfTouches:1];
+//    [_panGestureRecognizer setMaximumNumberOfTouches:1];
+//    [_panGestureRecognizer setDelegate:self];
+//    [self addGestureRecognizer:_panGestureRecognizer];
     
-    [_singleTap requireGestureRecognizerToFail:_doubleTap];
-    
-    _pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
-    [_pinch setDelaysTouchesEnded:NO];
-    [self addGestureRecognizer:_pinch];
-    
-    _panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector( hanldePanGestureRecognizer: )];
-    [_panGestureRecognizer setDelaysTouchesEnded:NO];
-    [_panGestureRecognizer setMinimumNumberOfTouches:1];
-    [_panGestureRecognizer setMaximumNumberOfTouches:1];
-    [_panGestureRecognizer setDelegate:self];
-    [self addGestureRecognizer:_panGestureRecognizer];
+
 }
 
 #pragma mark - Actions
@@ -435,6 +458,33 @@
         [pinchGestureRecognizer state] == UIGestureRecognizerStateFailed) {
         _preScaleNum = _scaleNum;
     }
+}
+
+-(void)handleSwipe:(UISwipeGestureRecognizer *)recogniser
+{
+    if (recogniser.direction == UISwipeGestureRecognizerDirectionRight)
+    {
+        NSLog(@"handleSwipeRight");
+        self.frameNumber -= 1;
+        if (self.frameNumber < 0) {
+            self.frameNumber += [self.frameArr count];
+        }
+    }
+    else if (recogniser.direction == UISwipeGestureRecognizerDirectionLeft)
+    {
+        NSLog(@"handleSwipeLeft");
+        self.frameNumber += 1;
+        if (self.frameNumber > [self.frameArr count] - 1) {
+            self.frameNumber -= [self.frameArr count];
+        }
+    }
+    self.frameImageView.alpha = 0.0;
+    [UIView animateWithDuration:0.7 animations:^{
+        self.frameImageView.alpha = 1.0;
+        self.frameImageView.image = [UIImage imageNamed:self.frameArr[self.frameNumber]];
+    } completion:^(BOOL finished) {
+        ;
+    }];
 }
 
 - (void) pinchCameraViewWithScalNum:(CGFloat)scale

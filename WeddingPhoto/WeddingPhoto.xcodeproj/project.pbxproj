@@ -21,6 +21,9 @@
 		962A06C419C205C300C6A93B /* flip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 962A06B819C205C300C6A93B /* flip@2x.png */; };
 		962A06C519C205C300C6A93B /* trigger.png in Resources */ = {isa = PBXBuildFile; fileRef = 962A06B919C205C300C6A93B /* trigger.png */; };
 		962A06C619C205C300C6A93B /* trigger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 962A06BA19C205C300C6A93B /* trigger@2x.png */; };
+		962A06CB19C2247E00C6A93B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 962A06C819C2247E00C6A93B /* 1.png */; };
+		962A06CC19C2247E00C6A93B /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 962A06C919C2247E00C6A93B /* 2.png */; };
+		962A06CD19C2247E00C6A93B /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 962A06CA19C2247E00C6A93B /* 3.png */; };
 		9683A4C319B8C96A001DE84C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C219B8C96A001DE84C /* Foundation.framework */; };
 		9683A4C519B8C96A001DE84C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C419B8C96A001DE84C /* CoreGraphics.framework */; };
 		9683A4C719B8C96A001DE84C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C619B8C96A001DE84C /* UIKit.framework */; };
@@ -75,6 +78,9 @@
 		962A06B819C205C300C6A93B /* flip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flip@2x.png"; sourceTree = "<group>"; };
 		962A06B919C205C300C6A93B /* trigger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trigger.png; sourceTree = "<group>"; };
 		962A06BA19C205C300C6A93B /* trigger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trigger@2x.png"; sourceTree = "<group>"; };
+		962A06C819C2247E00C6A93B /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		962A06C919C2247E00C6A93B /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		962A06CA19C2247E00C6A93B /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		9683A4BF19B8C96A001DE84C /* WeddingPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeddingPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9683A4C219B8C96A001DE84C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9683A4C419B8C96A001DE84C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -165,6 +171,16 @@
 				962A06BA19C205C300C6A93B /* trigger@2x.png */,
 			);
 			path = "library pic";
+			sourceTree = "<group>";
+		};
+		962A06C719C2247E00C6A93B /* frame */ = {
+			isa = PBXGroup;
+			children = (
+				962A06C819C2247E00C6A93B /* 1.png */,
+				962A06C919C2247E00C6A93B /* 2.png */,
+				962A06CA19C2247E00C6A93B /* 3.png */,
+			);
+			path = frame;
 			sourceTree = "<group>";
 		};
 		9683A4B619B8C96A001DE84C = {
@@ -264,6 +280,7 @@
 		96E3F3B819BF539F00E88F98 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				962A06C719C2247E00C6A93B /* frame */,
 				962A06AE19C205C300C6A93B /* library pic */,
 				96E3F3B919BF539F00E88F98 /* pic */,
 			);
@@ -378,8 +395,11 @@
 				962A06C019C205C300C6A93B /* crop@2x.png in Resources */,
 				962A06C119C205C300C6A93B /* flash.png in Resources */,
 				962A06C519C205C300C6A93B /* trigger.png in Resources */,
+				962A06CC19C2247E00C6A93B /* 2.png in Resources */,
 				96E3F3D919BF88AC00E88F98 /* HTAdViewController.xib in Resources */,
+				962A06CD19C2247E00C6A93B /* 3.png in Resources */,
 				9683A4CD19B8C96A001DE84C /* InfoPlist.strings in Resources */,
+				962A06CB19C2247E00C6A93B /* 1.png in Resources */,
 				9683A4D619B8C96A001DE84C /* Main.storyboard in Resources */,
 				962A06C419C205C300C6A93B /* flip@2x.png in Resources */,
 			);
