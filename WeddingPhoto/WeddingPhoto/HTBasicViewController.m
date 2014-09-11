@@ -14,6 +14,11 @@
 
 @implementation HTBasicViewController
 
+-(BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,9 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    [super viewDidLoad];
+
     self.backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg.png"]];
     [self.view addSubview:self.backgroundImageView];
     [self.view sendSubviewToBack:self.backgroundImageView];
@@ -38,6 +41,7 @@
 {
     [super viewDidAppear:animated];
     self.backgroundImageView.frame = [UIScreen mainScreen].bounds;
+    
 }
 
 /*

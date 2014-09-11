@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HTMainViewController : UIViewController
+@interface HTMainViewController : HTBasicViewController
 {
     IBOutlet UITextField *passwordTextField;
 }

@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-DBCamera.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-GPUImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1F9AAD18C29C4652914E228A</key>
+		<key>0E885741DA974D9A90C9A246</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>677A319C5C4C41B6AE5181FC</key>
+		<key>39DF74C82F2A4C7D9243EE7E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>72091F234D224156B0311E55</key>
+		<key>3CA7695090FD486C97D4FBF1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>80600BF1504F4C4CB4547C84</key>
+		<key>5B32E7308D1D45A0A71B7969</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8244480982724C63A8427E3E</key>
+		<key>B057DCDFA93E42678EF953D9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0A2C430F3F94909A0DD8E57</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF352A86D145430D9030F66E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
