@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05893B7D585744DCA58BD724 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F24060E1F594420FB11FF167 /* libPods.a */; };
+		962A06AD19C1F53B00C6A93B /* HTCustomCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 962A06AC19C1F53B00C6A93B /* HTCustomCamera.m */; };
 		9683A4C319B8C96A001DE84C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C219B8C96A001DE84C /* Foundation.framework */; };
 		9683A4C519B8C96A001DE84C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C419B8C96A001DE84C /* CoreGraphics.framework */; };
 		9683A4C719B8C96A001DE84C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C619B8C96A001DE84C /* UIKit.framework */; };
@@ -48,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		18A0EFA8E27B47B7B686FB29 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		962A06AB19C1F53B00C6A93B /* HTCustomCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTCustomCamera.h; sourceTree = "<group>"; };
+		962A06AC19C1F53B00C6A93B /* HTCustomCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTCustomCamera.m; sourceTree = "<group>"; };
 		9683A4BF19B8C96A001DE84C /* WeddingPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeddingPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9683A4C219B8C96A001DE84C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9683A4C419B8C96A001DE84C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -180,6 +183,8 @@
 				96E3F3D519BF88AC00E88F98 /* HTAdViewController.h */,
 				96E3F3D619BF88AC00E88F98 /* HTAdViewController.m */,
 				96E3F3D719BF88AC00E88F98 /* HTAdViewController.xib */,
+				962A06AB19C1F53B00C6A93B /* HTCustomCamera.h */,
+				962A06AC19C1F53B00C6A93B /* HTCustomCamera.m */,
 			);
 			path = WeddingPhoto;
 			sourceTree = "<group>";
@@ -379,6 +384,7 @@
 				96E3F3B119BF4C9200E88F98 /* HTNetworkManager.m in Sources */,
 				96E3F3AD19BF4BE700E88F98 /* HTMainViewController.m in Sources */,
 				96E3F3B719BF521E00E88F98 /* HTBasicViewController.m in Sources */,
+				962A06AD19C1F53B00C6A93B /* HTCustomCamera.m in Sources */,
 				96E3F3D819BF88AC00E88F98 /* HTAdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

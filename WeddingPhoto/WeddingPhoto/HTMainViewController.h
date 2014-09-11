@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DBCameraViewController.h"
 
-@interface HTMainViewController : HTBasicViewController
+@interface HTMainViewController : HTBasicViewController <DBCameraViewControllerDelegate>
 {
     IBOutlet UITextField *passwordTextField;
 }

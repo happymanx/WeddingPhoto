@@ -8,8 +8,7 @@
 
 #import "HTMainViewController.h"
 #import "HTListViewController.h"
-#import "HTAdViewController.h"
-#import ""
+#import "HTCustomCamera.h"
 
 @interface HTMainViewController ()
 
@@ -46,13 +45,24 @@
 
 -(IBAction)cameraButtonClicked:(UIButton *)button
 {
-    HTAdViewController *vc = [[HTAdViewController alloc] initWithAdArr:@[]];
-    [self.navigationController presentViewController:vc animated:YES completion:nil];
+    HTCustomCamera *camera = [HTCustomCamera initWithFrame:[[UIScreen mainScreen] bounds]];
+    [camera buildInterface];
+
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[DBCameraViewController alloc] initWithDelegate:self cameraView:camera]];
+    [nav setNavigationBarHidden:YES];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 -(IBAction)aboutButtonClicked:(UIButton *)button
 {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://google.com.tw"]];
+}
+
+#pragma mark - DBCameraViewController
+
+-(void)dismissCamera:(id)cameraViewController
+{
+    [cameraViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
