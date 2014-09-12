@@ -26,6 +26,7 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="thumbnailImageView" destination="lxf-ro-uC4" id="nJe-Jf-6HY"/>
                 <outlet property="titleLabel" destination="6If-Gw-dbQ" id="G73-Yu-aDi"/>

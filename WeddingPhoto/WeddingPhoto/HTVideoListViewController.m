@@ -8,6 +8,7 @@
 
 #import "HTVideoListViewController.h"
 #import "HTVideoCell.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface HTVideoListViewController ()
 
@@ -21,7 +22,7 @@
     if (self) {
         videoArr = array;
         
-        videoArr = @[@"0BUphSdjPEw", @"uAfVxhUCDis", @"4oPw63oVqpA"];
+        videoArr = @[@"0BUphSdjPEw", @"uAfVxhUCDis", @"4oPw63oVqpA", @"-8fHZj2PjI0", @"JmKTfcRz0FY"];
     }
     return self;
 }
@@ -49,21 +50,8 @@
     HTVideoCell *cell = [HTVideoCell cell];
     
     NSURL *youtubeURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.youtube.com/vi/%@/0.jpg", videoArr[indexPath.row]]];
-                         
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSData *data = [NSData dataWithContentsOfURL:youtubeURL];
-        if (data) {
-            UIImage *image = [[UIImage alloc] initWithData:data];
-            if (image) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    cell.thumbnailImageView.image = image;
-                });
-            }
-            else {
-                // 預設圖
-            }
-        }
-    });
+    
+    [cell.thumbnailImageView setImageWithURL:youtubeURL];
 
     return cell;
 }

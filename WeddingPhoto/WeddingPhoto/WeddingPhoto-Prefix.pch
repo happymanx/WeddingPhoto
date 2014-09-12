@@ -15,4 +15,5 @@
     #import <Foundation/Foundation.h>
 #import "HTConstant.h"
 #import "HTBasicViewController.h"
+#import <AFNetworking.h>
 #endif
