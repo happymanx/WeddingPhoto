@@ -6,18 +6,18 @@
 //  Copyright (c) 2014年 HappyMan. All rights reserved.
 //
 
-#import "HTListViewController.h"
+#import "HTEventListViewController.h"
 #import "HTEventCell.h"
 
-@interface HTListViewController ()
+@interface HTEventListViewController ()
 
 @end
 
-@implementation HTListViewController
+@implementation HTEventListViewController
 
 - (id)initWithEventArr:(NSArray *)array
 {
-    self = [super initWithNibName:@"HTListViewController" bundle:nil];
+    self = [super initWithNibName:@"HTEventListViewController" bundle:nil];
     if (self) {
         eventArr = array;
         

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		05893B7D585744DCA58BD724 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F24060E1F594420FB11FF167 /* libPods.a */; };
+		96098C8619C34CD00065D96B /* HTVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96098C8419C34CD00065D96B /* HTVideoListViewController.m */; };
+		96098C8719C34CD00065D96B /* HTVideoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96098C8519C34CD00065D96B /* HTVideoListViewController.xib */; };
+		96098C8B19C352650065D96B /* HTVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96098C8919C352650065D96B /* HTVideoCell.m */; };
+		96098C8C19C352650065D96B /* HTVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96098C8A19C352650065D96B /* HTVideoCell.xib */; };
 		962A06AD19C1F53B00C6A93B /* HTCustomCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 962A06AC19C1F53B00C6A93B /* HTCustomCamera.m */; };
 		962A06BB19C205C300C6A93B /* cameraGrid.png in Resources */ = {isa = PBXBuildFile; fileRef = 962A06AF19C205C300C6A93B /* cameraGrid.png */; };
 		962A06BC19C205C300C6A93B /* cameraGrid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 962A06B019C205C300C6A93B /* cameraGrid@2x.png */; };
@@ -44,8 +48,8 @@
 		96E3F3BB19BF539F00E88F98 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3BA19BF539F00E88F98 /* bg.png */; };
 		96E3F3BD19BF54E100E88F98 /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3BC19BF54E100E88F98 /* main.png */; };
 		96E3F3C619BF67CE00E88F98 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3C819BF67CE00E88F98 /* Localizable.strings */; };
-		96E3F3CE19BF6F0600E88F98 /* HTListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3CC19BF6F0600E88F98 /* HTListViewController.m */; };
-		96E3F3CF19BF6F0600E88F98 /* HTListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3CD19BF6F0600E88F98 /* HTListViewController.xib */; };
+		96E3F3CE19BF6F0600E88F98 /* HTEventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3CC19BF6F0600E88F98 /* HTEventListViewController.m */; };
+		96E3F3CF19BF6F0600E88F98 /* HTEventListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3CD19BF6F0600E88F98 /* HTEventListViewController.xib */; };
 		96E3F3D319BF71BA00E88F98 /* HTEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3D119BF71BA00E88F98 /* HTEventCell.m */; };
 		96E3F3D419BF71BA00E88F98 /* HTEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3D219BF71BA00E88F98 /* HTEventCell.xib */; };
 		96E3F3D819BF88AC00E88F98 /* HTAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3D619BF88AC00E88F98 /* HTAdViewController.m */; };
@@ -64,6 +68,12 @@
 
 /* Begin PBXFileReference section */
 		18A0EFA8E27B47B7B686FB29 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		96098C8319C34CD00065D96B /* HTVideoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTVideoListViewController.h; sourceTree = "<group>"; };
+		96098C8419C34CD00065D96B /* HTVideoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTVideoListViewController.m; sourceTree = "<group>"; };
+		96098C8519C34CD00065D96B /* HTVideoListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTVideoListViewController.xib; sourceTree = "<group>"; };
+		96098C8819C352650065D96B /* HTVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTVideoCell.h; sourceTree = "<group>"; };
+		96098C8919C352650065D96B /* HTVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTVideoCell.m; sourceTree = "<group>"; };
+		96098C8A19C352650065D96B /* HTVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTVideoCell.xib; sourceTree = "<group>"; };
 		962A06AB19C1F53B00C6A93B /* HTCustomCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTCustomCamera.h; sourceTree = "<group>"; };
 		962A06AC19C1F53B00C6A93B /* HTCustomCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTCustomCamera.m; sourceTree = "<group>"; };
 		962A06AF19C205C300C6A93B /* cameraGrid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraGrid.png; sourceTree = "<group>"; };
@@ -117,9 +127,9 @@
 		96E3F3C719BF67CE00E88F98 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		96E3F3C919BF67D500E88F98 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		96E3F3CA19BF67D600E88F98 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		96E3F3CB19BF6F0600E88F98 /* HTListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTListViewController.h; sourceTree = "<group>"; };
-		96E3F3CC19BF6F0600E88F98 /* HTListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTListViewController.m; sourceTree = "<group>"; };
-		96E3F3CD19BF6F0600E88F98 /* HTListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTListViewController.xib; sourceTree = "<group>"; };
+		96E3F3CB19BF6F0600E88F98 /* HTEventListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTEventListViewController.h; sourceTree = "<group>"; };
+		96E3F3CC19BF6F0600E88F98 /* HTEventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTEventListViewController.m; sourceTree = "<group>"; };
+		96E3F3CD19BF6F0600E88F98 /* HTEventListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTEventListViewController.xib; sourceTree = "<group>"; };
 		96E3F3D019BF71BA00E88F98 /* HTEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTEventCell.h; sourceTree = "<group>"; };
 		96E3F3D119BF71BA00E88F98 /* HTEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTEventCell.m; sourceTree = "<group>"; };
 		96E3F3D219BF71BA00E88F98 /* HTEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTEventCell.xib; sourceTree = "<group>"; };
@@ -233,9 +243,9 @@
 				96E3F3AA19BF4BE700E88F98 /* HTMainViewController.h */,
 				96E3F3AB19BF4BE700E88F98 /* HTMainViewController.m */,
 				96E3F3AC19BF4BE700E88F98 /* HTMainViewController.xib */,
-				96E3F3CB19BF6F0600E88F98 /* HTListViewController.h */,
-				96E3F3CC19BF6F0600E88F98 /* HTListViewController.m */,
-				96E3F3CD19BF6F0600E88F98 /* HTListViewController.xib */,
+				96E3F3CB19BF6F0600E88F98 /* HTEventListViewController.h */,
+				96E3F3CC19BF6F0600E88F98 /* HTEventListViewController.m */,
+				96E3F3CD19BF6F0600E88F98 /* HTEventListViewController.xib */,
 				96E3F3D019BF71BA00E88F98 /* HTEventCell.h */,
 				96E3F3D119BF71BA00E88F98 /* HTEventCell.m */,
 				96E3F3D219BF71BA00E88F98 /* HTEventCell.xib */,
@@ -244,6 +254,12 @@
 				96E3F3D719BF88AC00E88F98 /* HTAdViewController.xib */,
 				962A06AB19C1F53B00C6A93B /* HTCustomCamera.h */,
 				962A06AC19C1F53B00C6A93B /* HTCustomCamera.m */,
+				96098C8319C34CD00065D96B /* HTVideoListViewController.h */,
+				96098C8419C34CD00065D96B /* HTVideoListViewController.m */,
+				96098C8519C34CD00065D96B /* HTVideoListViewController.xib */,
+				96098C8819C352650065D96B /* HTVideoCell.h */,
+				96098C8919C352650065D96B /* HTVideoCell.m */,
+				96098C8A19C352650065D96B /* HTVideoCell.xib */,
 			);
 			path = WeddingPhoto;
 			sourceTree = "<group>";
@@ -380,11 +396,12 @@
 				962A06BC19C205C300C6A93B /* cameraGrid@2x.png in Resources */,
 				962A06C619C205C300C6A93B /* trigger@2x.png in Resources */,
 				962A06BE19C205C300C6A93B /* close@2x.png in Resources */,
-				96E3F3CF19BF6F0600E88F98 /* HTListViewController.xib in Resources */,
+				96E3F3CF19BF6F0600E88F98 /* HTEventListViewController.xib in Resources */,
 				962A06BB19C205C300C6A93B /* cameraGrid.png in Resources */,
 				96E3F3D419BF71BA00E88F98 /* HTEventCell.xib in Resources */,
 				96E3F3BB19BF539F00E88F98 /* bg.png in Resources */,
 				9683A4DB19B8C96A001DE84C /* Images.xcassets in Resources */,
+				96098C8719C34CD00065D96B /* HTVideoListViewController.xib in Resources */,
 				962A06C219C205C300C6A93B /* flash@2x.png in Resources */,
 				96E3F3BD19BF54E100E88F98 /* main.png in Resources */,
 				962A06BD19C205C300C6A93B /* close.png in Resources */,
@@ -392,6 +409,7 @@
 				96E3F3AE19BF4BE700E88F98 /* HTMainViewController.xib in Resources */,
 				962A06C319C205C300C6A93B /* flip.png in Resources */,
 				962A06BF19C205C300C6A93B /* crop.png in Resources */,
+				96098C8C19C352650065D96B /* HTVideoCell.xib in Resources */,
 				962A06C019C205C300C6A93B /* crop@2x.png in Resources */,
 				962A06C119C205C300C6A93B /* flash.png in Resources */,
 				962A06C519C205C300C6A93B /* trigger.png in Resources */,
@@ -453,10 +471,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96E3F3CE19BF6F0600E88F98 /* HTListViewController.m in Sources */,
+				96E3F3CE19BF6F0600E88F98 /* HTEventListViewController.m in Sources */,
 				96E3F3D319BF71BA00E88F98 /* HTEventCell.m in Sources */,
 				9683A4D319B8C96A001DE84C /* HTAppDelegate.m in Sources */,
+				96098C8B19C352650065D96B /* HTVideoCell.m in Sources */,
 				9683A4CF19B8C96A001DE84C /* main.m in Sources */,
+				96098C8619C34CD00065D96B /* HTVideoListViewController.m in Sources */,
 				96E3F3B119BF4C9200E88F98 /* HTNetworkManager.m in Sources */,
 				96E3F3AD19BF4BE700E88F98 /* HTMainViewController.m in Sources */,
 				96E3F3B719BF521E00E88F98 /* HTBasicViewController.m in Sources */,

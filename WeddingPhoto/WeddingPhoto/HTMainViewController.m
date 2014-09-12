@@ -7,8 +7,9 @@
 //
 
 #import "HTMainViewController.h"
-#import "HTListViewController.h"
+#import "HTEventListViewController.h"
 #import "HTCustomCamera.h"
+#import "HTVideoListViewController.h"
 
 @interface HTMainViewController ()
 
@@ -39,7 +40,7 @@
 
 -(IBAction)listButtonClicked:(UIButton *)button
 {
-    HTListViewController *vc = [[HTListViewController alloc] initWithEventArr:@[]];
+    HTVideoListViewController *vc = [[HTVideoListViewController alloc] initWithEventArr:@[]];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

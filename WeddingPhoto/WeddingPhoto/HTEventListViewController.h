@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HTListViewController : HTBasicViewController <UITableViewDelegate, UITableViewDataSource>
+@interface HTEventListViewController : HTBasicViewController <UITableViewDelegate, UITableViewDataSource>
 {
     NSArray *eventArr;
     BOOL isEdit;
