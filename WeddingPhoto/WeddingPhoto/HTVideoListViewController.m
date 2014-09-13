@@ -36,8 +36,8 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    HTAppDelegate *appDelegate = (HTAppDelegate*)[[UIApplication sharedApplication] delegate];
-    [appDelegate application:nil supportedInterfaceOrientationsForWindow:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(youTubeStarted:) name:MPMoviePlayerNowPlayingMovieDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(youTubeFinished:) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -79,16 +79,14 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-#pragma mark - XCDYouTubeVideoPlayerViewControllerDelegate
--(void)didPresentVideo
+-(void)youTubeStarted:(NSNotification *)notification
 {
-    HTAppDelegate *appDelegate = (HTAppDelegate*)[[UIApplication sharedApplication] delegate];
+    HTAppDelegate *appDelegate = (HTAppDelegate *)[[UIApplication sharedApplication] delegate];
     appDelegate.fullScreenVideoIsPlaying = YES;
 }
-
--(void)didDismissVideo
+-(void)youTubeFinished:(NSNotification *)notification
 {
-    HTAppDelegate *appDelegate = (HTAppDelegate*)[[UIApplication sharedApplication] delegate];
+    HTAppDelegate *appDelegate = (HTAppDelegate *)[[UIApplication sharedApplication] delegate];
     appDelegate.fullScreenVideoIsPlaying = NO;
 }
 @end
