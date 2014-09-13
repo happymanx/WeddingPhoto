@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-XCDYouTubeKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ZipArchive.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0E885741DA974D9A90C9A246</key>
+		<key>3509C31152404543917F8030</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>39DF74C82F2A4C7D9243EE7E</key>
+		<key>45507AE5A74840A69F4CD960</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3CA7695090FD486C97D4FBF1</key>
+		<key>5BD901C43D7B45CFBB13F1F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5B32E7308D1D45A0A71B7969</key>
+		<key>887980A4967D4354B8C7F1C5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B057DCDFA93E42678EF953D9</key>
+		<key>8AE5F9E4E6564266A4D3C3D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F0A2C430F3F94909A0DD8E57</key>
+		<key>B0FAB66020F8422EA3EA0253</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FF352A86D145430D9030F66E</key>
+		<key>CDA15A99B7F54948A32CE653</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE41044C17B2498798620F29</key>
 		<dict>
 			<key>primary</key>
 			<true/>
