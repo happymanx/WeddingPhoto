@@ -31,7 +31,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    HTAppDelegate *appDelegate = (HTAppDelegate*)[[UIApplication sharedApplication] delegate];
+    [appDelegate application:nil supportedInterfaceOrientationsForWindow:nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -62,6 +68,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     XCDYouTubeVideoPlayerViewController *videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:videoArr[indexPath.row]];
+    videoPlayerViewController.delegate = self;
     [self presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
 }
 
@@ -72,4 +79,16 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+#pragma mark - XCDYouTubeVideoPlayerViewControllerDelegate
+-(void)didPresentVideo
+{
+    HTAppDelegate *appDelegate = (HTAppDelegate*)[[UIApplication sharedApplication] delegate];
+    appDelegate.fullScreenVideoIsPlaying = YES;
+}
+
+-(void)didDismissVideo
+{
+    HTAppDelegate *appDelegate = (HTAppDelegate*)[[UIApplication sharedApplication] delegate];
+    appDelegate.fullScreenVideoIsPlaying = NO;
+}
 @end

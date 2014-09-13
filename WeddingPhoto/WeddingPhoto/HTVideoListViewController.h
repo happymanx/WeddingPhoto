@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <XCDYouTubeKit/XCDYouTubeKit.h>
 
-@interface HTVideoListViewController : HTBasicViewController <UITableViewDelegate, UITableViewDataSource>
+@interface HTVideoListViewController : HTBasicViewController <UITableViewDelegate, UITableViewDataSource, XCDYouTubeVideoPlayerViewControllerDelegate>
 {
     NSArray *videoArr;
 

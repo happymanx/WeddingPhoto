@@ -4,6 +4,13 @@
 
 #import <MediaPlayer/MediaPlayer.h>
 
+@protocol XCDYouTubeVideoPlayerViewControllerDelegate <NSObject>
+
+@optional
+-(void)didPresentVideo;
+-(void)didDismissVideo;
+
+@end
 /**
  *  -------------------
  *  @name Notifications
@@ -34,6 +41,8 @@ MP_EXTERN NSString *const XCDYouTubeVideoUserInfoKey;
  *  Use the `presentInView:` method to play a YouTube video inline.
  */
 @interface XCDYouTubeVideoPlayerViewController : MPMoviePlayerViewController
+
+@property (nonatomic, strong) id <XCDYouTubeVideoPlayerViewControllerDelegate> delegate;
 
 /**
  *  ------------------

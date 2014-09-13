@@ -16,4 +16,6 @@
 #import "HTConstant.h"
 #import "HTBasicViewController.h"
 #import <AFNetworking.h>
+#import "HTAppDelegate.h"
+
 #endif

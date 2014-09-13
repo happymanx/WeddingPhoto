@@ -175,7 +175,11 @@ NSString *const XCDYouTubeVideoUserInfoKey = @"Video";
 - (void) viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
-	
+
+    if ([self.delegate respondsToSelector:@selector(didPresentVideo)]) {
+        [self.delegate didPresentVideo];
+    }
+    
 	if (![self isBeingPresented])
 		return;
 	
@@ -186,6 +190,9 @@ NSString *const XCDYouTubeVideoUserInfoKey = @"Video";
 - (void) viewWillDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
+    if ([self.delegate respondsToSelector:@selector(didDismissVideo)]) {
+        [self.delegate didDismissVideo];
+    }
 	
 	if (![self isBeingDismissed])
 		return;
