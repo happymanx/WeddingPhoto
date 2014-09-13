@@ -9,6 +9,7 @@
 #import "HTVideoListViewController.h"
 #import "HTVideoCell.h"
 #import "UIImageView+AFNetworking.h"
+#import <XCDYouTubeKit/XCDYouTubeKit.h>
 
 @interface HTVideoListViewController ()
 
@@ -60,7 +61,8 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    XCDYouTubeVideoPlayerViewController *videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:videoArr[indexPath.row]];
+    [self presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
 }
 
 #pragma mark - Button Methods
