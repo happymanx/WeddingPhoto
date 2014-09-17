@@ -10,6 +10,7 @@
 #import "HTEventListViewController.h"
 #import "HTCustomCamera.h"
 #import "HTVideoListViewController.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface HTMainViewController ()
 
@@ -49,6 +50,8 @@
     DBCameraContainerViewController *cameraContainer = [[DBCameraContainerViewController alloc] initWithDelegate:self];
     [cameraContainer setFullScreenMode];
     
+    cameraContainer.delegate = self;
+    
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:cameraContainer];
     [nav setNavigationBarHidden:YES];
     [self presentViewController:nav animated:YES completion:nil];
@@ -59,11 +62,25 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://google.com.tw"]];
 }
 
-#pragma mark - DBCameraViewController
+#pragma mark - DBCameraViewControllerDelegate
 
 -(void)dismissCamera:(id)cameraViewController
 {
     [cameraViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)camera:(id)cameraViewController didFinishWithImage:(UIImage *)image withMetadata:(NSDictionary *)metadata
+{
+    // 儲存影像到相簿
+    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+    
+    [library writeImageToSavedPhotosAlbum:[image CGImage] orientation:(ALAssetOrientation)[image imageOrientation] completionBlock:^(NSURL *assetURL, NSError *error){
+        if (error) {
+            // TODO: error handling
+        } else {
+            // TODO: success handling
+        }
+    }];
 }
 
 @end

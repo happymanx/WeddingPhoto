@@ -267,7 +267,7 @@ NSLocalizedStringFromTable(key, @"DBCamera", nil)
     NSMutableDictionary *finalMetadata = [NSMutableDictionary dictionaryWithDictionary:metadata];
     finalMetadata[@"DBCameraSource"] = @"Camera";
 
-    if ( !self.useCameraSegue ) {
+    if ( self.useCameraSegue ) {
         if ( [_delegate respondsToSelector:@selector(camera:didFinishWithImage:withMetadata:)] )
             [_delegate camera:self didFinishWithImage:image withMetadata:finalMetadata];
     } else {

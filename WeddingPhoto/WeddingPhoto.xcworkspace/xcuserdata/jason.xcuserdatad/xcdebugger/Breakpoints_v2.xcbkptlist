@@ -9,14 +9,44 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/XCDYouTubeKit/XCDYouTubeKit/XCDYouTubeVideoPlayerViewController.m"
-            timestampString = "432324615.554364"
+            filePath = "WeddingPhoto/HTMainViewController.m"
+            timestampString = "432657525.072665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
-            landmarkName = "-stopWithError:"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "-camera:didFinishWithImage:withMetadata:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HTMainViewController camera:didFinishWithImage:withMetadata:]"
+                  moduleName = "WeddingPhoto"
+                  urlString = "file:///Users/jason/Test/WeddingPhoto/WeddingPhoto/WeddingPhoto/HTMainViewController.m"
+                  timestampString = "432657525.533278"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__63-[HTMainViewController camera:didFinishWithImage:withMetadata:]_block_invoke"
+                  moduleName = "WeddingPhoto"
+                  urlString = "file:///Users/jason/Test/WeddingPhoto/WeddingPhoto/WeddingPhoto/HTMainViewController.m"
+                  timestampString = "432657525.534805"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "54">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

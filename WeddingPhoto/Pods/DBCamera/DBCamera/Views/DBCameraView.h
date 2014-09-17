@@ -14,7 +14,7 @@
 /**
  *  The view class that contains the UI of the camera. Extend this class if you want to create a custom camera view.
  */
-@interface DBCameraView : UIView <DBCameraViewControllerSettings>
+@interface DBCameraView : UIView <DBCameraViewControllerSettings, DBCameraViewControllerDelegate>
 /**
  *  The DBCameraViewDelegate object
  */

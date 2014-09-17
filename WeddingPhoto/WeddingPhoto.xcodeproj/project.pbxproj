@@ -59,6 +59,7 @@
 		96E3F3D819BF88AC00E88F98 /* HTAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3D619BF88AC00E88F98 /* HTAdViewController.m */; };
 		96E3F3D919BF88AC00E88F98 /* HTAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3D719BF88AC00E88F98 /* HTAdViewController.xib */; };
 		96F855F019C9BEAB00FA8B10 /* photo_but_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 96F855EF19C9BEAB00FA8B10 /* photo_but_close.png */; };
+		96F855F219C9D3E300FA8B10 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F855F119C9D3E300FA8B10 /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,7 @@
 		96E3F3D619BF88AC00E88F98 /* HTAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTAdViewController.m; sourceTree = "<group>"; };
 		96E3F3D719BF88AC00E88F98 /* HTAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTAdViewController.xib; sourceTree = "<group>"; };
 		96F855EF19C9BEAB00FA8B10 /* photo_but_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_but_close.png; sourceTree = "<group>"; };
+		96F855F119C9D3E300FA8B10 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		F24060E1F594420FB11FF167 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96F855F219C9D3E300FA8B10 /* AssetsLibrary.framework in Frameworks */,
 				9683A4C519B8C96A001DE84C /* CoreGraphics.framework in Frameworks */,
 				9683A4C719B8C96A001DE84C /* UIKit.framework in Frameworks */,
 				9683A4C319B8C96A001DE84C /* Foundation.framework in Frameworks */,
@@ -226,6 +229,7 @@
 		9683A4C119B8C96A001DE84C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96F855F119C9D3E300FA8B10 /* AssetsLibrary.framework */,
 				9683A4C219B8C96A001DE84C /* Foundation.framework */,
 				9683A4C419B8C96A001DE84C /* CoreGraphics.framework */,
 				9683A4C619B8C96A001DE84C /* UIKit.framework */,
