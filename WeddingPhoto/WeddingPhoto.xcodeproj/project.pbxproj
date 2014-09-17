@@ -58,6 +58,7 @@
 		96E3F3D419BF71BA00E88F98 /* HTEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3D219BF71BA00E88F98 /* HTEventCell.xib */; };
 		96E3F3D819BF88AC00E88F98 /* HTAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3D619BF88AC00E88F98 /* HTAdViewController.m */; };
 		96E3F3D919BF88AC00E88F98 /* HTAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3D719BF88AC00E88F98 /* HTAdViewController.xib */; };
+		96F855F019C9BEAB00FA8B10 /* photo_but_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 96F855EF19C9BEAB00FA8B10 /* photo_but_close.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,7 @@
 		96E3F3D519BF88AC00E88F98 /* HTAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAdViewController.h; sourceTree = "<group>"; };
 		96E3F3D619BF88AC00E88F98 /* HTAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTAdViewController.m; sourceTree = "<group>"; };
 		96E3F3D719BF88AC00E88F98 /* HTAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTAdViewController.xib; sourceTree = "<group>"; };
+		96F855EF19C9BEAB00FA8B10 /* photo_but_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_but_close.png; sourceTree = "<group>"; };
 		F24060E1F594420FB11FF167 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -314,6 +316,7 @@
 		96E3F3B919BF539F00E88F98 /* pic */ = {
 			isa = PBXGroup;
 			children = (
+				96F855EF19C9BEAB00FA8B10 /* photo_but_close.png */,
 				968A16DD19C86D4C00598435 /* landing.png */,
 				968A16DE19C86D4C00598435 /* main_but_demo.png */,
 				968A16DF19C86D4C00598435 /* main_but_photo.png */,
@@ -420,6 +423,7 @@
 				962A06BD19C205C300C6A93B /* close.png in Resources */,
 				96E3F3C619BF67CE00E88F98 /* Localizable.strings in Resources */,
 				96E3F3AE19BF4BE700E88F98 /* HTMainViewController.xib in Resources */,
+				96F855F019C9BEAB00FA8B10 /* photo_but_close.png in Resources */,
 				962A06C319C205C300C6A93B /* flip.png in Resources */,
 				962A06BF19C205C300C6A93B /* crop.png in Resources */,
 				96098C8C19C352650065D96B /* HTVideoCell.xib in Resources */,
