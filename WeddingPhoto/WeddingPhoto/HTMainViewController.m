@@ -71,16 +71,7 @@
 
 -(void)camera:(id)cameraViewController didFinishWithImage:(UIImage *)image withMetadata:(NSDictionary *)metadata
 {
-    // 儲存影像到相簿
-    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
     
-    [library writeImageToSavedPhotosAlbum:[image CGImage] orientation:(ALAssetOrientation)[image imageOrientation] completionBlock:^(NSURL *assetURL, NSError *error){
-        if (error) {
-            // TODO: error handling
-        } else {
-            // TODO: success handling
-        }
-    }];
 }
 
 @end

@@ -10,6 +10,7 @@
 #import "DBCameraMacros.h"
 #import "UIImage+Crop.h"
 #import "UIImage+TintColor.h"
+#import "HTFrameImage.h"
 
 #import <AssetsLibrary/AssetsLibrary.h>
 
@@ -89,8 +90,9 @@
     
 #pragma mark - Frame Image View
     
-    self.frameArr = @[@"1.png", @"2.png", @"3.png"];
+    self.frameArr = [HTFrameImage defautFrameArr];
     self.frameNumber = 0;
+    [HTFrameImage sharedInstance].frameName = self.frameArr[self.frameNumber];
     
     self.frameImageView = [[UIImageView alloc] initWithFrame:previewFrameRetina_4];
     self.frameImageView.image = [UIImage imageNamed:self.frameArr[self.frameNumber]];
@@ -482,6 +484,7 @@
     [UIView animateWithDuration:0.7 animations:^{
         self.frameImageView.alpha = 1.0;
         self.frameImageView.image = [UIImage imageNamed:self.frameArr[self.frameNumber]];
+        [HTFrameImage sharedInstance].frameName = self.frameArr[self.frameNumber];
     } completion:^(BOOL finished) {
         ;
     }];

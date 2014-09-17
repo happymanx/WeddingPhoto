@@ -22,6 +22,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
+#import "HTFrameImage.h"
+
 #ifndef DBCameraLocalizedStrings
 #define DBCameraLocalizedStrings(key) \
 NSLocalizedStringFromTable(key, @"DBCamera", nil)
@@ -267,9 +269,24 @@ NSLocalizedStringFromTable(key, @"DBCamera", nil)
     NSMutableDictionary *finalMetadata = [NSMutableDictionary dictionaryWithDictionary:metadata];
     finalMetadata[@"DBCameraSource"] = @"Camera";
 
+    // 讓它永遠為真！
     if ( self.useCameraSegue ) {
         if ( [_delegate respondsToSelector:@selector(camera:didFinishWithImage:withMetadata:)] )
             [_delegate camera:self didFinishWithImage:image withMetadata:finalMetadata];
+        
+        UIImage *mixedImage = [[HTFrameImage sharedInstance] returnMixedImage:image withSize:image.size];
+        
+        // 儲存影像到相簿
+        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+        
+        [library writeImageToSavedPhotosAlbum:[mixedImage CGImage] orientation:(ALAssetOrientation)[mixedImage imageOrientation] completionBlock:^(NSURL *assetURL, NSError *error){
+            if (error) {
+                // TODO: error handling
+            } else {
+                // TODO: success handling
+            }
+        }];
+
     } else {
         CGFloat newW = 256.0;
         CGFloat newH = 340.0;
