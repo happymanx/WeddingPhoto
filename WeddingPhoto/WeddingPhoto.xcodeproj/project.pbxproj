@@ -56,7 +56,6 @@
 		963248DA19CB3AA800B46B3A /* DBCameraGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9632476419CB3AA600B46B3A /* DBCameraGridView.m */; };
 		963248DB19CB3AA800B46B3A /* DBCameraLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9632476619CB3AA600B46B3A /* DBCameraLoadingView.m */; };
 		963248DC19CB3AA800B46B3A /* DBCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9632476819CB3AA600B46B3A /* DBCameraView.m */; };
-		963248DD19CB3AA800B46B3A /* HTFrameImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9632476A19CB3AA600B46B3A /* HTFrameImage.m */; };
 		963248DE19CB3AA800B46B3A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9632476B19CB3AA600B46B3A /* LICENSE */; };
 		963248DF19CB3AA800B46B3A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9632476C19CB3AA600B46B3A /* README.md */; };
 		963248E019CB3AA800B46B3A /* lookup.png in Resources */ = {isa = PBXBuildFile; fileRef = 9632477019CB3AA600B46B3A /* lookup.png */; };
@@ -230,6 +229,7 @@
 		9632498819CB3AA800B46B3A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 963248BF19CB3AA800B46B3A /* README.md */; };
 		9632498C19CB410700B46B3A /* HTEditPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9632498A19CB410700B46B3A /* HTEditPhotoViewController.m */; };
 		9632498D19CB410700B46B3A /* HTEditPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9632498B19CB410700B46B3A /* HTEditPhotoViewController.xib */; };
+		9632499019CB587400B46B3A /* HTFrameImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9632498F19CB587400B46B3A /* HTFrameImage.m */; };
 		9683A4C319B8C96A001DE84C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C219B8C96A001DE84C /* Foundation.framework */; };
 		9683A4C519B8C96A001DE84C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C419B8C96A001DE84C /* CoreGraphics.framework */; };
 		9683A4C719B8C96A001DE84C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C619B8C96A001DE84C /* UIKit.framework */; };
@@ -354,8 +354,6 @@
 		9632476619CB3AA600B46B3A /* DBCameraLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBCameraLoadingView.m; sourceTree = "<group>"; };
 		9632476719CB3AA600B46B3A /* DBCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBCameraView.h; sourceTree = "<group>"; };
 		9632476819CB3AA600B46B3A /* DBCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBCameraView.m; sourceTree = "<group>"; };
-		9632476919CB3AA600B46B3A /* HTFrameImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTFrameImage.h; sourceTree = "<group>"; };
-		9632476A19CB3AA600B46B3A /* HTFrameImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTFrameImage.m; sourceTree = "<group>"; };
 		9632476B19CB3AA600B46B3A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9632476C19CB3AA600B46B3A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9632477019CB3AA600B46B3A /* lookup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup.png; sourceTree = "<group>"; };
@@ -694,6 +692,8 @@
 		9632498919CB410700B46B3A /* HTEditPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTEditPhotoViewController.h; sourceTree = "<group>"; };
 		9632498A19CB410700B46B3A /* HTEditPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTEditPhotoViewController.m; sourceTree = "<group>"; };
 		9632498B19CB410700B46B3A /* HTEditPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTEditPhotoViewController.xib; sourceTree = "<group>"; };
+		9632498E19CB587400B46B3A /* HTFrameImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTFrameImage.h; sourceTree = "<group>"; };
+		9632498F19CB587400B46B3A /* HTFrameImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTFrameImage.m; sourceTree = "<group>"; };
 		9683A4BF19B8C96A001DE84C /* WeddingPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeddingPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9683A4C219B8C96A001DE84C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9683A4C419B8C96A001DE84C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -950,8 +950,6 @@
 				9632476619CB3AA600B46B3A /* DBCameraLoadingView.m */,
 				9632476719CB3AA600B46B3A /* DBCameraView.h */,
 				9632476819CB3AA600B46B3A /* DBCameraView.m */,
-				9632476919CB3AA600B46B3A /* HTFrameImage.h */,
-				9632476A19CB3AA600B46B3A /* HTFrameImage.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1406,6 +1404,8 @@
 				9632498919CB410700B46B3A /* HTEditPhotoViewController.h */,
 				9632498A19CB410700B46B3A /* HTEditPhotoViewController.m */,
 				9632498B19CB410700B46B3A /* HTEditPhotoViewController.xib */,
+				9632498E19CB587400B46B3A /* HTFrameImage.h */,
+				9632498F19CB587400B46B3A /* HTFrameImage.m */,
 			);
 			path = WeddingPhoto;
 			sourceTree = "<group>";
@@ -1747,7 +1747,6 @@
 				9632494919CB3AA800B46B3A /* GPUImagePerlinNoiseFilter.m in Sources */,
 				9632496F19CB3AA800B46B3A /* GPUImageThresholdEdgeDetectionFilter.m in Sources */,
 				9632496419CB3AA800B46B3A /* GPUImageSoftLightBlendFilter.m in Sources */,
-				963248DD19CB3AA800B46B3A /* HTFrameImage.m in Sources */,
 				9632494C19CB3AA800B46B3A /* GPUImagePixellatePositionFilter.m in Sources */,
 				9632498219CB3AA800B46B3A /* GPUImageZoomBlurFilter.m in Sources */,
 				9632492F19CB3AA800B46B3A /* GPUImageLineGenerator.m in Sources */,
@@ -1814,6 +1813,7 @@
 				9632493519CB3AA800B46B3A /* GPUImageLuminosity.m in Sources */,
 				9632498319CB3AA800B46B3A /* GPUImageContext.m in Sources */,
 				9632491D19CB3AA800B46B3A /* GPUImageHazeFilter.m in Sources */,
+				9632499019CB587400B46B3A /* HTFrameImage.m in Sources */,
 				9632496719CB3AA800B46B3A /* GPUImageSphereRefractionFilter.m in Sources */,
 				963248E719CB3AA800B46B3A /* GPUImage3x3TextureSamplingFilter.m in Sources */,
 				9632497019CB3AA800B46B3A /* GPUImageThresholdedNonMaximumSuppressionFilter.m in Sources */,
