@@ -228,6 +228,8 @@
 		9632498619CB3AA800B46B3A /* GPUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 963248BD19CB3AA800B46B3A /* GPUImageView.m */; };
 		9632498719CB3AA800B46B3A /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 963248BE19CB3AA800B46B3A /* License.txt */; };
 		9632498819CB3AA800B46B3A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 963248BF19CB3AA800B46B3A /* README.md */; };
+		9632498C19CB410700B46B3A /* HTEditPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9632498A19CB410700B46B3A /* HTEditPhotoViewController.m */; };
+		9632498D19CB410700B46B3A /* HTEditPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9632498B19CB410700B46B3A /* HTEditPhotoViewController.xib */; };
 		9683A4C319B8C96A001DE84C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C219B8C96A001DE84C /* Foundation.framework */; };
 		9683A4C519B8C96A001DE84C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C419B8C96A001DE84C /* CoreGraphics.framework */; };
 		9683A4C719B8C96A001DE84C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C619B8C96A001DE84C /* UIKit.framework */; };
@@ -689,6 +691,9 @@
 		963248BD19CB3AA800B46B3A /* GPUImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageView.m; sourceTree = "<group>"; };
 		963248BE19CB3AA800B46B3A /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		963248BF19CB3AA800B46B3A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9632498919CB410700B46B3A /* HTEditPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTEditPhotoViewController.h; sourceTree = "<group>"; };
+		9632498A19CB410700B46B3A /* HTEditPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTEditPhotoViewController.m; sourceTree = "<group>"; };
+		9632498B19CB410700B46B3A /* HTEditPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTEditPhotoViewController.xib; sourceTree = "<group>"; };
 		9683A4BF19B8C96A001DE84C /* WeddingPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeddingPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9683A4C219B8C96A001DE84C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9683A4C419B8C96A001DE84C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1398,6 +1403,9 @@
 				96098C8819C352650065D96B /* HTVideoCell.h */,
 				96098C8919C352650065D96B /* HTVideoCell.m */,
 				96098C8A19C352650065D96B /* HTVideoCell.xib */,
+				9632498919CB410700B46B3A /* HTEditPhotoViewController.h */,
+				9632498A19CB410700B46B3A /* HTEditPhotoViewController.m */,
+				9632498B19CB410700B46B3A /* HTEditPhotoViewController.xib */,
 			);
 			path = WeddingPhoto;
 			sourceTree = "<group>";
@@ -1565,6 +1573,7 @@
 				96E3F3AE19BF4BE700E88F98 /* HTMainViewController.xib in Resources */,
 				96F855F019C9BEAB00FA8B10 /* photo_but_close.png in Resources */,
 				962A06C319C205C300C6A93B /* flip.png in Resources */,
+				9632498D19CB410700B46B3A /* HTEditPhotoViewController.xib in Resources */,
 				963248E419CB3AA800B46B3A /* lookup_soft_elegance_2.png in Resources */,
 				962A06BF19C205C300C6A93B /* crop.png in Resources */,
 				96098C8C19C352650065D96B /* HTVideoCell.xib in Resources */,
@@ -1723,6 +1732,7 @@
 				9632498419CB3AA800B46B3A /* GPUImageMovieWriter.m in Sources */,
 				9632491119CB3AA800B46B3A /* GPUImageFilterPipeline.m in Sources */,
 				9632492A19CB3AA800B46B3A /* GPUImageLanczosResamplingFilter.m in Sources */,
+				9632498C19CB410700B46B3A /* HTEditPhotoViewController.m in Sources */,
 				9632493B19CB3AA800B46B3A /* GPUImageMosaicFilter.m in Sources */,
 				963248D419CB3AA800B46B3A /* DBCollectionViewCell.m in Sources */,
 				9632494A19CB3AA800B46B3A /* GPUImagePinchDistortionFilter.m in Sources */,

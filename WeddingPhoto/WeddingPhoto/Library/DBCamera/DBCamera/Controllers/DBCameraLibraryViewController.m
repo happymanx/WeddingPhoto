@@ -14,6 +14,7 @@
 #import "DBCameraCollectionViewController.h"
 #import "DBCameraMacros.h"
 #import "DBCameraLoadingView.h"
+#import "HTEditPhotoViewController.h"
 
 #import "UIImage+Crop.h"
 #import "UIImage+TintColor.h"
@@ -344,14 +345,14 @@ NSLocalizedStringFromTable(key, @"DBCamera", nil)
                 if ( [weakSelf.delegate respondsToSelector:@selector(camera:didFinishWithImage:withMetadata:)] )
                     [weakSelf.delegate camera:self didFinishWithImage:image withMetadata:metadata];
             } else {
-                DBCameraSegueViewController *segue = [[DBCameraSegueViewController alloc] initWithImage:image thumb:[UIImage imageWithCGImage:[asset aspectRatioThumbnail]]];
-                [segue setTintColor:self.tintColor];
-                [segue setSelectedTintColor:self.selectedTintColor];
-                [segue setForceQuadCrop:_forceQuadCrop];
-                [segue enableGestures:YES];
-                [segue setCapturedImageMetadata:metadata];
-                [segue setDelegate:weakSelf.delegate];
-                [segue setCameraSegueConfigureBlock:self.cameraSegueConfigureBlock];
+                HTEditPhotoViewController *segue = [[HTEditPhotoViewController alloc] initWithImage:image];
+//                [segue setTintColor:self.tintColor];
+//                [segue setSelectedTintColor:self.selectedTintColor];
+//                [segue setForceQuadCrop:_forceQuadCrop];
+//                [segue enableGestures:YES];
+//                [segue setCapturedImageMetadata:metadata];
+//                [segue setDelegate:weakSelf.delegate];
+//                [segue setCameraSegueConfigureBlock:self.cameraSegueConfigureBlock];
                 
                 [weakSelf.navigationController pushViewController:segue animated:YES];
             }
