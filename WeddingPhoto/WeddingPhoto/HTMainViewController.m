@@ -8,7 +8,6 @@
 
 #import "HTMainViewController.h"
 #import "HTEventListViewController.h"
-#import "HTCustomCamera.h"
 #import "HTVideoListViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 
@@ -71,7 +70,6 @@
 
 -(void)camera:(id)cameraViewController didFinishWithImage:(UIImage *)image withMetadata:(NSDictionary *)metadata
 {
-    
 }
 
 @end
