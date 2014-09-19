@@ -10,7 +10,7 @@
 #import "ACEDrawingView.h"
 
 
-@interface HTEditPhotoViewController : HTBasicViewController <UIActionSheetDelegate, ACEDrawingViewDelegate>
+@interface HTEditPhotoViewController : HTBasicViewController <UIActionSheetDelegate, ACEDrawingViewDelegate, UITextViewDelegate>
 {
     IBOutlet UIImageView *photoImageView;
     IBOutlet ACEDrawingView *drawingView;
@@ -42,6 +42,21 @@
     IBOutlet UIButton *eraserButton;
     
     IBOutlet UIView *sizeView;
+    
+    // Filter Button
+    IBOutlet UIButton *filter1Button;
+    IBOutlet UIButton *filter2Button;
+    IBOutlet UIButton *filter3Button;
+    IBOutlet UIButton *filter4Button;
+    IBOutlet UIButton *filter5Button;
+
+    IBOutlet UIView *filterView;
+    IBOutlet UIScrollView *filterScrollView;
+    IBOutlet UIView *filterSubView;
+
+    // Edit Text
+    IBOutlet UITextView *statementTextView;
+    IBOutlet UIView *statementView;
 }
 
 - (id) initWithImage:(UIImage *)image;
