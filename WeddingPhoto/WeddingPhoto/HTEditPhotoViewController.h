@@ -19,6 +19,9 @@
     UIImage *sourceImage;
     UIImage *previewImage;
     
+    NSArray *filterParameterArr;
+    NSInteger selectedFilterIndex;
+    
     // Color Button
     IBOutlet UIButton *color1Button;
     IBOutlet UIButton *color2Button;

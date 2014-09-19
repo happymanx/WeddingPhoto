@@ -22,6 +22,12 @@
         sourceImage = image;
         NSInteger scale = [UIScreen mainScreen].scale;
         previewImage = [self returnPreviewImage:image withSize:CGSizeMake(320 * scale, 480 * scale)];
+        
+        filterParameterArr = @[@[[NSNull null],[NSNull null],[NSNull null]],
+                               @[@(1.0),@(1.0),@(0.1)],
+                               @[@(1.3),@(1.5),@(0.2)],
+                               @[@(1.0),@(1.0),@(0.3)],
+                               @[@(0.5),@(1.7),@(0.4)]];
     }
     return self;
 }
@@ -139,37 +145,28 @@
 
 -(IBAction)filterButtonClicked:(UIButton *)button
 {
-    switch (button.tag) {
-        case 1:
-            [self filterWithSaturation:0.9 contrast:1.0 brightness:0.0];
-            break;
-        case 2:
-            [self filterWithSaturation:1.0 contrast:0.9 brightness:0.0];
-            break;
-        case 3:
-            [self filterWithSaturation:1.0 contrast:1.0 brightness:0.9];
-            break;
-        case 4:
-            [self filterWithSaturation:1.0 contrast:1.0 brightness:0.5];
-            break;
-        case 5:
-            [self filterWithSaturation:0.5 contrast:1.0 brightness:0.9];
-            break;
-            
-        default:
-            break;
+    selectedFilterIndex = button.tag;
+    
+    UIImage *filterImage;
+    if (button.tag == 0) {// 不使用濾鏡圖
+        filterImage = previewImage;
     }
+    else {
+        filterImage = [self filterWithImage:previewImage saturation:[filterParameterArr[button.tag][0] floatValue] contrast:[filterParameterArr[button.tag][1] floatValue] brightness:[filterParameterArr[button.tag][2] floatValue]];
+    }
+    
+    photoImageView.image = filterImage;
     
     [filterView removeFromSuperview];
 }
 
--(void)filterWithSaturation:(float)saturation contrast:(float)contrast brightness:(float)brightness
+-(UIImage *)filterWithImage:(UIImage *)image saturation:(float)saturation contrast:(float)contrast brightness:(float)brightness
 {
     //  創建基於 GPU 的 CIContext 對象
     CIContext *context = [CIContext contextWithOptions:nil];
     
     CIFilter *filter = [CIFilter filterWithName : @"CIColorControls"];
-    CIImage *ciSourceImage = [[CIImage alloc] initWithImage:previewImage];
+    CIImage *ciSourceImage = [[CIImage alloc] initWithImage:image];
     [filter setValue : ciSourceImage forKey:kCIInputImageKey];
     [filter setValue :[NSNumber numberWithFloat :saturation] forKey:kCIInputSaturationKey];
     [filter setValue :[NSNumber numberWithFloat :contrast] forKey:kCIInputContrastKey];
@@ -181,9 +178,10 @@
     CGImageRef cgImage = [context createCGImage:outputImage fromRect:[outputImage extent]];
     UIImage *newImage = [UIImage imageWithCGImage:cgImage];
     
-    photoImageView.image = newImage;
     //  釋放 C 對象
     CGImageRelease(cgImage);
+    
+    return newImage;
 }
 
 -(IBAction)editStatementButtonClicked:(UIButton *)button
@@ -212,8 +210,18 @@
 
 - (UIImage *)returnFinalImage:(UIImage *)img withSize:(CGSize)finalSize
 {
+    // 濾鏡合成
+    UIImage *filterImage;
+    if (selectedFilterIndex == 0) {// 不使用濾鏡圖
+        filterImage = img;
+    }
+    else {
+        filterImage =  [self filterWithImage:img saturation:[filterParameterArr[selectedFilterIndex][0] floatValue] contrast:[filterParameterArr[selectedFilterIndex][1] floatValue] brightness:[filterParameterArr[selectedFilterIndex][2] floatValue]];
+    }
+
     UIGraphicsBeginImageContext(finalSize);
-    [img drawInRect:CGRectMake(0, 0, finalSize.width, finalSize.height)];
+    [filterImage drawInRect:CGRectMake(0, 0, finalSize.width, finalSize.height)];
+    // 繪圖合成
     [drawingView.image drawInRect:CGRectMake(0, 0, finalSize.width, finalSize.height)];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
