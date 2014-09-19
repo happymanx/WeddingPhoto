@@ -33,6 +33,15 @@
 
     IBOutlet UIView *colorView;
 
+    // Size Button
+    IBOutlet UIButton *size1Button;
+    IBOutlet UIButton *size2Button;
+    IBOutlet UIButton *size3Button;
+    IBOutlet UIButton *size4Button;
+    IBOutlet UIButton *size5Button;
+    IBOutlet UIButton *eraserButton;
+    
+    IBOutlet UIView *sizeView;
 }
 
 - (id) initWithImage:(UIImage *)image;

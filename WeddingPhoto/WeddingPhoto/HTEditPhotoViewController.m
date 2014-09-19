@@ -93,6 +93,7 @@
 // settings
 - (IBAction)changeColorButtonClicked:(UIButton *)button
 {
+    [self removeAllToolView];
     [self.view addSubview:colorView];
     [colorView bringSubviewToFront:drawingView];
 }
@@ -101,6 +102,43 @@
 {
     drawingView.lineColor = button.backgroundColor;
     [colorView removeFromSuperview];
+}
+
+-(IBAction)changeSizeButtonClicked:(UIButton *)button
+{
+    [self removeAllToolView];
+    [self.view addSubview:sizeView];
+    [sizeView bringSubviewToFront:drawingView];
+}
+
+-(IBAction)sizeButtonClicked:(UIButton *)button
+{
+    if (button.tag == 0) {// 橡皮擦
+        drawingView.drawTool = ACEDrawingToolTypeEraser;
+        
+        drawingView.lineWidth = 20;
+    }
+    else {
+        drawingView.drawTool = ACEDrawingToolTypePen;
+        
+        drawingView.lineWidth = button.tag;
+    }
+    [sizeView removeFromSuperview];
+}
+
+-(IBAction)changeFilterButtonClicked:(UIButton *)button
+{
+    
+}
+
+-(IBAction)filterButtonClicked:(UIButton *)button
+{
+    
+}
+
+-(IBAction)editTextButtonClicked:(UIButton *)button
+{
+    
 }
 
 -(void)removeAllToolView
