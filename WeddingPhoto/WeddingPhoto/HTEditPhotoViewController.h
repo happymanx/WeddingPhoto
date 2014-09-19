@@ -13,16 +13,29 @@
 @interface HTEditPhotoViewController : HTBasicViewController <UIActionSheetDelegate, ACEDrawingViewDelegate>
 {
     IBOutlet UIImageView *photoImageView;
+    IBOutlet ACEDrawingView *drawingView;
+    IBOutlet UIButton *colorButton;
     
     UIImage *sourceImage;
     UIImage *previewImage;
+    
+    // Color Button
+    IBOutlet UIButton *color1Button;
+    IBOutlet UIButton *color2Button;
+    IBOutlet UIButton *color3Button;
+    IBOutlet UIButton *color4Button;
+    IBOutlet UIButton *color5Button;
+    IBOutlet UIButton *color6Button;
+    IBOutlet UIButton *color7Button;
+    IBOutlet UIButton *color8Button;
+    IBOutlet UIButton *color9Button;
+    IBOutlet UIButton *color10Button;
+
+    IBOutlet UIView *colorView;
+
 }
 
 - (id) initWithImage:(UIImage *)image;
-
-@property (nonatomic, unsafe_unretained) IBOutlet ACEDrawingView *drawingView;
-
-@property (nonatomic, unsafe_unretained) IBOutlet UIButton *colorButton;
 
 
 @end

@@ -32,8 +32,23 @@
     photoImageView.image = previewImage;
     
     // set the delegate
-    self.drawingView.delegate = self;
+    drawingView.delegate = self;
+    
+    [self setupColorButton];
+}
 
+-(void)setupColorButton
+{
+    color1Button.layer.cornerRadius = color1Button.frame.size.width/2;
+    color2Button.layer.cornerRadius = color2Button.frame.size.width/2;
+    color3Button.layer.cornerRadius = color3Button.frame.size.width/2;
+    color4Button.layer.cornerRadius = color4Button.frame.size.width/2;
+    color5Button.layer.cornerRadius = color5Button.frame.size.width/2;
+    color6Button.layer.cornerRadius = color6Button.frame.size.width/2;
+    color7Button.layer.cornerRadius = color7Button.frame.size.width/2;
+    color8Button.layer.cornerRadius = color8Button.frame.size.width/2;
+    color9Button.layer.cornerRadius = color9Button.frame.size.width/2;
+    color10Button.layer.cornerRadius = color10Button.frame.size.width/2;
 }
 
 // 回傳預覽相片
@@ -56,20 +71,21 @@
 // actions
 - (IBAction)clearViewButtonClicked:(UIButton *)button
 {
-    [self.drawingView clear];
+    [drawingView clear];
 }
 
 - (IBAction)finishButtonClicked:(UIButton *)button
 {
     // 儲存影像到相簿
     ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
-    UIImage *finalImage = [self returnFinalImage:photoImageView.image withSize:photoImageView.image.size];
+    UIImage *finalImage = [self returnFinalImage:sourceImage withSize:sourceImage.size];
     
     [library writeImageToSavedPhotosAlbum:[finalImage CGImage] orientation:(ALAssetOrientation)[finalImage imageOrientation] completionBlock:^(NSURL *assetURL, NSError *error){
         if (error) {
             // TODO: error handling
         } else {
             // TODO: success handling
+            [self backButtonClicked:nil];
         }
     }];
 }
@@ -77,13 +93,19 @@
 // settings
 - (IBAction)changeColorButtonClicked:(UIButton *)button
 {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Selet a color"
-                                                             delegate:self
-                                                    cancelButtonTitle:@"Cancel"
-                                               destructiveButtonTitle:nil
-                                                    otherButtonTitles:@"Black", @"Red", @"Green", @"Blue", nil];
-    
-    [actionSheet showInView:self.view];
+    [self.view addSubview:colorView];
+    [colorView bringSubviewToFront:drawingView];
+}
+
+-(IBAction)colorButtonClicked:(UIButton *)button
+{
+    drawingView.lineColor = button.backgroundColor;
+    [colorView removeFromSuperview];
+}
+
+-(void)removeAllToolView
+{
+    [colorView removeFromSuperview];
 }
 
 #pragma mark - Action Sheet Delegate
@@ -91,19 +113,19 @@
 {
     switch (buttonIndex) {
         case 0:
-            self.drawingView.lineColor = [UIColor blackColor];
+            drawingView.lineColor = [UIColor blackColor];
             break;
             
         case 1:
-            self.drawingView.lineColor = [UIColor redColor];
+            drawingView.lineColor = [UIColor redColor];
             break;
             
         case 2:
-            self.drawingView.lineColor = [UIColor greenColor];
+            drawingView.lineColor = [UIColor greenColor];
             break;
             
         case 3:
-            self.drawingView.lineColor = [UIColor blueColor];
+            drawingView.lineColor = [UIColor blueColor];
             break;
     }
 }
@@ -119,7 +141,7 @@
 {
     UIGraphicsBeginImageContext(finalSize);
     [img drawInRect:CGRectMake(0, 0, finalSize.width, finalSize.height)];
-    [self.drawingView.image drawInRect:CGRectMake(0, 0, finalSize.width, finalSize.height)];
+    [drawingView.image drawInRect:CGRectMake(0, 0, finalSize.width, finalSize.height)];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
