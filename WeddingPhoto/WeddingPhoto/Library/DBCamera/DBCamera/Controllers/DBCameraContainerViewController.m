@@ -10,6 +10,7 @@
 #import "DBCameraViewController.h"
 #import "DBCameraMacros.h"
 #import "DBCameraView.h"
+#import "HTAdViewController.h"
 
 @interface DBCameraContainerViewController () <DBCameraContainerDelegate> {
     CameraSettingsBlock _settingsBlock;
@@ -48,11 +49,18 @@
     [self.view addSubview:self.defaultCameraViewController.view];
     if ( _settingsBlock )
         _settingsBlock(self.cameraViewController.cameraView, self);
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        // 顯示廣告
+        HTAdViewController *vc = [[HTAdViewController alloc] initWithAdArr:@[]];
+        [self.navigationController presentViewController:vc animated:NO completion:nil];
+    });
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+
 }
 
 - (void)didReceiveMemoryWarning

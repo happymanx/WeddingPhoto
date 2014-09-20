@@ -40,7 +40,7 @@
 
 -(IBAction)listButtonClicked:(UIButton *)button
 {
-    HTVideoListViewController *vc = [[HTVideoListViewController alloc] initWithEventArr:@[]];
+    HTEventListViewController *vc = [[HTEventListViewController alloc] initWithEventArr:@[]];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

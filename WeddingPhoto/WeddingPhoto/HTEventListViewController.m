@@ -19,9 +19,11 @@
 {
     self = [super initWithNibName:@"HTEventListViewController" bundle:nil];
     if (self) {
-        eventArr = array;
+        eventArr = [NSMutableArray array];
+        [eventArr addObjectsFromArray:array];
         
-        eventArr = @[@"Happy 1", @"Happy 2", @"Happy 3"];
+        // 測試用
+        [eventArr addObjectsFromArray:@[@"Happy 1", @"Happy 2", @"Happy 3"]];
     }
     return self;
 }
@@ -44,6 +46,8 @@
     HTEventCell *cell = [HTEventCell cell];
     
     cell.titleLabel.text = eventArr[indexPath.row];
+    cell.deleteButton.tag = indexPath.row;
+    [cell.deleteButton addTarget:self action:@selector(deleteEvent:) forControlEvents:UIControlEventTouchUpInside];
     
     if (isEdit) {
         cell.deleteButton.hidden = NO;
@@ -65,7 +69,14 @@
         return;
     }
     else {
-        // push
+        DBCameraContainerViewController *cameraContainer = [[DBCameraContainerViewController alloc] initWithDelegate:self];
+        [cameraContainer setFullScreenMode];
+        
+        cameraContainer.delegate = self;
+        
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:cameraContainer];
+        [nav setNavigationBarHidden:YES];
+        [self presentViewController:nav animated:YES completion:nil];
     }
 }
 
@@ -85,6 +96,32 @@
     else {
         [editButtom setTitle:@"編輯" forState:UIControlStateNormal];
     }
+    [displayTableView reloadData];
+}
+
+-(void)deleteEvent:(UIButton *)button
+{
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"注意" message:@"確定要刪除？" delegate:self cancelButtonTitle:@"不" otherButtonTitles:@"好", nil];
+    av.tag = button.tag;
+    [av show];
+}
+
+#pragma mark - DBCameraViewControllerDelegate
+
+-(void)dismissCamera:(id)cameraViewController
+{
+    [cameraViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)camera:(id)cameraViewController didFinishWithImage:(UIImage *)image withMetadata:(NSDictionary *)metadata
+{
+}
+
+#pragma mark - UIAlertViewDelegate
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [eventArr removeObjectAtIndex:alertView.tag];
     [displayTableView reloadData];
 }
 @end

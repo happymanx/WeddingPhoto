@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DBCameraViewController.h"
+#import "DBCameraContainerViewController.h"
 
-@interface HTEventListViewController : HTBasicViewController <UITableViewDelegate, UITableViewDataSource>
+@interface HTEventListViewController : HTBasicViewController <UITableViewDelegate, UITableViewDataSource, DBCameraViewControllerDelegate, UIAlertViewDelegate>
 {
-    NSArray *eventArr;
+    NSMutableArray *eventArr;
     BOOL isEdit;
     
     IBOutlet UITableView *displayTableView;
