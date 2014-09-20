@@ -47,13 +47,13 @@
         default:
             break;
     }
-    UIImage *rotatedFrameImage = [UIImage imageWithCGImage:imageRef scale:1.0 orientation:orientation];
+    UIImage *rotatedImage = [UIImage imageWithCGImage:imageRef scale:1.0 orientation:orientation];
     
     UIImage *frameImage = [UIImage imageNamed:self.frameName];
     
-    UIGraphicsBeginImageContext(rotatedFrameImage.size);
-    [rotatedFrameImage drawInRect:CGRectMake(0, 0, rotatedFrameImage.size.width, rotatedFrameImage.size.height)];
-    [frameImage drawInRect:CGRectMake(0, 0, rotatedFrameImage.size.width, rotatedFrameImage.size.height)];
+    UIGraphicsBeginImageContext(rotatedImage.size);
+    [rotatedImage drawInRect:CGRectMake(0, 0, rotatedImage.size.width, rotatedImage.size.height)];
+    [frameImage drawInRect:CGRectMake(0, 0, rotatedImage.size.width, rotatedImage.size.height)];
     UIImage *mixedImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
