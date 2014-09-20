@@ -25,16 +25,38 @@
     return @[@"1.png", @"2.png", @"3.png"];
 }
 
-- (UIImage *)returnMixedImage:(UIImage *)img withSize:(CGSize)finalSize
+- (UIImage *)returnMixedImage:(UIImage *)image withSize:(CGSize)finalSize
 {
+    // 相片轉成直立方向
+    CGImageRef imageRef = [image CGImage];
+    UIImageOrientation orientation;
+    switch (image.imageOrientation) {
+        case UIImageOrientationUp:
+            orientation = UIImageOrientationRight;
+            break;
+        case UIImageOrientationDown:
+            orientation = UIImageOrientationRight;
+            break;
+        case UIImageOrientationLeft:
+            orientation = UIImageOrientationRight;
+            break;
+        case UIImageOrientationRight:
+            orientation = UIImageOrientationRight;
+            break;
+            
+        default:
+            break;
+    }
+    UIImage *rotatedFrameImage = [UIImage imageWithCGImage:imageRef scale:1.0 orientation:orientation];
+    
     UIImage *frameImage = [UIImage imageNamed:self.frameName];
     
-    UIGraphicsBeginImageContext(finalSize);
-    [img drawInRect:CGRectMake(0, 0, finalSize.width, finalSize.height)];
-    [frameImage drawInRect:CGRectMake(0, 0, finalSize.width, finalSize.height)];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsBeginImageContext(rotatedFrameImage.size);
+    [rotatedFrameImage drawInRect:CGRectMake(0, 0, rotatedFrameImage.size.width, rotatedFrameImage.size.height)];
+    [frameImage drawInRect:CGRectMake(0, 0, rotatedFrameImage.size.width, rotatedFrameImage.size.height)];
+    UIImage *mixedImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    return image;
+    return mixedImage;
 }
 @end

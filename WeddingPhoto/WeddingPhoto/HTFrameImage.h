@@ -21,6 +21,6 @@
 
 +(NSArray *)defautFrameArr;
 
-- (UIImage *)returnMixedImage:(UIImage *)img withSize:(CGSize)finalSize;
+- (UIImage *)returnMixedImage:(UIImage *)image withSize:(CGSize)finalSize;
 
 @end
