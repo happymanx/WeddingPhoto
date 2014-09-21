@@ -104,7 +104,7 @@
     [self addSubview:self.bottomContainerBar];
     
     [self.bottomContainerBar addSubview:self.cameraButton];
-//    [self.topContainerBar addSubview:self.flashButton];
+    [self.bottomContainerBar addSubview:self.flashButton];
 //    [self.topContainerBar addSubview:self.gridButton];
     
     [self.bottomContainerBar addSubview:self.triggerButton];
@@ -188,7 +188,7 @@
         [_cameraButton setBackgroundColor:[UIColor clearColor]];
         [_cameraButton setImage:[[UIImage imageNamed:@"flip"] tintImageWithColor:self.tintColor] forState:UIControlStateNormal];
         [_cameraButton setImage:[[UIImage imageNamed:@"flip"] tintImageWithColor:self.selectedTintColor] forState:UIControlStateSelected];
-        [_cameraButton setFrame:(CGRect){ CGRectGetWidth(self.bounds) - 59, CGRectGetMidY(self.bottomContainerBar.bounds) - 22, 50, 50 }];
+        [_cameraButton setFrame:(CGRect){ CGRectGetWidth(self.bounds) - 55, CGRectGetMidY(self.bottomContainerBar.bounds) - 40, 50, 50 }];
         [_cameraButton addTarget:self action:@selector(changeCamera:) forControlEvents:UIControlEventTouchUpInside];
     }
     
@@ -202,7 +202,7 @@
         [_flashButton setBackgroundColor:[UIColor clearColor]];
         [_flashButton setImage:[[UIImage imageNamed:@"flash"] tintImageWithColor:self.tintColor] forState:UIControlStateNormal];
         [_flashButton setImage:[[UIImage imageNamed:@"flash"] tintImageWithColor:self.selectedTintColor] forState:UIControlStateSelected];
-        [_flashButton setFrame:(CGRect){ CGRectGetWidth(self.bounds) - 55, 17.5f, 30, 30 }];
+        [_flashButton setFrame:(CGRect){ CGRectGetWidth(self.bounds) - 55, CGRectGetMidY(self.bottomContainerBar.bounds), 50, 50 }];
         [_flashButton addTarget:self action:@selector(flashTriggerAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     
