@@ -53,7 +53,7 @@
 		963248DB19CB3AA800B46B3A /* DBCameraLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9632476619CB3AA600B46B3A /* DBCameraLoadingView.m */; };
 		963248DC19CB3AA800B46B3A /* DBCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9632476819CB3AA600B46B3A /* DBCameraView.m */; };
 		963248DE19CB3AA800B46B3A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9632476B19CB3AA600B46B3A /* LICENSE */; };
-		963248DF19CB3AA800B46B3A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9632476C19CB3AA600B46B3A /* README.md */; };
+		963248DF19CB3AA800B46B3A /* README.txt in Sources */ = {isa = PBXBuildFile; fileRef = 9632476C19CB3AA600B46B3A /* README.txt */; };
 		963248E019CB3AA800B46B3A /* lookup.png in Resources */ = {isa = PBXBuildFile; fileRef = 9632477019CB3AA600B46B3A /* lookup.png */; };
 		963248E119CB3AA800B46B3A /* lookup_amatorka.png in Resources */ = {isa = PBXBuildFile; fileRef = 9632477119CB3AA600B46B3A /* lookup_amatorka.png */; };
 		963248E219CB3AA800B46B3A /* lookup_miss_etikate.png in Resources */ = {isa = PBXBuildFile; fileRef = 9632477219CB3AA600B46B3A /* lookup_miss_etikate.png */; };
@@ -221,8 +221,8 @@
 		9632498419CB3AA800B46B3A /* GPUImageMovieWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 963248B919CB3AA800B46B3A /* GPUImageMovieWriter.m */; };
 		9632498519CB3AA800B46B3A /* GPUImagePicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 963248BB19CB3AA800B46B3A /* GPUImagePicture.m */; };
 		9632498619CB3AA800B46B3A /* GPUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 963248BD19CB3AA800B46B3A /* GPUImageView.m */; };
-		9632498719CB3AA800B46B3A /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 963248BE19CB3AA800B46B3A /* License.txt */; };
-		9632498819CB3AA800B46B3A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 963248BF19CB3AA800B46B3A /* README.md */; };
+		9632498719CB3AA800B46B3A /* License in Resources */ = {isa = PBXBuildFile; fileRef = 963248BE19CB3AA800B46B3A /* License */; };
+		9632498819CB3AA800B46B3A /* README.txt in Sources */ = {isa = PBXBuildFile; fileRef = 963248BF19CB3AA800B46B3A /* README.txt */; };
 		9683A4C319B8C96A001DE84C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C219B8C96A001DE84C /* Foundation.framework */; };
 		9683A4C519B8C96A001DE84C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C419B8C96A001DE84C /* CoreGraphics.framework */; };
 		9683A4C719B8C96A001DE84C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C619B8C96A001DE84C /* UIKit.framework */; };
@@ -257,10 +257,15 @@
 		96895F4A19CF394600470964 /* HTTrialListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96895F3419CF394600470964 /* HTTrialListViewController.xib */; };
 		96895F4B19CF394600470964 /* HTVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895F3619CF394600470964 /* HTVideoListViewController.m */; };
 		96895F4C19CF394600470964 /* HTVideoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96895F3719CF394600470964 /* HTVideoListViewController.xib */; };
+		96895F5019CF44CB00470964 /* HTCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895F4E19CF44CB00470964 /* HTCollectionViewController.m */; };
+		96895F5119CF44CB00470964 /* HTCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96895F4F19CF44CB00470964 /* HTCollectionViewController.xib */; };
+		96895F5A19CF4E0F00470964 /* HTCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895F5819CF4E0F00470964 /* HTCollectionCell.m */; };
+		96895F5B19CF4E0F00470964 /* HTCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96895F5919CF4E0F00470964 /* HTCollectionCell.xib */; };
 		968A16E119C86D4C00598435 /* landing.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A16DD19C86D4C00598435 /* landing.png */; };
 		968A16E219C86D4C00598435 /* main_but_demo.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A16DE19C86D4C00598435 /* main_but_demo.png */; };
 		968A16E319C86D4C00598435 /* main_but_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A16DF19C86D4C00598435 /* main_but_photo.png */; };
 		968A16E419C86D4C00598435 /* main_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A16E019C86D4C00598435 /* main_logo.png */; };
+		96968E9119CF5305002C9F5F /* HappyMan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96968E9019CF5305002C9F5F /* HappyMan.jpg */; };
 		96E3F3BB19BF539F00E88F98 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3BA19BF539F00E88F98 /* bg.png */; };
 		96E3F3BD19BF54E100E88F98 /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3BC19BF54E100E88F98 /* main.png */; };
 		96E3F3C619BF67CE00E88F98 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3C819BF67CE00E88F98 /* Localizable.strings */; };
@@ -353,7 +358,7 @@
 		9632476719CB3AA600B46B3A /* DBCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBCameraView.h; sourceTree = "<group>"; };
 		9632476819CB3AA600B46B3A /* DBCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBCameraView.m; sourceTree = "<group>"; };
 		9632476B19CB3AA600B46B3A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		9632476C19CB3AA600B46B3A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9632476C19CB3AA600B46B3A /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		9632477019CB3AA600B46B3A /* lookup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup.png; sourceTree = "<group>"; };
 		9632477119CB3AA600B46B3A /* lookup_amatorka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_amatorka.png; sourceTree = "<group>"; };
 		9632477219CB3AA600B46B3A /* lookup_miss_etikate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_miss_etikate.png; sourceTree = "<group>"; };
@@ -685,8 +690,8 @@
 		963248BB19CB3AA800B46B3A /* GPUImagePicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImagePicture.m; sourceTree = "<group>"; };
 		963248BC19CB3AA800B46B3A /* GPUImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageView.h; sourceTree = "<group>"; };
 		963248BD19CB3AA800B46B3A /* GPUImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageView.m; sourceTree = "<group>"; };
-		963248BE19CB3AA800B46B3A /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
-		963248BF19CB3AA800B46B3A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		963248BE19CB3AA800B46B3A /* License */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License; sourceTree = "<group>"; };
+		963248BF19CB3AA800B46B3A /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		9683A4BF19B8C96A001DE84C /* WeddingPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeddingPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9683A4C219B8C96A001DE84C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9683A4C419B8C96A001DE84C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -738,10 +743,17 @@
 		96895F3519CF394600470964 /* HTVideoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTVideoListViewController.h; sourceTree = "<group>"; };
 		96895F3619CF394600470964 /* HTVideoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTVideoListViewController.m; sourceTree = "<group>"; };
 		96895F3719CF394600470964 /* HTVideoListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTVideoListViewController.xib; sourceTree = "<group>"; };
+		96895F4D19CF44CB00470964 /* HTCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTCollectionViewController.h; sourceTree = "<group>"; };
+		96895F4E19CF44CB00470964 /* HTCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTCollectionViewController.m; sourceTree = "<group>"; };
+		96895F4F19CF44CB00470964 /* HTCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTCollectionViewController.xib; sourceTree = "<group>"; };
+		96895F5719CF4E0F00470964 /* HTCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTCollectionCell.h; sourceTree = "<group>"; };
+		96895F5819CF4E0F00470964 /* HTCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTCollectionCell.m; sourceTree = "<group>"; };
+		96895F5919CF4E0F00470964 /* HTCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTCollectionCell.xib; sourceTree = "<group>"; };
 		968A16DD19C86D4C00598435 /* landing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = landing.png; sourceTree = "<group>"; };
 		968A16DE19C86D4C00598435 /* main_but_demo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_but_demo.png; sourceTree = "<group>"; };
 		968A16DF19C86D4C00598435 /* main_but_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_but_photo.png; sourceTree = "<group>"; };
 		968A16E019C86D4C00598435 /* main_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_logo.png; sourceTree = "<group>"; };
+		96968E9019CF5305002C9F5F /* HappyMan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HappyMan.jpg; sourceTree = "<group>"; };
 		96E3F3BA19BF539F00E88F98 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		96E3F3BC19BF54E100E88F98 /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main.png; sourceTree = "<group>"; };
 		96E3F3BE19BF674700E88F98 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -827,7 +839,7 @@
 			children = (
 				9632472519CB3AA600B46B3A /* DBCamera */,
 				9632476B19CB3AA600B46B3A /* LICENSE */,
-				9632476C19CB3AA600B46B3A /* README.md */,
+				9632476C19CB3AA600B46B3A /* README.txt */,
 			);
 			path = DBCamera;
 			sourceTree = "<group>";
@@ -968,8 +980,8 @@
 			isa = PBXGroup;
 			children = (
 				9632476E19CB3AA600B46B3A /* framework */,
-				963248BE19CB3AA800B46B3A /* License.txt */,
-				963248BF19CB3AA800B46B3A /* README.md */,
+				963248BE19CB3AA800B46B3A /* License */,
+				963248BF19CB3AA800B46B3A /* README.txt */,
 			);
 			path = GPUImage;
 			sourceTree = "<group>";
@@ -1436,6 +1448,9 @@
 				96895F1A19CF394600470964 /* HTVideoCell.h */,
 				96895F1B19CF394600470964 /* HTVideoCell.m */,
 				96895F1C19CF394600470964 /* HTVideoCell.xib */,
+				96895F5719CF4E0F00470964 /* HTCollectionCell.h */,
+				96895F5819CF4E0F00470964 /* HTCollectionCell.m */,
+				96895F5919CF4E0F00470964 /* HTCollectionCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -1475,13 +1490,25 @@
 				96895F3519CF394600470964 /* HTVideoListViewController.h */,
 				96895F3619CF394600470964 /* HTVideoListViewController.m */,
 				96895F3719CF394600470964 /* HTVideoListViewController.xib */,
+				96895F4D19CF44CB00470964 /* HTCollectionViewController.h */,
+				96895F4E19CF44CB00470964 /* HTCollectionViewController.m */,
+				96895F4F19CF44CB00470964 /* HTCollectionViewController.xib */,
 			);
 			path = "normal classes";
+			sourceTree = "<group>";
+		};
+		96968E8F19CF5305002C9F5F /* test pic */ = {
+			isa = PBXGroup;
+			children = (
+				96968E9019CF5305002C9F5F /* HappyMan.jpg */,
+			);
+			path = "test pic";
 			sourceTree = "<group>";
 		};
 		96E3F3B819BF539F00E88F98 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				96968E8F19CF5305002C9F5F /* test pic */,
 				962A06C719C2247E00C6A93B /* frame */,
 				962A06AE19C205C300C6A93B /* library pic */,
 				96E3F3B919BF539F00E88F98 /* pic */,
@@ -1589,11 +1616,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				963248D719CB3AA800B46B3A /* DBCameraImages.xcassets in Resources */,
+				96968E9119CF5305002C9F5F /* HappyMan.jpg in Resources */,
 				963248D019CB3AA800B46B3A /* DBCamera.strings in Resources */,
 				962A06BC19C205C300C6A93B /* cameraGrid@2x.png in Resources */,
 				962A06C619C205C300C6A93B /* trigger@2x.png in Resources */,
 				962A06BE19C205C300C6A93B /* close@2x.png in Resources */,
-				9632498719CB3AA800B46B3A /* License.txt in Resources */,
+				96895F5B19CF4E0F00470964 /* HTCollectionCell.xib in Resources */,
+				9632498719CB3AA800B46B3A /* License in Resources */,
 				963248CD19CB3AA800B46B3A /* mayfair.acv in Resources */,
 				962A06BB19C205C300C6A93B /* cameraGrid.png in Resources */,
 				963248E219CB3AA800B46B3A /* lookup_miss_etikate.png in Resources */,
@@ -1606,6 +1635,7 @@
 				96E3F3BD19BF54E100E88F98 /* main.png in Resources */,
 				963248CF19CB3AA800B46B3A /* Valencia.acv in Resources */,
 				968A16E319C86D4C00598435 /* main_but_photo.png in Resources */,
+				96895F5119CF44CB00470964 /* HTCollectionViewController.xib in Resources */,
 				962A06BD19C205C300C6A93B /* close.png in Resources */,
 				96E3F3C619BF67CE00E88F98 /* Localizable.strings in Resources */,
 				96F855F019C9BEAB00FA8B10 /* photo_but_close.png in Resources */,
@@ -1734,7 +1764,8 @@
 				9632494819CB3AA800B46B3A /* GPUImageParallelCoordinateLineTransformFilter.m in Sources */,
 				96895F4B19CF394600470964 /* HTVideoListViewController.m in Sources */,
 				9632496519CB3AA800B46B3A /* GPUImageSolidColorGenerator.m in Sources */,
-				963248DF19CB3AA800B46B3A /* README.md in Sources */,
+				963248DF19CB3AA800B46B3A /* README.txt in Sources */,
+				96895F5019CF44CB00470964 /* HTCollectionViewController.m in Sources */,
 				9632494519CB3AA800B46B3A /* GPUImageOpeningFilter.m in Sources */,
 				9632491C19CB3AA800B46B3A /* GPUImageHarrisCornerDetectionFilter.m in Sources */,
 				963248FB19CB3AA800B46B3A /* GPUImageColorInvertFilter.m in Sources */,
@@ -1755,7 +1786,7 @@
 				9632492819CB3AA800B46B3A /* GPUImageKuwaharaFilter.m in Sources */,
 				9632495119CB3AA800B46B3A /* GPUImagePrewittEdgeDetectionFilter.m in Sources */,
 				9632490919CB3AA800B46B3A /* GPUImageEmbossFilter.m in Sources */,
-				9632498819CB3AA800B46B3A /* README.md in Sources */,
+				9632498819CB3AA800B46B3A /* README.txt in Sources */,
 				963248D619CB3AA800B46B3A /* DBMotionManager.m in Sources */,
 				963248C719CB3AA800B46B3A /* DBCameraLibraryViewController.m in Sources */,
 				963248F519CB3AA800B46B3A /* GPUImageChromaKeyBlendFilter.m in Sources */,
@@ -1855,6 +1886,7 @@
 				9632492D19CB3AA800B46B3A /* GPUImageLightenBlendFilter.m in Sources */,
 				9632492919CB3AA800B46B3A /* GPUImageKuwaharaRadius3Filter.m in Sources */,
 				9632494419CB3AA800B46B3A /* GPUImageOpacityFilter.m in Sources */,
+				96895F5A19CF4E0F00470964 /* HTCollectionCell.m in Sources */,
 				9632493519CB3AA800B46B3A /* GPUImageLuminosity.m in Sources */,
 				9632498319CB3AA800B46B3A /* GPUImageContext.m in Sources */,
 				9632491D19CB3AA800B46B3A /* GPUImageHazeFilter.m in Sources */,

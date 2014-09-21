@@ -8,6 +8,7 @@
 
 #import "HTEventListViewController.h"
 #import "HTEventCell.h"
+#import "HTCollectionViewController.h"
 
 @interface HTEventListViewController ()
 
@@ -47,7 +48,8 @@
     
     cell.titleLabel.text = eventArr[indexPath.row];
     cell.deleteButton.tag = indexPath.row;
-    [cell.deleteButton addTarget:self action:@selector(deleteEvent:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.deleteButton addTarget:self action:@selector(deleteButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.albumButton addTarget:self action:@selector(albumButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     
     if (isEdit) {
         cell.deleteButton.hidden = NO;
@@ -99,11 +101,17 @@
     [displayTableView reloadData];
 }
 
--(void)deleteEvent:(UIButton *)button
+-(void)deleteButtonClicked:(UIButton *)button
 {
     UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"注意" message:@"確定要刪除？" delegate:self cancelButtonTitle:@"不" otherButtonTitles:@"好", nil];
     av.tag = button.tag;
     [av show];
+}
+
+-(void)albumButtonClicked:(UIButton *)button
+{
+    HTCollectionViewController *vc = [[HTCollectionViewController alloc] initWithItemArr:@[]];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - DBCameraViewControllerDelegate
