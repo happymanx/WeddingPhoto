@@ -9,6 +9,7 @@
 #import "HTMainViewController.h"
 #import "HTEventListViewController.h"
 #import "HTVideoListViewController.h"
+#import "HTTrialListViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 
 @interface HTMainViewController ()
@@ -38,22 +39,25 @@
     
 }
 
--(IBAction)listButtonClicked:(UIButton *)button
+-(IBAction)eventButtonClicked:(UIButton *)button
 {
     HTEventListViewController *vc = [[HTEventListViewController alloc] initWithEventArr:@[]];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
--(IBAction)cameraButtonClicked:(UIButton *)button
+-(IBAction)trailButtonClicked:(UIButton *)button
 {
-    DBCameraContainerViewController *cameraContainer = [[DBCameraContainerViewController alloc] initWithDelegate:self];
-    [cameraContainer setFullScreenMode];
+    HTTrialListViewController *vc = [[HTTrialListViewController alloc] initWithTrialArr:@[]];
+    [self.navigationController pushViewController:vc animated:YES];
     
-    cameraContainer.delegate = self;
-    
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:cameraContainer];
-    [nav setNavigationBarHidden:YES];
-    [self presentViewController:nav animated:YES completion:nil];
+//    DBCameraContainerViewController *cameraContainer = [[DBCameraContainerViewController alloc] initWithDelegate:self];
+//    [cameraContainer setFullScreenMode];
+//    
+//    cameraContainer.delegate = self;
+//    
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:cameraContainer];
+//    [nav setNavigationBarHidden:YES];
+//    [self presentViewController:nav animated:YES completion:nil];
 }
 
 -(IBAction)aboutButtonClicked:(UIButton *)button

@@ -243,6 +243,10 @@
 		9683A4E419B8C96A001DE84C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C619B8C96A001DE84C /* UIKit.framework */; };
 		9683A4EC19B8C96A001DE84C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9683A4EA19B8C96A001DE84C /* InfoPlist.strings */; };
 		9683A4EE19B8C96A001DE84C /* WeddingPhotoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9683A4ED19B8C96A001DE84C /* WeddingPhotoTests.m */; };
+		96895F0C19CF319500470964 /* HTTrialListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895F0A19CF319500470964 /* HTTrialListViewController.m */; };
+		96895F0D19CF319500470964 /* HTTrialListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96895F0B19CF319500470964 /* HTTrialListViewController.xib */; };
+		96895F1119CF334A00470964 /* HTTrialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895F0F19CF334A00470964 /* HTTrialCell.m */; };
+		96895F1219CF334A00470964 /* HTTrialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96895F1019CF334A00470964 /* HTTrialCell.xib */; };
 		968A16E119C86D4C00598435 /* landing.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A16DD19C86D4C00598435 /* landing.png */; };
 		968A16E219C86D4C00598435 /* main_but_demo.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A16DE19C86D4C00598435 /* main_but_demo.png */; };
 		968A16E319C86D4C00598435 /* main_but_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A16DF19C86D4C00598435 /* main_but_photo.png */; };
@@ -711,6 +715,12 @@
 		9683A4E919B8C96A001DE84C /* WeddingPhotoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WeddingPhotoTests-Info.plist"; sourceTree = "<group>"; };
 		9683A4EB19B8C96A001DE84C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9683A4ED19B8C96A001DE84C /* WeddingPhotoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeddingPhotoTests.m; sourceTree = "<group>"; };
+		96895F0919CF319500470964 /* HTTrialListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTrialListViewController.h; sourceTree = "<group>"; };
+		96895F0A19CF319500470964 /* HTTrialListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTrialListViewController.m; sourceTree = "<group>"; };
+		96895F0B19CF319500470964 /* HTTrialListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTrialListViewController.xib; sourceTree = "<group>"; };
+		96895F0E19CF334A00470964 /* HTTrialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTrialCell.h; sourceTree = "<group>"; };
+		96895F0F19CF334A00470964 /* HTTrialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTrialCell.m; sourceTree = "<group>"; };
+		96895F1019CF334A00470964 /* HTTrialCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTrialCell.xib; sourceTree = "<group>"; };
 		968A16DD19C86D4C00598435 /* landing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = landing.png; sourceTree = "<group>"; };
 		968A16DE19C86D4C00598435 /* main_but_demo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_but_demo.png; sourceTree = "<group>"; };
 		968A16DF19C86D4C00598435 /* main_but_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_but_photo.png; sourceTree = "<group>"; };
@@ -1406,6 +1416,12 @@
 				9632498B19CB410700B46B3A /* HTEditPhotoViewController.xib */,
 				9632498E19CB587400B46B3A /* HTFrameImage.h */,
 				9632498F19CB587400B46B3A /* HTFrameImage.m */,
+				96895F0919CF319500470964 /* HTTrialListViewController.h */,
+				96895F0A19CF319500470964 /* HTTrialListViewController.m */,
+				96895F0B19CF319500470964 /* HTTrialListViewController.xib */,
+				96895F0E19CF334A00470964 /* HTTrialCell.h */,
+				96895F0F19CF334A00470964 /* HTTrialCell.m */,
+				96895F1019CF334A00470964 /* HTTrialCell.xib */,
 			);
 			path = WeddingPhoto;
 			sourceTree = "<group>";
@@ -1583,12 +1599,14 @@
 				968A16E119C86D4C00598435 /* landing.png in Resources */,
 				962A06C519C205C300C6A93B /* trigger.png in Resources */,
 				962A06CC19C2247E00C6A93B /* 2.png in Resources */,
+				96895F0D19CF319500470964 /* HTTrialListViewController.xib in Resources */,
 				963248DE19CB3AA800B46B3A /* LICENSE in Resources */,
 				963248E119CB3AA800B46B3A /* lookup_amatorka.png in Resources */,
 				968A16E419C86D4C00598435 /* main_logo.png in Resources */,
 				963248CA19CB3AA800B46B3A /* 1977.acv in Resources */,
 				963248E019CB3AA800B46B3A /* lookup.png in Resources */,
 				96E3F3D919BF88AC00E88F98 /* HTAdViewController.xib in Resources */,
+				96895F1219CF334A00470964 /* HTTrialCell.xib in Resources */,
 				962A06CD19C2247E00C6A93B /* 3.png in Resources */,
 				963248CC19CB3AA800B46B3A /* Hudson.acv in Resources */,
 				9683A4CD19B8C96A001DE84C /* InfoPlist.strings in Resources */,
@@ -1777,6 +1795,7 @@
 				963248D119CB3AA800B46B3A /* DBCameraManager.m in Sources */,
 				9632497319CB3AA800B46B3A /* GPUImageToneCurveFilter.m in Sources */,
 				9632496119CB3AA800B46B3A /* GPUImageSmoothToonFilter.m in Sources */,
+				96895F1119CF334A00470964 /* HTTrialCell.m in Sources */,
 				9632490E19CB3AA800B46B3A /* GPUImageFASTCornerDetectionFilter.m in Sources */,
 				963248D819CB3AA800B46B3A /* DBCameraCropView.m in Sources */,
 				9632496019CB3AA800B46B3A /* GPUImageSketchFilter.m in Sources */,
@@ -1786,6 +1805,7 @@
 				9632492519CB3AA800B46B3A /* GPUImageHueFilter.m in Sources */,
 				9632498019CB3AA800B46B3A /* GPUImageWhiteBalanceFilter.m in Sources */,
 				9632492B19CB3AA800B46B3A /* GPUImageLaplacianFilter.m in Sources */,
+				96895F0C19CF319500470964 /* HTTrialListViewController.m in Sources */,
 				963248ED19CB3AA800B46B3A /* GPUImageAverageLuminanceThresholdFilter.m in Sources */,
 				9632497519CB3AA800B46B3A /* GPUImageTransformFilter.m in Sources */,
 				9632495619CB3AA800B46B3A /* GPUImageRGBErosionFilter.m in Sources */,
