@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		05893B7D585744DCA58BD724 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F24060E1F594420FB11FF167 /* libPods.a */; };
-		96098C8619C34CD00065D96B /* HTVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96098C8419C34CD00065D96B /* HTVideoListViewController.m */; };
-		96098C8719C34CD00065D96B /* HTVideoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96098C8519C34CD00065D96B /* HTVideoListViewController.xib */; };
-		96098C8B19C352650065D96B /* HTVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96098C8919C352650065D96B /* HTVideoCell.m */; };
-		96098C8C19C352650065D96B /* HTVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96098C8A19C352650065D96B /* HTVideoCell.xib */; };
 		962A06BB19C205C300C6A93B /* cameraGrid.png in Resources */ = {isa = PBXBuildFile; fileRef = 962A06AF19C205C300C6A93B /* cameraGrid.png */; };
 		962A06BC19C205C300C6A93B /* cameraGrid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 962A06B019C205C300C6A93B /* cameraGrid@2x.png */; };
 		962A06BD19C205C300C6A93B /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 962A06B119C205C300C6A93B /* close.png */; };
@@ -227,9 +223,6 @@
 		9632498619CB3AA800B46B3A /* GPUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 963248BD19CB3AA800B46B3A /* GPUImageView.m */; };
 		9632498719CB3AA800B46B3A /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 963248BE19CB3AA800B46B3A /* License.txt */; };
 		9632498819CB3AA800B46B3A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 963248BF19CB3AA800B46B3A /* README.md */; };
-		9632498C19CB410700B46B3A /* HTEditPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9632498A19CB410700B46B3A /* HTEditPhotoViewController.m */; };
-		9632498D19CB410700B46B3A /* HTEditPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9632498B19CB410700B46B3A /* HTEditPhotoViewController.xib */; };
-		9632499019CB587400B46B3A /* HTFrameImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9632498F19CB587400B46B3A /* HTFrameImage.m */; };
 		9683A4C319B8C96A001DE84C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C219B8C96A001DE84C /* Foundation.framework */; };
 		9683A4C519B8C96A001DE84C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C419B8C96A001DE84C /* CoreGraphics.framework */; };
 		9683A4C719B8C96A001DE84C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C619B8C96A001DE84C /* UIKit.framework */; };
@@ -243,27 +236,34 @@
 		9683A4E419B8C96A001DE84C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C619B8C96A001DE84C /* UIKit.framework */; };
 		9683A4EC19B8C96A001DE84C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9683A4EA19B8C96A001DE84C /* InfoPlist.strings */; };
 		9683A4EE19B8C96A001DE84C /* WeddingPhotoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9683A4ED19B8C96A001DE84C /* WeddingPhotoTests.m */; };
-		96895F0C19CF319500470964 /* HTTrialListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895F0A19CF319500470964 /* HTTrialListViewController.m */; };
-		96895F0D19CF319500470964 /* HTTrialListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96895F0B19CF319500470964 /* HTTrialListViewController.xib */; };
-		96895F1119CF334A00470964 /* HTTrialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895F0F19CF334A00470964 /* HTTrialCell.m */; };
-		96895F1219CF334A00470964 /* HTTrialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96895F1019CF334A00470964 /* HTTrialCell.xib */; };
+		96895F3819CF394600470964 /* HTEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895F1519CF394600470964 /* HTEventCell.m */; };
+		96895F3919CF394600470964 /* HTEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96895F1619CF394600470964 /* HTEventCell.xib */; };
+		96895F3A19CF394600470964 /* HTTrialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895F1819CF394600470964 /* HTTrialCell.m */; };
+		96895F3B19CF394600470964 /* HTTrialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96895F1919CF394600470964 /* HTTrialCell.xib */; };
+		96895F3C19CF394600470964 /* HTVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895F1B19CF394600470964 /* HTVideoCell.m */; };
+		96895F3D19CF394600470964 /* HTVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96895F1C19CF394600470964 /* HTVideoCell.xib */; };
+		96895F3E19CF394600470964 /* HTBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895F1F19CF394600470964 /* HTBasicViewController.m */; };
+		96895F3F19CF394600470964 /* HTNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895F2219CF394600470964 /* HTNetworkManager.m */; };
+		96895F4019CF394600470964 /* HTAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895F2519CF394600470964 /* HTAdViewController.m */; };
+		96895F4119CF394600470964 /* HTAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96895F2619CF394600470964 /* HTAdViewController.xib */; };
+		96895F4219CF394600470964 /* HTEditPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895F2819CF394600470964 /* HTEditPhotoViewController.m */; };
+		96895F4319CF394600470964 /* HTEditPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96895F2919CF394600470964 /* HTEditPhotoViewController.xib */; };
+		96895F4419CF394600470964 /* HTEventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895F2B19CF394600470964 /* HTEventListViewController.m */; };
+		96895F4519CF394600470964 /* HTEventListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96895F2C19CF394600470964 /* HTEventListViewController.xib */; };
+		96895F4619CF394600470964 /* HTFrameImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895F2E19CF394600470964 /* HTFrameImage.m */; };
+		96895F4719CF394600470964 /* HTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895F3019CF394600470964 /* HTMainViewController.m */; };
+		96895F4819CF394600470964 /* HTMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96895F3119CF394600470964 /* HTMainViewController.xib */; };
+		96895F4919CF394600470964 /* HTTrialListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895F3319CF394600470964 /* HTTrialListViewController.m */; };
+		96895F4A19CF394600470964 /* HTTrialListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96895F3419CF394600470964 /* HTTrialListViewController.xib */; };
+		96895F4B19CF394600470964 /* HTVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895F3619CF394600470964 /* HTVideoListViewController.m */; };
+		96895F4C19CF394600470964 /* HTVideoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96895F3719CF394600470964 /* HTVideoListViewController.xib */; };
 		968A16E119C86D4C00598435 /* landing.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A16DD19C86D4C00598435 /* landing.png */; };
 		968A16E219C86D4C00598435 /* main_but_demo.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A16DE19C86D4C00598435 /* main_but_demo.png */; };
 		968A16E319C86D4C00598435 /* main_but_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A16DF19C86D4C00598435 /* main_but_photo.png */; };
 		968A16E419C86D4C00598435 /* main_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A16E019C86D4C00598435 /* main_logo.png */; };
-		96E3F3AD19BF4BE700E88F98 /* HTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3AB19BF4BE700E88F98 /* HTMainViewController.m */; };
-		96E3F3AE19BF4BE700E88F98 /* HTMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3AC19BF4BE700E88F98 /* HTMainViewController.xib */; };
-		96E3F3B119BF4C9200E88F98 /* HTNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3B019BF4C9200E88F98 /* HTNetworkManager.m */; };
-		96E3F3B719BF521E00E88F98 /* HTBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3B619BF521E00E88F98 /* HTBasicViewController.m */; };
 		96E3F3BB19BF539F00E88F98 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3BA19BF539F00E88F98 /* bg.png */; };
 		96E3F3BD19BF54E100E88F98 /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3BC19BF54E100E88F98 /* main.png */; };
 		96E3F3C619BF67CE00E88F98 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3C819BF67CE00E88F98 /* Localizable.strings */; };
-		96E3F3CE19BF6F0600E88F98 /* HTEventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3CC19BF6F0600E88F98 /* HTEventListViewController.m */; };
-		96E3F3CF19BF6F0600E88F98 /* HTEventListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3CD19BF6F0600E88F98 /* HTEventListViewController.xib */; };
-		96E3F3D319BF71BA00E88F98 /* HTEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3D119BF71BA00E88F98 /* HTEventCell.m */; };
-		96E3F3D419BF71BA00E88F98 /* HTEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3D219BF71BA00E88F98 /* HTEventCell.xib */; };
-		96E3F3D819BF88AC00E88F98 /* HTAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3F3D619BF88AC00E88F98 /* HTAdViewController.m */; };
-		96E3F3D919BF88AC00E88F98 /* HTAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3D719BF88AC00E88F98 /* HTAdViewController.xib */; };
 		96F855F019C9BEAB00FA8B10 /* photo_but_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 96F855EF19C9BEAB00FA8B10 /* photo_but_close.png */; };
 		96F855F219C9D3E300FA8B10 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F855F119C9D3E300FA8B10 /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
@@ -280,12 +280,6 @@
 
 /* Begin PBXFileReference section */
 		18A0EFA8E27B47B7B686FB29 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		96098C8319C34CD00065D96B /* HTVideoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTVideoListViewController.h; sourceTree = "<group>"; };
-		96098C8419C34CD00065D96B /* HTVideoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTVideoListViewController.m; sourceTree = "<group>"; };
-		96098C8519C34CD00065D96B /* HTVideoListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTVideoListViewController.xib; sourceTree = "<group>"; };
-		96098C8819C352650065D96B /* HTVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTVideoCell.h; sourceTree = "<group>"; };
-		96098C8919C352650065D96B /* HTVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTVideoCell.m; sourceTree = "<group>"; };
-		96098C8A19C352650065D96B /* HTVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTVideoCell.xib; sourceTree = "<group>"; };
 		962A06AF19C205C300C6A93B /* cameraGrid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraGrid.png; sourceTree = "<group>"; };
 		962A06B019C205C300C6A93B /* cameraGrid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cameraGrid@2x.png"; sourceTree = "<group>"; };
 		962A06B119C205C300C6A93B /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
@@ -693,11 +687,6 @@
 		963248BD19CB3AA800B46B3A /* GPUImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageView.m; sourceTree = "<group>"; };
 		963248BE19CB3AA800B46B3A /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		963248BF19CB3AA800B46B3A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		9632498919CB410700B46B3A /* HTEditPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTEditPhotoViewController.h; sourceTree = "<group>"; };
-		9632498A19CB410700B46B3A /* HTEditPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTEditPhotoViewController.m; sourceTree = "<group>"; };
-		9632498B19CB410700B46B3A /* HTEditPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTEditPhotoViewController.xib; sourceTree = "<group>"; };
-		9632498E19CB587400B46B3A /* HTFrameImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTFrameImage.h; sourceTree = "<group>"; };
-		9632498F19CB587400B46B3A /* HTFrameImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTFrameImage.m; sourceTree = "<group>"; };
 		9683A4BF19B8C96A001DE84C /* WeddingPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeddingPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9683A4C219B8C96A001DE84C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9683A4C419B8C96A001DE84C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -715,24 +704,44 @@
 		9683A4E919B8C96A001DE84C /* WeddingPhotoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WeddingPhotoTests-Info.plist"; sourceTree = "<group>"; };
 		9683A4EB19B8C96A001DE84C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9683A4ED19B8C96A001DE84C /* WeddingPhotoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeddingPhotoTests.m; sourceTree = "<group>"; };
-		96895F0919CF319500470964 /* HTTrialListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTrialListViewController.h; sourceTree = "<group>"; };
-		96895F0A19CF319500470964 /* HTTrialListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTrialListViewController.m; sourceTree = "<group>"; };
-		96895F0B19CF319500470964 /* HTTrialListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTrialListViewController.xib; sourceTree = "<group>"; };
-		96895F0E19CF334A00470964 /* HTTrialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTrialCell.h; sourceTree = "<group>"; };
-		96895F0F19CF334A00470964 /* HTTrialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTrialCell.m; sourceTree = "<group>"; };
-		96895F1019CF334A00470964 /* HTTrialCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTrialCell.xib; sourceTree = "<group>"; };
+		96895F1419CF394600470964 /* HTEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTEventCell.h; sourceTree = "<group>"; };
+		96895F1519CF394600470964 /* HTEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTEventCell.m; sourceTree = "<group>"; };
+		96895F1619CF394600470964 /* HTEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTEventCell.xib; sourceTree = "<group>"; };
+		96895F1719CF394600470964 /* HTTrialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTrialCell.h; sourceTree = "<group>"; };
+		96895F1819CF394600470964 /* HTTrialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTrialCell.m; sourceTree = "<group>"; };
+		96895F1919CF394600470964 /* HTTrialCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTrialCell.xib; sourceTree = "<group>"; };
+		96895F1A19CF394600470964 /* HTVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTVideoCell.h; sourceTree = "<group>"; };
+		96895F1B19CF394600470964 /* HTVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTVideoCell.m; sourceTree = "<group>"; };
+		96895F1C19CF394600470964 /* HTVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTVideoCell.xib; sourceTree = "<group>"; };
+		96895F1E19CF394600470964 /* HTBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBasicViewController.h; sourceTree = "<group>"; };
+		96895F1F19CF394600470964 /* HTBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBasicViewController.m; sourceTree = "<group>"; };
+		96895F2019CF394600470964 /* HTConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTConstant.h; sourceTree = "<group>"; };
+		96895F2119CF394600470964 /* HTNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNetworkManager.h; sourceTree = "<group>"; };
+		96895F2219CF394600470964 /* HTNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNetworkManager.m; sourceTree = "<group>"; };
+		96895F2419CF394600470964 /* HTAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAdViewController.h; sourceTree = "<group>"; };
+		96895F2519CF394600470964 /* HTAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTAdViewController.m; sourceTree = "<group>"; };
+		96895F2619CF394600470964 /* HTAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTAdViewController.xib; sourceTree = "<group>"; };
+		96895F2719CF394600470964 /* HTEditPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTEditPhotoViewController.h; sourceTree = "<group>"; };
+		96895F2819CF394600470964 /* HTEditPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTEditPhotoViewController.m; sourceTree = "<group>"; };
+		96895F2919CF394600470964 /* HTEditPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTEditPhotoViewController.xib; sourceTree = "<group>"; };
+		96895F2A19CF394600470964 /* HTEventListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTEventListViewController.h; sourceTree = "<group>"; };
+		96895F2B19CF394600470964 /* HTEventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTEventListViewController.m; sourceTree = "<group>"; };
+		96895F2C19CF394600470964 /* HTEventListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTEventListViewController.xib; sourceTree = "<group>"; };
+		96895F2D19CF394600470964 /* HTFrameImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTFrameImage.h; sourceTree = "<group>"; };
+		96895F2E19CF394600470964 /* HTFrameImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTFrameImage.m; sourceTree = "<group>"; };
+		96895F2F19CF394600470964 /* HTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMainViewController.h; sourceTree = "<group>"; };
+		96895F3019CF394600470964 /* HTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMainViewController.m; sourceTree = "<group>"; };
+		96895F3119CF394600470964 /* HTMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTMainViewController.xib; sourceTree = "<group>"; };
+		96895F3219CF394600470964 /* HTTrialListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTrialListViewController.h; sourceTree = "<group>"; };
+		96895F3319CF394600470964 /* HTTrialListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTrialListViewController.m; sourceTree = "<group>"; };
+		96895F3419CF394600470964 /* HTTrialListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTrialListViewController.xib; sourceTree = "<group>"; };
+		96895F3519CF394600470964 /* HTVideoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTVideoListViewController.h; sourceTree = "<group>"; };
+		96895F3619CF394600470964 /* HTVideoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTVideoListViewController.m; sourceTree = "<group>"; };
+		96895F3719CF394600470964 /* HTVideoListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTVideoListViewController.xib; sourceTree = "<group>"; };
 		968A16DD19C86D4C00598435 /* landing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = landing.png; sourceTree = "<group>"; };
 		968A16DE19C86D4C00598435 /* main_but_demo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_but_demo.png; sourceTree = "<group>"; };
 		968A16DF19C86D4C00598435 /* main_but_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_but_photo.png; sourceTree = "<group>"; };
 		968A16E019C86D4C00598435 /* main_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_logo.png; sourceTree = "<group>"; };
-		96E3F3AA19BF4BE700E88F98 /* HTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMainViewController.h; sourceTree = "<group>"; };
-		96E3F3AB19BF4BE700E88F98 /* HTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMainViewController.m; sourceTree = "<group>"; };
-		96E3F3AC19BF4BE700E88F98 /* HTMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTMainViewController.xib; sourceTree = "<group>"; };
-		96E3F3AF19BF4C9200E88F98 /* HTNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNetworkManager.h; sourceTree = "<group>"; };
-		96E3F3B019BF4C9200E88F98 /* HTNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNetworkManager.m; sourceTree = "<group>"; };
-		96E3F3B219BF4CC500E88F98 /* HTConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTConstant.h; sourceTree = "<group>"; };
-		96E3F3B519BF521E00E88F98 /* HTBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBasicViewController.h; sourceTree = "<group>"; };
-		96E3F3B619BF521E00E88F98 /* HTBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBasicViewController.m; sourceTree = "<group>"; };
 		96E3F3BA19BF539F00E88F98 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		96E3F3BC19BF54E100E88F98 /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main.png; sourceTree = "<group>"; };
 		96E3F3BE19BF674700E88F98 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -744,15 +753,6 @@
 		96E3F3C719BF67CE00E88F98 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		96E3F3C919BF67D500E88F98 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		96E3F3CA19BF67D600E88F98 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		96E3F3CB19BF6F0600E88F98 /* HTEventListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTEventListViewController.h; sourceTree = "<group>"; };
-		96E3F3CC19BF6F0600E88F98 /* HTEventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTEventListViewController.m; sourceTree = "<group>"; };
-		96E3F3CD19BF6F0600E88F98 /* HTEventListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTEventListViewController.xib; sourceTree = "<group>"; };
-		96E3F3D019BF71BA00E88F98 /* HTEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTEventCell.h; sourceTree = "<group>"; };
-		96E3F3D119BF71BA00E88F98 /* HTEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTEventCell.m; sourceTree = "<group>"; };
-		96E3F3D219BF71BA00E88F98 /* HTEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTEventCell.xib; sourceTree = "<group>"; };
-		96E3F3D519BF88AC00E88F98 /* HTAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAdViewController.h; sourceTree = "<group>"; };
-		96E3F3D619BF88AC00E88F98 /* HTAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTAdViewController.m; sourceTree = "<group>"; };
-		96E3F3D719BF88AC00E88F98 /* HTAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTAdViewController.xib; sourceTree = "<group>"; };
 		96F855EF19C9BEAB00FA8B10 /* photo_but_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_but_close.png; sourceTree = "<group>"; };
 		96F855F119C9D3E300FA8B10 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		F24060E1F594420FB11FF167 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1381,6 +1381,9 @@
 			isa = PBXGroup;
 			children = (
 				9683A4DA19B8C96A001DE84C /* Images.xcassets */,
+				96895F1D19CF394600470964 /* common classes */,
+				96895F2319CF394600470964 /* normal classes */,
+				96895F1319CF394600470964 /* cells */,
 				96E3F3B819BF539F00E88F98 /* Resource */,
 				9683A4C919B8C96A001DE84C /* Supporting Files */,
 				9632472319CB3AA600B46B3A /* Library */,
@@ -1388,40 +1391,6 @@
 				9683A4D219B8C96A001DE84C /* HTAppDelegate.m */,
 				9683A4D419B8C96A001DE84C /* Main.storyboard */,
 				96E3F3C819BF67CE00E88F98 /* Localizable.strings */,
-				96E3F3AF19BF4C9200E88F98 /* HTNetworkManager.h */,
-				96E3F3B019BF4C9200E88F98 /* HTNetworkManager.m */,
-				96E3F3B219BF4CC500E88F98 /* HTConstant.h */,
-				96E3F3B519BF521E00E88F98 /* HTBasicViewController.h */,
-				96E3F3B619BF521E00E88F98 /* HTBasicViewController.m */,
-				96E3F3AA19BF4BE700E88F98 /* HTMainViewController.h */,
-				96E3F3AB19BF4BE700E88F98 /* HTMainViewController.m */,
-				96E3F3AC19BF4BE700E88F98 /* HTMainViewController.xib */,
-				96E3F3CB19BF6F0600E88F98 /* HTEventListViewController.h */,
-				96E3F3CC19BF6F0600E88F98 /* HTEventListViewController.m */,
-				96E3F3CD19BF6F0600E88F98 /* HTEventListViewController.xib */,
-				96E3F3D019BF71BA00E88F98 /* HTEventCell.h */,
-				96E3F3D119BF71BA00E88F98 /* HTEventCell.m */,
-				96E3F3D219BF71BA00E88F98 /* HTEventCell.xib */,
-				96E3F3D519BF88AC00E88F98 /* HTAdViewController.h */,
-				96E3F3D619BF88AC00E88F98 /* HTAdViewController.m */,
-				96E3F3D719BF88AC00E88F98 /* HTAdViewController.xib */,
-				96098C8319C34CD00065D96B /* HTVideoListViewController.h */,
-				96098C8419C34CD00065D96B /* HTVideoListViewController.m */,
-				96098C8519C34CD00065D96B /* HTVideoListViewController.xib */,
-				96098C8819C352650065D96B /* HTVideoCell.h */,
-				96098C8919C352650065D96B /* HTVideoCell.m */,
-				96098C8A19C352650065D96B /* HTVideoCell.xib */,
-				9632498919CB410700B46B3A /* HTEditPhotoViewController.h */,
-				9632498A19CB410700B46B3A /* HTEditPhotoViewController.m */,
-				9632498B19CB410700B46B3A /* HTEditPhotoViewController.xib */,
-				9632498E19CB587400B46B3A /* HTFrameImage.h */,
-				9632498F19CB587400B46B3A /* HTFrameImage.m */,
-				96895F0919CF319500470964 /* HTTrialListViewController.h */,
-				96895F0A19CF319500470964 /* HTTrialListViewController.m */,
-				96895F0B19CF319500470964 /* HTTrialListViewController.xib */,
-				96895F0E19CF334A00470964 /* HTTrialCell.h */,
-				96895F0F19CF334A00470964 /* HTTrialCell.m */,
-				96895F1019CF334A00470964 /* HTTrialCell.xib */,
 			);
 			path = WeddingPhoto;
 			sourceTree = "<group>";
@@ -1453,6 +1422,61 @@
 				9683A4EA19B8C96A001DE84C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96895F1319CF394600470964 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				96895F1419CF394600470964 /* HTEventCell.h */,
+				96895F1519CF394600470964 /* HTEventCell.m */,
+				96895F1619CF394600470964 /* HTEventCell.xib */,
+				96895F1719CF394600470964 /* HTTrialCell.h */,
+				96895F1819CF394600470964 /* HTTrialCell.m */,
+				96895F1919CF394600470964 /* HTTrialCell.xib */,
+				96895F1A19CF394600470964 /* HTVideoCell.h */,
+				96895F1B19CF394600470964 /* HTVideoCell.m */,
+				96895F1C19CF394600470964 /* HTVideoCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		96895F1D19CF394600470964 /* common classes */ = {
+			isa = PBXGroup;
+			children = (
+				96895F1E19CF394600470964 /* HTBasicViewController.h */,
+				96895F1F19CF394600470964 /* HTBasicViewController.m */,
+				96895F2019CF394600470964 /* HTConstant.h */,
+				96895F2119CF394600470964 /* HTNetworkManager.h */,
+				96895F2219CF394600470964 /* HTNetworkManager.m */,
+			);
+			path = "common classes";
+			sourceTree = "<group>";
+		};
+		96895F2319CF394600470964 /* normal classes */ = {
+			isa = PBXGroup;
+			children = (
+				96895F2419CF394600470964 /* HTAdViewController.h */,
+				96895F2519CF394600470964 /* HTAdViewController.m */,
+				96895F2619CF394600470964 /* HTAdViewController.xib */,
+				96895F2719CF394600470964 /* HTEditPhotoViewController.h */,
+				96895F2819CF394600470964 /* HTEditPhotoViewController.m */,
+				96895F2919CF394600470964 /* HTEditPhotoViewController.xib */,
+				96895F2A19CF394600470964 /* HTEventListViewController.h */,
+				96895F2B19CF394600470964 /* HTEventListViewController.m */,
+				96895F2C19CF394600470964 /* HTEventListViewController.xib */,
+				96895F2D19CF394600470964 /* HTFrameImage.h */,
+				96895F2E19CF394600470964 /* HTFrameImage.m */,
+				96895F2F19CF394600470964 /* HTMainViewController.h */,
+				96895F3019CF394600470964 /* HTMainViewController.m */,
+				96895F3119CF394600470964 /* HTMainViewController.xib */,
+				96895F3219CF394600470964 /* HTTrialListViewController.h */,
+				96895F3319CF394600470964 /* HTTrialListViewController.m */,
+				96895F3419CF394600470964 /* HTTrialListViewController.xib */,
+				96895F3519CF394600470964 /* HTVideoListViewController.h */,
+				96895F3619CF394600470964 /* HTVideoListViewController.m */,
+				96895F3719CF394600470964 /* HTVideoListViewController.xib */,
+			);
+			path = "normal classes";
 			sourceTree = "<group>";
 		};
 		96E3F3B819BF539F00E88F98 /* Resource */ = {
@@ -1570,43 +1594,43 @@
 				962A06C619C205C300C6A93B /* trigger@2x.png in Resources */,
 				962A06BE19C205C300C6A93B /* close@2x.png in Resources */,
 				9632498719CB3AA800B46B3A /* License.txt in Resources */,
-				96E3F3CF19BF6F0600E88F98 /* HTEventListViewController.xib in Resources */,
 				963248CD19CB3AA800B46B3A /* mayfair.acv in Resources */,
 				962A06BB19C205C300C6A93B /* cameraGrid.png in Resources */,
-				96E3F3D419BF71BA00E88F98 /* HTEventCell.xib in Resources */,
 				963248E219CB3AA800B46B3A /* lookup_miss_etikate.png in Resources */,
 				963248CE19CB3AA800B46B3A /* Nashville.acv in Resources */,
 				96E3F3BB19BF539F00E88F98 /* bg.png in Resources */,
 				963248E319CB3AA800B46B3A /* lookup_soft_elegance_1.png in Resources */,
 				9683A4DB19B8C96A001DE84C /* Images.xcassets in Resources */,
-				96098C8719C34CD00065D96B /* HTVideoListViewController.xib in Resources */,
 				962A06C219C205C300C6A93B /* flash@2x.png in Resources */,
+				96895F4A19CF394600470964 /* HTTrialListViewController.xib in Resources */,
 				96E3F3BD19BF54E100E88F98 /* main.png in Resources */,
 				963248CF19CB3AA800B46B3A /* Valencia.acv in Resources */,
 				968A16E319C86D4C00598435 /* main_but_photo.png in Resources */,
 				962A06BD19C205C300C6A93B /* close.png in Resources */,
 				96E3F3C619BF67CE00E88F98 /* Localizable.strings in Resources */,
-				96E3F3AE19BF4BE700E88F98 /* HTMainViewController.xib in Resources */,
 				96F855F019C9BEAB00FA8B10 /* photo_but_close.png in Resources */,
 				962A06C319C205C300C6A93B /* flip.png in Resources */,
-				9632498D19CB410700B46B3A /* HTEditPhotoViewController.xib in Resources */,
+				96895F4C19CF394600470964 /* HTVideoListViewController.xib in Resources */,
 				963248E419CB3AA800B46B3A /* lookup_soft_elegance_2.png in Resources */,
+				96895F4119CF394600470964 /* HTAdViewController.xib in Resources */,
 				962A06BF19C205C300C6A93B /* crop.png in Resources */,
-				96098C8C19C352650065D96B /* HTVideoCell.xib in Resources */,
 				962A06C019C205C300C6A93B /* crop@2x.png in Resources */,
 				962A06C119C205C300C6A93B /* flash.png in Resources */,
 				963248CB19CB3AA800B46B3A /* amaro.acv in Resources */,
 				968A16E119C86D4C00598435 /* landing.png in Resources */,
 				962A06C519C205C300C6A93B /* trigger.png in Resources */,
 				962A06CC19C2247E00C6A93B /* 2.png in Resources */,
-				96895F0D19CF319500470964 /* HTTrialListViewController.xib in Resources */,
+				96895F3B19CF394600470964 /* HTTrialCell.xib in Resources */,
+				96895F4319CF394600470964 /* HTEditPhotoViewController.xib in Resources */,
+				96895F4519CF394600470964 /* HTEventListViewController.xib in Resources */,
 				963248DE19CB3AA800B46B3A /* LICENSE in Resources */,
+				96895F4819CF394600470964 /* HTMainViewController.xib in Resources */,
+				96895F3D19CF394600470964 /* HTVideoCell.xib in Resources */,
+				96895F3919CF394600470964 /* HTEventCell.xib in Resources */,
 				963248E119CB3AA800B46B3A /* lookup_amatorka.png in Resources */,
 				968A16E419C86D4C00598435 /* main_logo.png in Resources */,
 				963248CA19CB3AA800B46B3A /* 1977.acv in Resources */,
 				963248E019CB3AA800B46B3A /* lookup.png in Resources */,
-				96E3F3D919BF88AC00E88F98 /* HTAdViewController.xib in Resources */,
-				96895F1219CF334A00470964 /* HTTrialCell.xib in Resources */,
 				962A06CD19C2247E00C6A93B /* 3.png in Resources */,
 				963248CC19CB3AA800B46B3A /* Hudson.acv in Resources */,
 				9683A4CD19B8C96A001DE84C /* InfoPlist.strings in Resources */,
@@ -1671,7 +1695,6 @@
 				9632491519CB3AA800B46B3A /* GPUImageGaussianBlurFilter.m in Sources */,
 				9632494719CB3AA800B46B3A /* GPUImageOverlayBlendFilter.m in Sources */,
 				9632491A19CB3AA800B46B3A /* GPUImageHalftoneFilter.m in Sources */,
-				96E3F3CE19BF6F0600E88F98 /* HTEventListViewController.m in Sources */,
 				9632493019CB3AA800B46B3A /* GPUImageLocalBinaryPatternFilter.m in Sources */,
 				963248EC19CB3AA800B46B3A /* GPUImageAverageColor.m in Sources */,
 				9632495A19CB3AA800B46B3A /* GPUImageSaturationFilter.m in Sources */,
@@ -1694,6 +1717,7 @@
 				963248E619CB3AA800B46B3A /* GPUImage3x3ConvolutionFilter.m in Sources */,
 				963248EA19CB3AA800B46B3A /* GPUImageAlphaBlendFilter.m in Sources */,
 				9632495B19CB3AA800B46B3A /* GPUImageScreenBlendFilter.m in Sources */,
+				96895F3E19CF394600470964 /* HTBasicViewController.m in Sources */,
 				9632490419CB3AA800B46B3A /* GPUImageDilationFilter.m in Sources */,
 				9632490C19CB3AA800B46B3A /* GPUImageExposureFilter.m in Sources */,
 				963248C819CB3AA800B46B3A /* DBCameraSegueViewController.m in Sources */,
@@ -1704,11 +1728,11 @@
 				9632490819CB3AA800B46B3A /* GPUImageDivideBlendFilter.m in Sources */,
 				963248C219CB3AA800B46B3A /* UIImage+TintColor.m in Sources */,
 				9632490D19CB3AA800B46B3A /* GPUImageFalseColorFilter.m in Sources */,
-				96E3F3D319BF71BA00E88F98 /* HTEventCell.m in Sources */,
 				9683A4D319B8C96A001DE84C /* HTAppDelegate.m in Sources */,
 				963248EE19CB3AA800B46B3A /* GPUImageBilateralFilter.m in Sources */,
 				9632495019CB3AA800B46B3A /* GPUImagePosterizeFilter.m in Sources */,
 				9632494819CB3AA800B46B3A /* GPUImageParallelCoordinateLineTransformFilter.m in Sources */,
+				96895F4B19CF394600470964 /* HTVideoListViewController.m in Sources */,
 				9632496519CB3AA800B46B3A /* GPUImageSolidColorGenerator.m in Sources */,
 				963248DF19CB3AA800B46B3A /* README.md in Sources */,
 				9632494519CB3AA800B46B3A /* GPUImageOpeningFilter.m in Sources */,
@@ -1722,10 +1746,10 @@
 				9632497C19CB3AA800B46B3A /* GPUImageVideoCamera.m in Sources */,
 				963248DC19CB3AA800B46B3A /* DBCameraView.m in Sources */,
 				963248E919CB3AA800B46B3A /* GPUImageAddBlendFilter.m in Sources */,
-				96098C8B19C352650065D96B /* HTVideoCell.m in Sources */,
 				963248D219CB3AA800B46B3A /* DBLibraryManager.m in Sources */,
 				9632493719CB3AA800B46B3A /* GPUImageMaskFilter.m in Sources */,
 				9632493919CB3AA800B46B3A /* GPUImageMissEtikateFilter.m in Sources */,
+				96895F4419CF394600470964 /* HTEventListViewController.m in Sources */,
 				9632495419CB3AA800B46B3A /* GPUImageRGBClosingFilter.m in Sources */,
 				9683A4CF19B8C96A001DE84C /* main.m in Sources */,
 				9632492819CB3AA800B46B3A /* GPUImageKuwaharaFilter.m in Sources */,
@@ -1736,29 +1760,31 @@
 				963248C719CB3AA800B46B3A /* DBCameraLibraryViewController.m in Sources */,
 				963248F519CB3AA800B46B3A /* GPUImageChromaKeyBlendFilter.m in Sources */,
 				9632495C19CB3AA800B46B3A /* GPUImageSepiaFilter.m in Sources */,
-				96098C8619C34CD00065D96B /* HTVideoListViewController.m in Sources */,
 				9632492E19CB3AA800B46B3A /* GPUImageLinearBurnBlendFilter.m in Sources */,
 				9632494D19CB3AA800B46B3A /* GPUImagePoissonBlendFilter.m in Sources */,
 				9632494E19CB3AA800B46B3A /* GPUImagePolarPixellateFilter.m in Sources */,
 				9632491819CB3AA800B46B3A /* GPUImageGlassSphereFilter.m in Sources */,
 				9632493D19CB3AA800B46B3A /* GPUImageMotionDetector.m in Sources */,
 				9632491B19CB3AA800B46B3A /* GPUImageHardLightBlendFilter.m in Sources */,
-				96E3F3B119BF4C9200E88F98 /* HTNetworkManager.m in Sources */,
 				9632491019CB3AA800B46B3A /* GPUImageFilterGroup.m in Sources */,
 				9632494319CB3AA800B46B3A /* GPUImageNormalBlendFilter.m in Sources */,
+				96895F3C19CF394600470964 /* HTVideoCell.m in Sources */,
 				9632490019CB3AA800B46B3A /* GPUImageCrosshairGenerator.m in Sources */,
+				96895F4919CF394600470964 /* HTTrialListViewController.m in Sources */,
 				9632498419CB3AA800B46B3A /* GPUImageMovieWriter.m in Sources */,
 				9632491119CB3AA800B46B3A /* GPUImageFilterPipeline.m in Sources */,
 				9632492A19CB3AA800B46B3A /* GPUImageLanczosResamplingFilter.m in Sources */,
-				9632498C19CB410700B46B3A /* HTEditPhotoViewController.m in Sources */,
 				9632493B19CB3AA800B46B3A /* GPUImageMosaicFilter.m in Sources */,
 				963248D419CB3AA800B46B3A /* DBCollectionViewCell.m in Sources */,
+				96895F3F19CF394600470964 /* HTNetworkManager.m in Sources */,
 				9632494A19CB3AA800B46B3A /* GPUImagePinchDistortionFilter.m in Sources */,
 				9632490519CB3AA800B46B3A /* GPUImageDirectionalNonMaximumSuppressionFilter.m in Sources */,
 				963248F219CB3AA800B46B3A /* GPUImageBulgeDistortionFilter.m in Sources */,
 				963248EB19CB3AA800B46B3A /* GPUImageAmatorkaFilter.m in Sources */,
 				963248C019CB3AA800B46B3A /* UIImage+Asset.m in Sources */,
 				9632492119CB3AA800B46B3A /* GPUImageHistogramGenerator.m in Sources */,
+				96895F3819CF394600470964 /* HTEventCell.m in Sources */,
+				96895F4619CF394600470964 /* HTFrameImage.m in Sources */,
 				9632498519CB3AA800B46B3A /* GPUImagePicture.m in Sources */,
 				9632495519CB3AA800B46B3A /* GPUImageRGBDilationFilter.m in Sources */,
 				9632497E19CB3AA800B46B3A /* GPUImageVoronoiConsumerFilter.m in Sources */,
@@ -1768,7 +1794,6 @@
 				9632494C19CB3AA800B46B3A /* GPUImagePixellatePositionFilter.m in Sources */,
 				9632498219CB3AA800B46B3A /* GPUImageZoomBlurFilter.m in Sources */,
 				9632492F19CB3AA800B46B3A /* GPUImageLineGenerator.m in Sources */,
-				96E3F3AD19BF4BE700E88F98 /* HTMainViewController.m in Sources */,
 				9632491E19CB3AA800B46B3A /* GPUImageHighlightShadowFilter.m in Sources */,
 				9632496D19CB3AA800B46B3A /* GPUImageTextureOutput.m in Sources */,
 				9632494019CB3AA800B46B3A /* GPUImageMultiplyBlendFilter.m in Sources */,
@@ -1794,8 +1819,8 @@
 				963248C119CB3AA800B46B3A /* UIImage+Crop.m in Sources */,
 				963248D119CB3AA800B46B3A /* DBCameraManager.m in Sources */,
 				9632497319CB3AA800B46B3A /* GPUImageToneCurveFilter.m in Sources */,
+				96895F4019CF394600470964 /* HTAdViewController.m in Sources */,
 				9632496119CB3AA800B46B3A /* GPUImageSmoothToonFilter.m in Sources */,
-				96895F1119CF334A00470964 /* HTTrialCell.m in Sources */,
 				9632490E19CB3AA800B46B3A /* GPUImageFASTCornerDetectionFilter.m in Sources */,
 				963248D819CB3AA800B46B3A /* DBCameraCropView.m in Sources */,
 				9632496019CB3AA800B46B3A /* GPUImageSketchFilter.m in Sources */,
@@ -1803,9 +1828,9 @@
 				9632491319CB3AA800B46B3A /* GPUImageFramebufferCache.m in Sources */,
 				963248F119CB3AA800B46B3A /* GPUImageBuffer.m in Sources */,
 				9632492519CB3AA800B46B3A /* GPUImageHueFilter.m in Sources */,
+				96895F4719CF394600470964 /* HTMainViewController.m in Sources */,
 				9632498019CB3AA800B46B3A /* GPUImageWhiteBalanceFilter.m in Sources */,
 				9632492B19CB3AA800B46B3A /* GPUImageLaplacianFilter.m in Sources */,
-				96895F0C19CF319500470964 /* HTTrialListViewController.m in Sources */,
 				963248ED19CB3AA800B46B3A /* GPUImageAverageLuminanceThresholdFilter.m in Sources */,
 				9632497519CB3AA800B46B3A /* GPUImageTransformFilter.m in Sources */,
 				9632495619CB3AA800B46B3A /* GPUImageRGBErosionFilter.m in Sources */,
@@ -1816,6 +1841,7 @@
 				9632491619CB3AA800B46B3A /* GPUImageGaussianBlurPositionFilter.m in Sources */,
 				9632491919CB3AA800B46B3A /* GPUImageGrayscaleFilter.m in Sources */,
 				9632497D19CB3AA800B46B3A /* GPUImageVignetteFilter.m in Sources */,
+				96895F3A19CF394600470964 /* HTTrialCell.m in Sources */,
 				9632495F19CB3AA800B46B3A /* GPUImageSingleComponentGaussianBlurFilter.m in Sources */,
 				9632490719CB3AA800B46B3A /* GPUImageDissolveBlendFilter.m in Sources */,
 				9632497619CB3AA800B46B3A /* GPUImageTwoInputCrossTextureSamplingFilter.m in Sources */,
@@ -1827,21 +1853,19 @@
 				963248FA19CB3AA800B46B3A /* GPUImageColorDodgeBlendFilter.m in Sources */,
 				963248C919CB3AA800B46B3A /* DBCameraViewController.m in Sources */,
 				9632492D19CB3AA800B46B3A /* GPUImageLightenBlendFilter.m in Sources */,
-				96E3F3B719BF521E00E88F98 /* HTBasicViewController.m in Sources */,
 				9632492919CB3AA800B46B3A /* GPUImageKuwaharaRadius3Filter.m in Sources */,
 				9632494419CB3AA800B46B3A /* GPUImageOpacityFilter.m in Sources */,
 				9632493519CB3AA800B46B3A /* GPUImageLuminosity.m in Sources */,
 				9632498319CB3AA800B46B3A /* GPUImageContext.m in Sources */,
 				9632491D19CB3AA800B46B3A /* GPUImageHazeFilter.m in Sources */,
-				9632499019CB587400B46B3A /* HTFrameImage.m in Sources */,
 				9632496719CB3AA800B46B3A /* GPUImageSphereRefractionFilter.m in Sources */,
 				963248E719CB3AA800B46B3A /* GPUImage3x3TextureSamplingFilter.m in Sources */,
 				9632497019CB3AA800B46B3A /* GPUImageThresholdedNonMaximumSuppressionFilter.m in Sources */,
-				96E3F3D819BF88AC00E88F98 /* HTAdViewController.m in Sources */,
 				9632496E19CB3AA800B46B3A /* GPUImageThreeInputFilter.m in Sources */,
 				9632490119CB3AA800B46B3A /* GPUImageCrosshatchFilter.m in Sources */,
 				9632497F19CB3AA800B46B3A /* GPUImageWeakPixelInclusionFilter.m in Sources */,
 				9632496619CB3AA800B46B3A /* GPUImageSourceOverBlendFilter.m in Sources */,
+				96895F4219CF394600470964 /* HTEditPhotoViewController.m in Sources */,
 				9632491F19CB3AA800B46B3A /* GPUImageHighPassFilter.m in Sources */,
 				963248D519CB3AA800B46B3A /* DBCollectionViewFlowLayout.m in Sources */,
 				9632495D19CB3AA800B46B3A /* GPUImageSharpenFilter.m in Sources */,
