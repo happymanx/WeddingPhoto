@@ -1455,6 +1455,9 @@
 		96895F2319CF394600470964 /* normal classes */ = {
 			isa = PBXGroup;
 			children = (
+				96895F2F19CF394600470964 /* HTMainViewController.h */,
+				96895F3019CF394600470964 /* HTMainViewController.m */,
+				96895F3119CF394600470964 /* HTMainViewController.xib */,
 				96895F2419CF394600470964 /* HTAdViewController.h */,
 				96895F2519CF394600470964 /* HTAdViewController.m */,
 				96895F2619CF394600470964 /* HTAdViewController.xib */,
@@ -1466,9 +1469,6 @@
 				96895F2C19CF394600470964 /* HTEventListViewController.xib */,
 				96895F2D19CF394600470964 /* HTFrameImage.h */,
 				96895F2E19CF394600470964 /* HTFrameImage.m */,
-				96895F2F19CF394600470964 /* HTMainViewController.h */,
-				96895F3019CF394600470964 /* HTMainViewController.m */,
-				96895F3119CF394600470964 /* HTMainViewController.xib */,
 				96895F3219CF394600470964 /* HTTrialListViewController.h */,
 				96895F3319CF394600470964 /* HTTrialListViewController.m */,
 				96895F3419CF394600470964 /* HTTrialListViewController.xib */,

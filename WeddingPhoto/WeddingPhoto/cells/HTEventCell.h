@@ -11,8 +11,8 @@
 @interface HTEventCell : UITableViewCell
 
 @property (nonatomic, retain) IBOutlet UILabel *titleLabel;
-@property (nonatomic, retain) IBOutlet UIImageView *arrowImageView;
 @property (nonatomic, retain) IBOutlet UIButton *deleteButton;
+@property (nonatomic, retain) IBOutlet UIButton *albumButton;
 
 +(HTEventCell *)cell;
 

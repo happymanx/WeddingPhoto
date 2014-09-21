@@ -51,11 +51,11 @@
     
     if (isEdit) {
         cell.deleteButton.hidden = NO;
-        cell.arrowImageView.hidden = YES;
+        cell.albumButton.hidden = YES;
     }
     else {
         cell.deleteButton.hidden = YES;
-        cell.arrowImageView.hidden = NO;
+        cell.albumButton.hidden = NO;
     }
     
     return cell;
@@ -121,7 +121,12 @@
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    [eventArr removeObjectAtIndex:alertView.tag];
-    [displayTableView reloadData];
+    if (buttonIndex == 0) {// 不，結束
+        
+    }
+    if (buttonIndex == 1) {// 好，移除
+        [eventArr removeObjectAtIndex:alertView.tag];
+        [displayTableView reloadData];
+    }
 }
 @end
