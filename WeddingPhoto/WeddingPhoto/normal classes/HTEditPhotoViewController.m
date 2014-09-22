@@ -97,6 +97,13 @@
     }];
 }
 
+-(IBAction)shareButtonClicked:(UIButton *)button
+{
+    UIImage *finalImage = [self returnFinalImage:previewImage withSize:previewImage.size];
+    UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:[NSArray arrayWithObjects:@"和新人合照！", finalImage, nil] applicationActivities:nil];
+    [self presentViewController:avc animated:YES completion:nil];
+}
+
 // settings
 - (IBAction)changeColorButtonClicked:(UIButton *)button
 {
