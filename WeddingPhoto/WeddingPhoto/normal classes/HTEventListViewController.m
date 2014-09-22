@@ -24,7 +24,8 @@
         [eventArr addObjectsFromArray:array];
         
         // 測試用
-        [eventArr addObjectsFromArray:@[@"Happy 1", @"Happy 2", @"Happy 3"]];
+//        [eventArr addObjectsFromArray:@[@"Happy 1", @"Happy 2", @"Happy 3"]];
+        [eventArr addObjectsFromArray:[[HTFileManager sharedManager] listFileAtPath:[HTFileManager eventsPath]]];
     }
     return self;
 }

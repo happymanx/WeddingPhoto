@@ -266,6 +266,7 @@
 		968A16E319C86D4C00598435 /* main_but_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A16DF19C86D4C00598435 /* main_but_photo.png */; };
 		968A16E419C86D4C00598435 /* main_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 968A16E019C86D4C00598435 /* main_logo.png */; };
 		96968E9119CF5305002C9F5F /* HappyMan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96968E9019CF5305002C9F5F /* HappyMan.jpg */; };
+		96C01D0B19D0A3BB001DD569 /* HTFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C01D0A19D0A3BB001DD569 /* HTFileManager.m */; };
 		96E3F3BB19BF539F00E88F98 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3BA19BF539F00E88F98 /* bg.png */; };
 		96E3F3BD19BF54E100E88F98 /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3BC19BF54E100E88F98 /* main.png */; };
 		96E3F3C619BF67CE00E88F98 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3C819BF67CE00E88F98 /* Localizable.strings */; };
@@ -754,6 +755,8 @@
 		968A16DF19C86D4C00598435 /* main_but_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_but_photo.png; sourceTree = "<group>"; };
 		968A16E019C86D4C00598435 /* main_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_logo.png; sourceTree = "<group>"; };
 		96968E9019CF5305002C9F5F /* HappyMan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HappyMan.jpg; sourceTree = "<group>"; };
+		96C01D0919D0A3BB001DD569 /* HTFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTFileManager.h; sourceTree = "<group>"; };
+		96C01D0A19D0A3BB001DD569 /* HTFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTFileManager.m; sourceTree = "<group>"; };
 		96E3F3BA19BF539F00E88F98 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		96E3F3BC19BF54E100E88F98 /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main.png; sourceTree = "<group>"; };
 		96E3F3BE19BF674700E88F98 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -1463,6 +1466,8 @@
 				96895F2019CF394600470964 /* HTConstant.h */,
 				96895F2119CF394600470964 /* HTNetworkManager.h */,
 				96895F2219CF394600470964 /* HTNetworkManager.m */,
+				96C01D0919D0A3BB001DD569 /* HTFileManager.h */,
+				96C01D0A19D0A3BB001DD569 /* HTFileManager.m */,
 			);
 			path = "common classes";
 			sourceTree = "<group>";
@@ -1742,6 +1747,7 @@
 				963248C519CB3AA800B46B3A /* DBCameraCollectionViewController.m in Sources */,
 				963248DB19CB3AA800B46B3A /* DBCameraLoadingView.m in Sources */,
 				9632491419CB3AA800B46B3A /* GPUImageGammaFilter.m in Sources */,
+				96C01D0B19D0A3BB001DD569 /* HTFileManager.m in Sources */,
 				963248E519CB3AA800B46B3A /* GLProgram.m in Sources */,
 				9632492219CB3AA800B46B3A /* GPUImageHoughTransformLineDetector.m in Sources */,
 				963248E619CB3AA800B46B3A /* GPUImage3x3ConvolutionFilter.m in Sources */,
