@@ -8,6 +8,7 @@
 
 #import "HTCollectionViewController.h"
 #import "HTCollectionCell.h"
+#import "HTEditPhotoViewController.h"
 
 @interface HTCollectionViewController ()
 
@@ -74,12 +75,20 @@
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    // TODO: Select Item
-    NSLog(@"Select indexPath.row: %li", indexPath.row);
+    if (isSelfWork) {
+        NSString *targetPath = [workPath stringByAppendingPathComponent:itemArray[indexPath.row]];
+        UIImage *image = [UIImage imageWithContentsOfFile:targetPath];
+
+        HTEditPhotoViewController *vc = [[HTEditPhotoViewController alloc] initWithImage:image];
+        
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else {
+        
+    }
 }
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
-    // TODO: Deselect item
-    NSLog(@"Deselect indexPath.row: %li", indexPath.row);
+    
 }
 
 #pragma mark – UICollectionViewDelegateFlowLayout
