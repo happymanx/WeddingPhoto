@@ -22,7 +22,9 @@
 #import <AVFoundation/AVFoundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
+// 我的view controller
 #import "HTFrameImage.h"
+#import "HTCollectionViewController.h"
 
 #ifndef DBCameraLocalizedStrings
 #define DBCameraLocalizedStrings(key) \
@@ -295,8 +297,8 @@ NSLocalizedStringFromTable(key, @"DBCamera", nil)
         }
         NSInteger number = [[[HTFileManager sharedManager] listFileAtPath:workPath] count];
         NSString *targetPath = [workPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%li.jpg", (long)number]];
-        UIImage *img = [UIImage imageNamed:@"HappyMan.jpg"];
-        [UIImageJPEGRepresentation(img, 0.9) writeToFile:targetPath atomically:YES];
+//        UIImage *img = [UIImage imageNamed:@"HappyMan.jpg"];
+        [UIImageJPEGRepresentation(mixedImage, 0.9) writeToFile:targetPath atomically:YES];
 
     } else {
         CGFloat newW = 256.0;
@@ -340,6 +342,10 @@ NSLocalizedStringFromTable(key, @"DBCamera", nil)
 
 - (void) openLibrary
 {
+    // 開啓自己的作品
+    HTCollectionViewController *vc = [[HTCollectionViewController alloc] initWithSelfWorkArr:@[]];
+    [self.navigationController pushViewController:vc animated:YES];
+/*
     if ( [ALAssetsLibrary authorizationStatus] !=  ALAuthorizationStatusDenied ) {
         [UIView animateWithDuration:.3 animations:^{
             [self.view setAlpha:0];
@@ -360,6 +366,7 @@ NSLocalizedStringFromTable(key, @"DBCamera", nil)
             [[[UIAlertView alloc] initWithTitle:DBCameraLocalizedStrings(@"general.error.title") message:DBCameraLocalizedStrings(@"pickerimage.nopolicy") delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] show];
         });
     }
+ */
 }
 
 #pragma mark - CameraViewDelegate

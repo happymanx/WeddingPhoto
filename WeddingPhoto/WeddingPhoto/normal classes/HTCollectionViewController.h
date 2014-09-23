@@ -13,8 +13,13 @@
     IBOutlet UICollectionView *displayCollectionView;
     
     NSArray *itemArray;
+    
+    BOOL isSelfWork;
+    
+    NSString *workPath;
 }
 
 - (id)initWithItemArr:(NSArray *)arr;
+- (id)initWithSelfWorkArr:(NSArray *)arr;
 
 @end

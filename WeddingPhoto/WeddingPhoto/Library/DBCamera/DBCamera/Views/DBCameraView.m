@@ -10,7 +10,10 @@
 #import "DBCameraMacros.h"
 #import "UIImage+Crop.h"
 #import "UIImage+TintColor.h"
+
+// 我的view controller
 #import "HTFrameImage.h"
+#import "HTCollectionViewController.h"
 
 #import <AssetsLibrary/AssetsLibrary.h>
 
