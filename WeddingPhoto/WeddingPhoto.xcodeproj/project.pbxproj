@@ -53,7 +53,6 @@
 		963248DB19CB3AA800B46B3A /* DBCameraLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9632476619CB3AA600B46B3A /* DBCameraLoadingView.m */; };
 		963248DC19CB3AA800B46B3A /* DBCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9632476819CB3AA600B46B3A /* DBCameraView.m */; };
 		963248DE19CB3AA800B46B3A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9632476B19CB3AA600B46B3A /* LICENSE */; };
-		963248DF19CB3AA800B46B3A /* README.txt in Sources */ = {isa = PBXBuildFile; fileRef = 9632476C19CB3AA600B46B3A /* README.txt */; };
 		963248E019CB3AA800B46B3A /* lookup.png in Resources */ = {isa = PBXBuildFile; fileRef = 9632477019CB3AA600B46B3A /* lookup.png */; };
 		963248E119CB3AA800B46B3A /* lookup_amatorka.png in Resources */ = {isa = PBXBuildFile; fileRef = 9632477119CB3AA600B46B3A /* lookup_amatorka.png */; };
 		963248E219CB3AA800B46B3A /* lookup_miss_etikate.png in Resources */ = {isa = PBXBuildFile; fileRef = 9632477219CB3AA600B46B3A /* lookup_miss_etikate.png */; };
@@ -222,7 +221,6 @@
 		9632498519CB3AA800B46B3A /* GPUImagePicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 963248BB19CB3AA800B46B3A /* GPUImagePicture.m */; };
 		9632498619CB3AA800B46B3A /* GPUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 963248BD19CB3AA800B46B3A /* GPUImageView.m */; };
 		9632498719CB3AA800B46B3A /* License in Resources */ = {isa = PBXBuildFile; fileRef = 963248BE19CB3AA800B46B3A /* License */; };
-		9632498819CB3AA800B46B3A /* README.txt in Sources */ = {isa = PBXBuildFile; fileRef = 963248BF19CB3AA800B46B3A /* README.txt */; };
 		9683A4C319B8C96A001DE84C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C219B8C96A001DE84C /* Foundation.framework */; };
 		9683A4C519B8C96A001DE84C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C419B8C96A001DE84C /* CoreGraphics.framework */; };
 		9683A4C719B8C96A001DE84C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9683A4C619B8C96A001DE84C /* UIKit.framework */; };
@@ -359,7 +357,6 @@
 		9632476719CB3AA600B46B3A /* DBCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBCameraView.h; sourceTree = "<group>"; };
 		9632476819CB3AA600B46B3A /* DBCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBCameraView.m; sourceTree = "<group>"; };
 		9632476B19CB3AA600B46B3A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		9632476C19CB3AA600B46B3A /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		9632477019CB3AA600B46B3A /* lookup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup.png; sourceTree = "<group>"; };
 		9632477119CB3AA600B46B3A /* lookup_amatorka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_amatorka.png; sourceTree = "<group>"; };
 		9632477219CB3AA600B46B3A /* lookup_miss_etikate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_miss_etikate.png; sourceTree = "<group>"; };
@@ -692,7 +689,6 @@
 		963248BC19CB3AA800B46B3A /* GPUImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageView.h; sourceTree = "<group>"; };
 		963248BD19CB3AA800B46B3A /* GPUImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageView.m; sourceTree = "<group>"; };
 		963248BE19CB3AA800B46B3A /* License */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License; sourceTree = "<group>"; };
-		963248BF19CB3AA800B46B3A /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		9683A4BF19B8C96A001DE84C /* WeddingPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeddingPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9683A4C219B8C96A001DE84C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9683A4C419B8C96A001DE84C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -842,7 +838,6 @@
 			children = (
 				9632472519CB3AA600B46B3A /* DBCamera */,
 				9632476B19CB3AA600B46B3A /* LICENSE */,
-				9632476C19CB3AA600B46B3A /* README.txt */,
 			);
 			path = DBCamera;
 			sourceTree = "<group>";
@@ -984,7 +979,6 @@
 			children = (
 				9632476E19CB3AA600B46B3A /* framework */,
 				963248BE19CB3AA800B46B3A /* License */,
-				963248BF19CB3AA800B46B3A /* README.txt */,
 			);
 			path = GPUImage;
 			sourceTree = "<group>";
@@ -1770,7 +1764,6 @@
 				9632494819CB3AA800B46B3A /* GPUImageParallelCoordinateLineTransformFilter.m in Sources */,
 				96895F4B19CF394600470964 /* HTVideoListViewController.m in Sources */,
 				9632496519CB3AA800B46B3A /* GPUImageSolidColorGenerator.m in Sources */,
-				963248DF19CB3AA800B46B3A /* README.txt in Sources */,
 				96895F5019CF44CB00470964 /* HTCollectionViewController.m in Sources */,
 				9632494519CB3AA800B46B3A /* GPUImageOpeningFilter.m in Sources */,
 				9632491C19CB3AA800B46B3A /* GPUImageHarrisCornerDetectionFilter.m in Sources */,
@@ -1792,7 +1785,6 @@
 				9632492819CB3AA800B46B3A /* GPUImageKuwaharaFilter.m in Sources */,
 				9632495119CB3AA800B46B3A /* GPUImagePrewittEdgeDetectionFilter.m in Sources */,
 				9632490919CB3AA800B46B3A /* GPUImageEmbossFilter.m in Sources */,
-				9632498819CB3AA800B46B3A /* README.txt in Sources */,
 				963248D619CB3AA800B46B3A /* DBMotionManager.m in Sources */,
 				963248C719CB3AA800B46B3A /* DBCameraLibraryViewController.m in Sources */,
 				963248F519CB3AA800B46B3A /* GPUImageChromaKeyBlendFilter.m in Sources */,

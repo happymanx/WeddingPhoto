@@ -33,7 +33,6 @@
     // Do any additional setup after loading the view from its nib.
     passwordTextField.placeholder = NSLocalizedString(@"請輸入下載密碼", nil);
     
-    [HTFileManager sharedManager];
 }
 
 -(IBAction)downloadButtonClicked:(UIButton *)button
