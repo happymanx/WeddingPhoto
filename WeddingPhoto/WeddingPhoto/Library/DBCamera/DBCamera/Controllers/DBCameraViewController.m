@@ -276,7 +276,7 @@ NSLocalizedStringFromTable(key, @"DBCamera", nil)
         
         UIImage *mixedImage = [[HTFrameImage sharedInstance] returnMixedImage:image withSize:image.size];
         
-        // 儲存影像到相簿
+#pragma mark - 儲存影像到相簿
         ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
         
         [library writeImageToSavedPhotosAlbum:[mixedImage CGImage] orientation:(ALAssetOrientation)[mixedImage imageOrientation] completionBlock:^(NSURL *assetURL, NSError *error){
@@ -286,6 +286,17 @@ NSLocalizedStringFromTable(key, @"DBCamera", nil)
                 // TODO: success handling
             }
         }];
+#pragma mark - 儲存影像到APP
+        // Documents -> Events -> xxx -> Works -> zzz.jpg
+        NSString *eventPath = [HTFileManager eventsPath];
+        NSString *workPath = [[eventPath stringByAppendingPathComponent:[HTAppDelegate sharedDelegate].eventName] stringByAppendingPathComponent:@"Works"];
+        if (![[NSFileManager defaultManager] fileExistsAtPath:workPath]) {
+            [[NSFileManager defaultManager] createDirectoryAtPath:workPath withIntermediateDirectories:NO attributes:nil error:nil];
+        }
+        NSInteger number = [[[HTFileManager sharedManager] listFileAtPath:workPath] count];
+        NSString *targetPath = [workPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%li.jpg", (long)number]];
+        UIImage *img = [UIImage imageNamed:@"HappyMan.jpg"];
+        [UIImageJPEGRepresentation(img, 0.9) writeToFile:targetPath atomically:YES];
 
     } else {
         CGFloat newW = 256.0;

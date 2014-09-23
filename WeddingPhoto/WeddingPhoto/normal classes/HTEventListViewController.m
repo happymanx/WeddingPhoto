@@ -68,10 +68,13 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (isEdit) {
+    // 記錄事件名稱
+    [HTAppDelegate sharedDelegate].eventName = eventArr[indexPath.row];
+    
+    if (isEdit) {// 編輯模式時，無法進入拍攝
         return;
     }
-    else {
+    else {// 非編輯模式時，進入拍攝
         DBCameraContainerViewController *cameraContainer = [[DBCameraContainerViewController alloc] initWithDelegate:self];
         [cameraContainer setFullScreenMode];
         
@@ -124,6 +127,7 @@
 
 -(void)camera:(id)cameraViewController didFinishWithImage:(UIImage *)image withMetadata:(NSDictionary *)metadata
 {
+    
 }
 
 #pragma mark - UIAlertViewDelegate
@@ -134,8 +138,11 @@
         
     }
     if (buttonIndex == 1) {// 好，移除
+        // 暫存資料移除
         [eventArr removeObjectAtIndex:alertView.tag];
         [displayTableView reloadData];
+        // APP中的資料移除
+        
     }
 }
 @end

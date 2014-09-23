@@ -37,7 +37,6 @@
 
 -(IBAction)downloadButtonClicked:(UIButton *)button
 {
-    
 }
 
 -(IBAction)eventButtonClicked:(UIButton *)button
