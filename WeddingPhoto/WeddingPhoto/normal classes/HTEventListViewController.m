@@ -143,11 +143,13 @@
         
     }
     if (buttonIndex == 1) {// 好，移除
+        // APP中的資料移除
+        NSString *targetPath = [[HTFileManager eventsPath] stringByAppendingPathComponent:eventArr[alertView.tag]];
+        [[NSFileManager defaultManager] removeItemAtPath:targetPath error:nil];
         // 暫存資料移除
         [eventArr removeObjectAtIndex:alertView.tag];
+        // 重載
         [displayTableView reloadData];
-        // APP中的資料移除
-        
     }
 }
 @end
