@@ -83,7 +83,7 @@
 
 - (IBAction)finishButtonClicked:(UIButton *)button
 {
-    // 儲存影像到相簿
+#pragma mark - 儲存影像到相簿
     ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
     UIImage *finalImage = [self returnFinalImage:sourceImage withSize:sourceImage.size];
     
@@ -95,6 +95,17 @@
             [self backButtonClicked:nil];
         }
     }];
+#pragma mark - 儲存影像到APP
+    // Documents -> Events -> xxx -> Works -> zzz.jpg
+    NSString *eventPath = [HTFileManager eventsPath];
+    NSString *workPath = [[eventPath stringByAppendingPathComponent:[HTAppDelegate sharedDelegate].eventName] stringByAppendingPathComponent:@"Works"];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:workPath]) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:workPath withIntermediateDirectories:NO attributes:nil error:nil];
+    }
+    NSInteger number = [[[HTFileManager sharedManager] listFileAtPath:workPath] count];
+    NSString *targetPath = [workPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%li.jpg", (long)number]];
+    //        UIImage *img = [UIImage imageNamed:@"HappyMan.jpg"];
+    [UIImageJPEGRepresentation(finalImage, 0.9) writeToFile:targetPath atomically:YES];
 }
 
 -(IBAction)shareButtonClicked:(UIButton *)button
