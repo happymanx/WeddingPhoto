@@ -21,6 +21,7 @@ PODS:
   - AFNetworking/UIKit (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - GGFullscreenImageViewController (1.0.0)
   - MBProgressHUD (0.9)
   - Toast (2.3)
   - XCDYouTubeKit (2.0.2)
@@ -29,6 +30,7 @@ PODS:
 DEPENDENCIES:
   - ACEDrawingView
   - AFNetworking
+  - GGFullscreenImageViewController
   - MBProgressHUD
   - Toast
   - XCDYouTubeKit
@@ -37,6 +39,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   ACEDrawingView: 70e79a58cbd3a07c8e3ea9166fc3cafe16cf9a97
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
+  GGFullscreenImageViewController: 6ebe07a8427a286de1a27cbc6cb16a2b6226a488
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   Toast: 1d773017c5d2e7b1d90565a5f9530340e6eeff72
   XCDYouTubeKit: 65d5f5b9fe4e731327ab61ecc253b8e70e5d5a4d

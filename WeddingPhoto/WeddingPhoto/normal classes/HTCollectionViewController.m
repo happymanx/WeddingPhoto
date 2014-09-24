@@ -9,6 +9,7 @@
 #import "HTCollectionViewController.h"
 #import "HTCollectionCell.h"
 #import "HTEditPhotoViewController.h"
+#import "HTFullscreenImageViewController.h"
 
 @interface HTCollectionViewController ()
 
@@ -27,7 +28,7 @@
     return self;
 }
 
-- (id)initWithSelfWorkArr:(NSArray *)arr
+- (id)initWithSelfWorkArr:(NSArray *)arr collectionViewMode:(HTCollectionViewMode)mode
 {
     self = [super initWithNibName:@"HTCollectionViewController" bundle:nil];
     if (self) {
@@ -40,6 +41,9 @@
         itemArray = [[HTFileManager sharedManager] listFileAtPath:workPath];
         
         isSelfWork = YES;
+        collectionViewMode = mode;
+        
+        cellImageViewArr = [NSMutableArray array];
     }
     return self;
 }
@@ -63,6 +67,8 @@
     if (isSelfWork) {
         NSString *targetPath = [workPath stringByAppendingPathComponent:itemArray[indexPath.row]];
         [cell.photoImageView setImage:[UIImage imageWithContentsOfFile:targetPath]];
+        // 注意會有bug，因為cell會重生
+        [cellImageViewArr addObject:cell.photoImageView];
     }
     else {
         [cell.titleLabel setText:itemArray[indexPath.row]];
@@ -78,10 +84,16 @@
     if (isSelfWork) {
         NSString *targetPath = [workPath stringByAppendingPathComponent:itemArray[indexPath.row]];
         UIImage *image = [UIImage imageWithContentsOfFile:targetPath];
-
-        HTEditPhotoViewController *vc = [[HTEditPhotoViewController alloc] initWithImage:image];
-        
-        [self.navigationController pushViewController:vc animated:YES];
+        if (collectionViewMode == HTCollectionViewModeEdit) {
+            
+            HTEditPhotoViewController *vc = [[HTEditPhotoViewController alloc] initWithImage:image];
+            
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        if (collectionViewMode == HTCollectionViewModeBrowse) {
+            HTFullscreenImageViewController *vc = [[HTFullscreenImageViewController alloc] initWithImage:image];
+            [self presentViewController:vc animated:YES completion:nil];
+        }
     }
     else {
         

@@ -342,8 +342,8 @@ NSLocalizedStringFromTable(key, @"DBCamera", nil)
 
 - (void) openLibrary
 {
-    // 開啓自己的作品
-    HTCollectionViewController *vc = [[HTCollectionViewController alloc] initWithSelfWorkArr:@[]];
+#pragma mark - 開啓自己的作品
+    HTCollectionViewController *vc = [[HTCollectionViewController alloc] initWithSelfWorkArr:@[] collectionViewMode:HTCollectionViewModeEdit];
     [self.navigationController pushViewController:vc animated:YES];
 /*
     if ( [ALAssetsLibrary authorizationStatus] !=  ALAuthorizationStatusDenied ) {

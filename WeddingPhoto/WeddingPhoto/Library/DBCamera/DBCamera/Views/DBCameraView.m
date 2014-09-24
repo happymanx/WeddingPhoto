@@ -91,7 +91,7 @@
     [exposeView.layer addSublayer:self.exposeBox];
     [self addSubview:exposeView];
     
-#pragma mark - Frame Image View
+#pragma mark - 相框
     
     self.frameArr = [HTFrameImage defautFrameArr];
     self.frameNumber = 0;

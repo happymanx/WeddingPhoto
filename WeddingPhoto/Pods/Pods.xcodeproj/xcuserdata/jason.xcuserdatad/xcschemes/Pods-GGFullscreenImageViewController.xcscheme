@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7A75876A5E8B4BF7BAC72535"
-               BuildableName = "libPods-MBProgressHUD.a"
-               BlueprintName = "Pods-MBProgressHUD"
+               BlueprintIdentifier = "39D65A4C09E649A8B03D3F00"
+               BuildableName = "libPods-GGFullscreenImageViewController.a"
+               BlueprintName = "Pods-GGFullscreenImageViewController"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

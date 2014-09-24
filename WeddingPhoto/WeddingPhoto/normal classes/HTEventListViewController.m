@@ -51,6 +51,7 @@
     cell.deleteButton.tag = indexPath.row;
     [cell.deleteButton addTarget:self action:@selector(deleteButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [cell.albumButton addTarget:self action:@selector(albumButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    cell.albumButton.tag = indexPath.row;
     
     if (isEdit) {
         cell.deleteButton.hidden = NO;
@@ -114,7 +115,11 @@
 
 -(void)albumButtonClicked:(UIButton *)button
 {
-    HTCollectionViewController *vc = [[HTCollectionViewController alloc] initWithItemArr:@[]];
+    // 記錄事件名稱
+    [HTAppDelegate sharedDelegate].eventName = eventArr[button.tag];
+
+#pragma mark - 開啓自己的作品
+    HTCollectionViewController *vc = [[HTCollectionViewController alloc] initWithSelfWorkArr:@[] collectionViewMode:HTCollectionViewModeBrowse];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
