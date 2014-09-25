@@ -132,7 +132,6 @@
 
 -(void)camera:(id)cameraViewController didFinishWithImage:(UIImage *)image withMetadata:(NSDictionary *)metadata
 {
-    
 }
 
 #pragma mark - UIAlertViewDelegate

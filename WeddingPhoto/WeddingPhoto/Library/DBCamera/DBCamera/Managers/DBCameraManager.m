@@ -129,12 +129,12 @@
     
     [videoConnection setVideoScaleAndCropFactor:_maxScale];
     
-    __weak AVCaptureSession *captureSessionBlock = _captureSession;
+//    __weak AVCaptureSession *captureSessionBlock = _captureSession;
     __weak id<DBCameraManagerDelegate>delegateBlock = _delegate;
     
     [_stillImageOutput captureStillImageAsynchronouslyFromConnection:videoConnection
                                                   completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
-         [captureSessionBlock stopRunning];
+//         [captureSessionBlock stopRunning];
          
          if ( imageDataSampleBuffer != NULL ) {
              NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
