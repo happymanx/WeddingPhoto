@@ -19,3 +19,13 @@
 #define ALog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 
 #endif
+
+typedef enum {
+    HTAdTypeTrial = 0,
+    HTAdTypeEvent
+} HTAdType;
+
+typedef enum {
+    HTCollectionTypeSelfWork = 0,
+    HTCollectionTypeNetWork
+} HTCollectionType;

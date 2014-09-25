@@ -10,12 +10,16 @@
 
 @interface HTAdViewController : HTBasicViewController <UIScrollViewDelegate>
 {
-    NSArray *adArr;
+    NSArray *adTypeTrialArr; // 存密碼，可下載試用
+    NSArray *adTypeEventArr; // 存廣告，可點擊跳出
     
     IBOutlet UIScrollView *displayScrollView;
     IBOutlet UIPageControl *displayPageControl;
+    
+    HTAdType adType;
+    NSInteger selectedIndex;
 }
 
-- (id)initWithAdArr:(NSArray *)array;
+- (id)initWithAdArr:(NSArray *)array adType:(HTAdType)type;
 
 @end
