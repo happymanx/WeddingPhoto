@@ -13,9 +13,9 @@
     IBOutlet UICollectionView *displayCollectionView;
     IBOutlet UIButton *uploadButton;
     
-    NSArray *itemArray;
-    
-    BOOL isSelfWork;
+    NSArray *itemArr;
+    NSMutableArray *uploadArr;
+
     HTCollectionType collectionType;
     
     NSString *workPath;
