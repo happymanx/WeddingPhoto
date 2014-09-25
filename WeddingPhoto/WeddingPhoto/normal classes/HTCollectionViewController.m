@@ -105,7 +105,7 @@
 
 #pragma mark – UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGSize size = CGSizeMake(80, 130);
+    CGSize size = CGSizeMake(80, 80);
     return size;
 }
 
