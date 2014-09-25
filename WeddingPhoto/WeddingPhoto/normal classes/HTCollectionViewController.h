@@ -8,26 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum {
-    HTCollectionViewModeEdit = 0,
-    HTCollectionViewModeBrowse
-} HTCollectionViewMode;
-
 @interface HTCollectionViewController : HTBasicViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 {
     IBOutlet UICollectionView *displayCollectionView;
+    IBOutlet UIButton *uploadButton;
     
     NSArray *itemArray;
     
     BOOL isSelfWork;
-    HTCollectionViewMode collectionViewMode;
+    HTCollectionType collectionType;
     
     NSString *workPath;
-    
-    NSMutableArray *cellImageViewArr;
 }
 
-- (id)initWithItemArr:(NSArray *)arr;
-- (id)initWithSelfWorkArr:(NSArray *)arr collectionViewMode:(HTCollectionViewMode)mode;
+- (id)initWithWorkArr:(NSArray *)arr collectionType:(HTCollectionType)mode;
 
 @end

@@ -119,7 +119,7 @@
     [HTAppDelegate sharedDelegate].eventName = eventArr[button.tag];
 
 #pragma mark - 開啓自己的作品
-    HTCollectionViewController *vc = [[HTCollectionViewController alloc] initWithSelfWorkArr:@[] collectionViewMode:HTCollectionViewModeBrowse];
+    HTCollectionViewController *vc = [[HTCollectionViewController alloc] initWithWorkArr:@[] collectionType:HTCollectionTypeNetWork];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

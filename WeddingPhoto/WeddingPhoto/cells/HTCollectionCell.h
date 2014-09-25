@@ -11,6 +11,6 @@
 @interface HTCollectionCell : UICollectionViewCell
 
 @property (nonatomic, retain) IBOutlet UIImageView *photoImageView;
-@property (nonatomic, retain) IBOutlet UILabel *titleLabel;
+@property (nonatomic, retain) IBOutlet UIButton *checkButton;
 
 @end

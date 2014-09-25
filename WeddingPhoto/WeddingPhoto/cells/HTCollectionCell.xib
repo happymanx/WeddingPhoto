@@ -16,11 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWT-Eu-EWl">
+                        <rect key="frame" x="50" y="50" width="30" height="30"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <size key="customSize" width="81" height="72"/>
             <connections>
+                <outlet property="checkButton" destination="XWT-Eu-EWl" id="wTK-3F-5Q9"/>
                 <outlet property="photoImageView" destination="MKc-fg-ht4" id="t4I-jb-pyu"/>
             </connections>
             <point key="canvasLocation" x="140" y="129"/>
