@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
@@ -52,32 +51,25 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i8U-tk-Ir6">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i8U-tk-Ir6" userLabel="Function View">
                     <rect key="frame" x="0.0" y="527" width="320" height="41"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNV-iV-VPf">
-                            <rect key="frame" x="96" y="1" width="40" height="40"/>
-                            <state key="normal" title="Filter">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNV-iV-VPf">
+                            <rect key="frame" x="103" y="4" width="32" height="32"/>
+                            <state key="normal" image="but_filter.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <state key="selected" image="but_filter_on.png"/>
                             <connections>
                                 <action selector="changeFilterButtonClicked:" destination="-1" eventType="touchUpInside" id="ZMI-aM-rBf"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVE-6v-4hL">
-                            <rect key="frame" x="140" y="1" width="40" height="40"/>
-                            <state key="normal" title="Text">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k58-ya-bDR">
+                            <rect key="frame" x="15" y="5" width="32" height="32"/>
+                            <state key="normal" image="but_pen.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
-                            <connections>
-                                <action selector="editStatementButtonClicked:" destination="-1" eventType="touchUpInside" id="ScD-ie-YIV"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k58-ya-bDR">
-                            <rect key="frame" x="14" y="0.0" width="40" height="40"/>
-                            <state key="normal" title="Size">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
+                            <state key="selected" image="but_pen_on.png"/>
                             <connections>
                                 <action selector="changeSizeButtonClicked:" destination="-1" eventType="touchUpInside" id="Xh4-uV-Oaa"/>
                             </connections>
@@ -100,23 +92,24 @@
                                 <action selector="finishButtonClicked:" destination="-1" eventType="touchUpInside" id="4eE-et-2Pt"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEo-wz-Jya">
+                            <rect key="frame" x="143" y="4" width="32" height="32"/>
+                            <state key="normal" image="but_share.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="but_share_on.png"/>
+                            <connections>
+                                <action selector="shareButtonClicked:" destination="-1" eventType="touchUpInside" id="PPW-zJ-gtL"/>
+                            </connections>
+                        </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bdw-Hr-M5X">
-                            <rect key="frame" x="287" y="6" width="30" height="30"/>
-                            <state key="normal" image="close">
+                            <rect key="frame" x="287" y="6" width="32" height="32"/>
+                            <state key="normal" image="but_album_close.png">
                                 <color key="titleColor" red="0.92549026010000002" green="0.0" blue="0.392156899" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
                                 <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="HjD-Jw-kuU"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEo-wz-Jya">
-                            <rect key="frame" x="188" y="0.0" width="40" height="40"/>
-                            <state key="normal" title="Share">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="shareButtonClicked:" destination="-1" eventType="touchUpInside" id="PPW-zJ-gtL"/>
                             </connections>
                         </button>
                     </subviews>
@@ -235,7 +228,7 @@
             <color key="backgroundColor" red="0.71764707565307617" green="0.93333339691162109" blue="0.92156869173049927" alpha="1" colorSpace="deviceRGB"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="56" y="536.5"/>
+            <point key="canvasLocation" x="-58" y="526.5"/>
         </view>
         <view contentMode="scaleToFill" id="D6Y-FB-zmL" userLabel="Szie View">
             <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
@@ -422,8 +415,25 @@
             </connections>
             <point key="canvasLocation" x="-189" y="337"/>
         </button>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sVE-6v-4hL">
+            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <state key="normal" title="Text">
+                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <connections>
+                <action selector="editStatementButtonClicked:" destination="-1" eventType="touchUpInside" id="ScD-ie-YIV"/>
+            </connections>
+            <point key="canvasLocation" x="-178" y="203"/>
+        </button>
     </objects>
     <resources>
-        <image name="close" width="30" height="30"/>
+        <image name="but_album_close.png" width="64" height="64"/>
+        <image name="but_filter.png" width="64" height="64"/>
+        <image name="but_filter_on.png" width="64" height="64"/>
+        <image name="but_pen.png" width="64" height="64"/>
+        <image name="but_pen_on.png" width="64" height="64"/>
+        <image name="but_share.png" width="64" height="64"/>
+        <image name="but_share_on.png" width="64" height="64"/>
     </resources>
 </document>

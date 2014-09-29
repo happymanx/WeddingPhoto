@@ -103,6 +103,18 @@
     
     [self addSubview:self.frameImageView];
     
+#pragma mark - 左右箭號
+    CGRect screenRect = [UIScreen mainScreen].bounds;
+    UIImageView *leftArrowImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"but_left.png"]];
+    leftArrowImageView.frame = CGRectMake(0, 0, 30, 44);
+    leftArrowImageView.center = CGPointMake(0, screenRect.size.height / 2);
+    [self addSubview:leftArrowImageView];
+    
+    UIImageView *rightArrowImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"but_right.png"]];
+    rightArrowImageView.frame = CGRectMake(0, 0, 30, 44);
+    rightArrowImageView.center = CGPointMake(screenRect.size.width -30, screenRect.size.height / 2);
+    [self addSubview:rightArrowImageView];
+    
 //    [self addSubview:self.topContainerBar];
     [self addSubview:self.bottomContainerBar];
     
@@ -161,7 +173,7 @@
     if ( !_triggerButton ) {
         _triggerButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_triggerButton setBackgroundColor:self.tintColor];
-        [_triggerButton setImage:[UIImage imageNamed:@"trigger"] forState:UIControlStateNormal];
+        [_triggerButton setImage:[UIImage imageNamed:@"but_photo.png"] forState:UIControlStateNormal];
         [_triggerButton setFrame:(CGRect){ 0, 0, 66, 66 }];
         [_triggerButton.layer setCornerRadius:33.0f];
         [_triggerButton setCenter:(CGPoint){ CGRectGetMidX(self.bottomContainerBar.bounds), CGRectGetMidY(self.bottomContainerBar.bounds) }];
@@ -176,8 +188,8 @@
     if ( !_closeButton ) {
         _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_closeButton setBackgroundColor:[UIColor clearColor]];
-        [_closeButton setImage:[[UIImage imageNamed:@"close"] tintImageWithColor:self.tintColor] forState:UIControlStateNormal];
-        [_closeButton setFrame:(CGRect){ 25, 25, 50, 50 }];
+        [_closeButton setImage:[UIImage imageNamed:@"but_photo_close.png"] forState:UIControlStateNormal];
+        [_closeButton setFrame:(CGRect){ 25, 25, 59, 61 }];
         [_closeButton addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
     }
     
@@ -189,9 +201,9 @@
     if ( !_cameraButton ) {
         _cameraButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_cameraButton setBackgroundColor:[UIColor clearColor]];
-        [_cameraButton setImage:[[UIImage imageNamed:@"flip"] tintImageWithColor:self.tintColor] forState:UIControlStateNormal];
-        [_cameraButton setImage:[[UIImage imageNamed:@"flip"] tintImageWithColor:self.selectedTintColor] forState:UIControlStateSelected];
-        [_cameraButton setFrame:(CGRect){ CGRectGetWidth(self.bounds) - 55, CGRectGetMidY(self.bottomContainerBar.bounds) - 40, 50, 50 }];
+        [_cameraButton setImage:[[UIImage imageNamed:@"but_switch.png"] tintImageWithColor:self.tintColor] forState:UIControlStateNormal];
+        [_cameraButton setImage:[[UIImage imageNamed:@"but_switch.png"] tintImageWithColor:self.selectedTintColor] forState:UIControlStateSelected];
+        [_cameraButton setFrame:(CGRect){ CGRectGetWidth(self.bounds) - 55, CGRectGetMidY(self.bottomContainerBar.bounds) - 40, 60, 31}];
         [_cameraButton addTarget:self action:@selector(changeCamera:) forControlEvents:UIControlEventTouchUpInside];
     }
     
