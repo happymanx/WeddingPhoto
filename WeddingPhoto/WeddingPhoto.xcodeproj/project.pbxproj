@@ -299,6 +299,7 @@
 		96CE6C0D19D9645A007A7206 /* but_upload.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CE6BEA19D9645A007A7206 /* but_upload.png */; };
 		96CE6C0E19D9645A007A7206 /* but_upload_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CE6BEB19D9645A007A7206 /* but_upload_on.png */; };
 		96CE6C1019D96533007A7206 /* but_folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CE6C0F19D96533007A7206 /* but_folder.png */; };
+		96CE6C1319D97B40007A7206 /* icon156.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CE6C1219D97B40007A7206 /* icon156.png */; };
 		96E3F3C619BF67CE00E88F98 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96E3F3C819BF67CE00E88F98 /* Localizable.strings */; };
 		96F855F219C9D3E300FA8B10 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F855F119C9D3E300FA8B10 /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
@@ -819,6 +820,7 @@
 		96CE6BEA19D9645A007A7206 /* but_upload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = but_upload.png; sourceTree = "<group>"; };
 		96CE6BEB19D9645A007A7206 /* but_upload_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = but_upload_on.png; sourceTree = "<group>"; };
 		96CE6C0F19D96533007A7206 /* but_folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = but_folder.png; sourceTree = "<group>"; };
+		96CE6C1219D97B40007A7206 /* icon156.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon156.png; sourceTree = "<group>"; };
 		96E3F3BE19BF674700E88F98 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		96E3F3BF19BF674700E88F98 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		96E3F3C019BF674800E88F98 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -1613,9 +1615,18 @@
 			path = pic;
 			sourceTree = "<group>";
 		};
+		96CE6C1119D97B40007A7206 /* app icon */ = {
+			isa = PBXGroup;
+			children = (
+				96CE6C1219D97B40007A7206 /* icon156.png */,
+			);
+			path = "app icon";
+			sourceTree = "<group>";
+		};
 		96E3F3B819BF539F00E88F98 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				96CE6C1119D97B40007A7206 /* app icon */,
 				96CE6BC819D9645A007A7206 /* pic */,
 				96968E8F19CF5305002C9F5F /* test pic */,
 				962A06C719C2247E00C6A93B /* frame */,
@@ -1768,6 +1779,7 @@
 				96CE6C0E19D9645A007A7206 /* but_upload_on.png in Resources */,
 				96CE6BFC19D9645A007A7206 /* but_eraser_on.png in Resources */,
 				96895F4319CF394600470964 /* HTEditPhotoViewController.xib in Resources */,
+				96CE6C1319D97B40007A7206 /* icon156.png in Resources */,
 				96895F4519CF394600470964 /* HTEventListViewController.xib in Resources */,
 				963248DE19CB3AA800B46B3A /* LICENSE in Resources */,
 				96895F4819CF394600470964 /* HTMainViewController.xib in Resources */,

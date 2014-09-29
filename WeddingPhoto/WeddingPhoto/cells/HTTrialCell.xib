@@ -19,7 +19,7 @@
                     </imageView>
                 </subviews>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="trialImageView" destination="Odx-fm-si1" id="7fm-ts-A2M"/>
             </connections>

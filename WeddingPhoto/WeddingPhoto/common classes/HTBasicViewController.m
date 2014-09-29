@@ -32,7 +32,9 @@
 {
     [super viewDidLoad];
 
-    self.backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg.png"]];
+//    self.backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg.png"]];
+    self.backgroundImageView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.backgroundImageView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:self.backgroundImageView];
     [self.view sendSubviewToBack:self.backgroundImageView];
 }
@@ -41,7 +43,6 @@
 {
     [super viewDidAppear:animated];
     self.backgroundImageView.frame = [UIScreen mainScreen].bounds;
-    
 }
 
 /*

@@ -91,10 +91,11 @@
     }
     if (collectionType == HTCollectionTypeNetWork) {
         // 全螢幕顯示相片
-//        HTFullscreenImageViewController *vc = [[HTFullscreenImageViewController alloc] initWithImage:image];
-//        [self presentViewController:vc animated:YES completion:nil];
+        UIImage *image = [UIImage imageNamed:@"HappyMan.jpg"];HTFullscreenImageViewController *vc = [[HTFullscreenImageViewController alloc] initWithImage:image];
+        [self presentViewController:vc animated:YES completion:nil];
     }
 }
+
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
     
 }

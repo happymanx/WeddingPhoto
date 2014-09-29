@@ -107,12 +107,12 @@
     CGRect screenRect = [UIScreen mainScreen].bounds;
     UIImageView *leftArrowImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"but_left.png"]];
     leftArrowImageView.frame = CGRectMake(0, 0, 30, 44);
-    leftArrowImageView.center = CGPointMake(0, screenRect.size.height / 2);
+    leftArrowImageView.center = CGPointMake(15, screenRect.size.height / 2 - 20);
     [self addSubview:leftArrowImageView];
     
     UIImageView *rightArrowImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"but_right.png"]];
     rightArrowImageView.frame = CGRectMake(0, 0, 30, 44);
-    rightArrowImageView.center = CGPointMake(screenRect.size.width -30, screenRect.size.height / 2);
+    rightArrowImageView.center = CGPointMake(screenRect.size.width - 15, screenRect.size.height / 2 - 20);
     [self addSubview:rightArrowImageView];
     
 //    [self addSubview:self.topContainerBar];
@@ -203,7 +203,7 @@
         [_cameraButton setBackgroundColor:[UIColor clearColor]];
         [_cameraButton setImage:[[UIImage imageNamed:@"but_switch.png"] tintImageWithColor:self.tintColor] forState:UIControlStateNormal];
         [_cameraButton setImage:[[UIImage imageNamed:@"but_switch.png"] tintImageWithColor:self.selectedTintColor] forState:UIControlStateSelected];
-        [_cameraButton setFrame:(CGRect){ CGRectGetWidth(self.bounds) - 55, CGRectGetMidY(self.bottomContainerBar.bounds) - 40, 60, 31}];
+        [_cameraButton setFrame:(CGRect){ CGRectGetWidth(self.bounds) - 65, CGRectGetMidY(self.bottomContainerBar.bounds) - 40, 60, 31}];
         [_cameraButton addTarget:self action:@selector(changeCamera:) forControlEvents:UIControlEventTouchUpInside];
     }
     
