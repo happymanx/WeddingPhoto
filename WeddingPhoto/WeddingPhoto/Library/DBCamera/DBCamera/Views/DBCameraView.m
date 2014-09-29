@@ -405,6 +405,16 @@
 
 - (void) triggerAction:(UIButton *)button
 {
+#pragma mark - 每拍一張就閃
+    UIView *blockView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    blockView.backgroundColor = [UIColor whiteColor];
+    [self addSubview:blockView];
+    [UIView animateWithDuration:0.5 animations:^{
+        blockView.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        [blockView removeFromSuperview];
+    }];
+
     if ( [_delegate respondsToSelector:@selector(cameraViewStartRecording)] )
         [_delegate cameraViewStartRecording];
 }

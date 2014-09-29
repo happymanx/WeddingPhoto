@@ -134,6 +134,7 @@
     
     [_stillImageOutput captureStillImageAsynchronouslyFromConnection:videoConnection
                                                   completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
+                                                      
 //         [captureSessionBlock stopRunning];
          
          if ( imageDataSampleBuffer != NULL ) {
