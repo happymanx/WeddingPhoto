@@ -215,9 +215,9 @@
     if ( !_flashButton ) {
         _flashButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_flashButton setBackgroundColor:[UIColor clearColor]];
-        [_flashButton setImage:[[UIImage imageNamed:@"flash"] tintImageWithColor:self.tintColor] forState:UIControlStateNormal];
-        [_flashButton setImage:[[UIImage imageNamed:@"flash"] tintImageWithColor:self.selectedTintColor] forState:UIControlStateSelected];
-        [_flashButton setFrame:(CGRect){ CGRectGetWidth(self.bounds) - 55, CGRectGetMidY(self.bottomContainerBar.bounds), 50, 50 }];
+        [_flashButton setImage:[[UIImage imageNamed:@"but_flash.png"] tintImageWithColor:self.tintColor] forState:UIControlStateNormal];
+//        [_flashButton setImage:[[UIImage imageNamed:@"but_flash.png"] tintImageWithColor:self.selectedTintColor] forState:UIControlStateSelected];
+        [_flashButton setFrame:(CGRect){ CGRectGetWidth(self.bounds) - 55, CGRectGetMidY(self.bottomContainerBar.bounds), 40, 40 }];
         [_flashButton addTarget:self action:@selector(flashTriggerAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     
@@ -367,8 +367,23 @@
 - (void) flashTriggerAction:(UIButton *)button
 {
     if ( [_delegate respondsToSelector:@selector(triggerFlashForMode:)] ) {
-        [button setSelected:!button.isSelected];
-        [_delegate triggerFlashForMode: button.isSelected ? AVCaptureFlashModeOn : AVCaptureFlashModeOff ];
+        AVCaptureFlashMode flashMode = AVCaptureFlashModeOn;
+        button.tag = (button.tag + 1) % 3;
+        if (button.tag == 0) {
+            flashMode = AVCaptureFlashModeOn;
+            [button setImage:[UIImage imageNamed:@"but_flash.png"] forState:UIControlStateNormal];
+        }
+        if (button.tag == 1) {
+            flashMode = AVCaptureFlashModeAuto;
+            [button setImage:[UIImage imageNamed:@"but_flash_auto.png"] forState:UIControlStateNormal];
+        }
+        if (button.tag == 2) {
+            flashMode = AVCaptureFlashModeOff;
+            [button setImage:[UIImage imageNamed:@"but_flash_no.png"] forState:UIControlStateNormal];
+        }
+        
+//        [button setSelected:!button.isSelected];
+        [_delegate triggerFlashForMode: flashMode];
     }
 }
 
