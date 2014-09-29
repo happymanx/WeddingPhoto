@@ -15,6 +15,7 @@
     IBOutlet UIImageView *photoImageView;
     IBOutlet ACEDrawingView *drawingView;
     IBOutlet UIButton *colorButton;
+    IBOutlet UIButton *filterButton;
     
     UIImage *sourceImage;
     UIImage *previewImage;
@@ -41,7 +42,6 @@
     IBOutlet UIButton *size2Button;
     IBOutlet UIButton *size3Button;
     IBOutlet UIButton *size4Button;
-    IBOutlet UIButton *size5Button;
     IBOutlet UIButton *eraserButton;
     
     IBOutlet UIView *sizeView;
@@ -56,6 +56,8 @@
     IBOutlet UIView *filterView;
     IBOutlet UIScrollView *filterScrollView;
     IBOutlet UIView *filterSubView;
+    
+    IBOutlet UIView *functionView;
 
     // Edit Text
     IBOutlet UITextView *statementTextView;

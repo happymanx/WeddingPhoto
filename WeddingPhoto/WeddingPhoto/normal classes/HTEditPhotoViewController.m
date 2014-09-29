@@ -119,21 +119,25 @@
 - (IBAction)changeColorButtonClicked:(UIButton *)button
 {
     [self removeAllToolView];
-    [self.view addSubview:colorView];
-    [colorView bringSubviewToFront:drawingView];
+    button.selected = !button.selected;
+    if (button.selected == YES) {
+        filterButton.selected = NO;
+        
+        [self.view addSubview:colorView];
+        
+        colorView.frame = CGRectMake(0, functionView.frame.origin.y - colorView.frame.size.height, colorView.frame.size.width, colorView.frame.size.height);
+        
+        [colorView bringSubviewToFront:drawingView];
+    }
+    else {
+
+    }
 }
 
 -(IBAction)colorButtonClicked:(UIButton *)button
 {
     drawingView.lineColor = button.backgroundColor;
     [colorView removeFromSuperview];
-}
-
--(IBAction)changeSizeButtonClicked:(UIButton *)button
-{
-    [self removeAllToolView];
-    [self.view addSubview:sizeView];
-    [sizeView bringSubviewToFront:drawingView];
 }
 
 -(IBAction)sizeButtonClicked:(UIButton *)button
@@ -148,17 +152,27 @@
         
         drawingView.lineWidth = button.tag;
     }
-    [sizeView removeFromSuperview];
+    [colorView removeFromSuperview];
 }
 
 -(IBAction)changeFilterButtonClicked:(UIButton *)button
 {
     [self removeAllToolView];
-    [self.view addSubview:filterView];
-    [filterView bringSubviewToFront:drawingView];
-    
-    filterScrollView.contentSize = filterSubView.frame.size;
-    [filterScrollView addSubview:filterSubView];
+    button.selected = !button.selected;
+    if (button.selected == YES) {
+        colorButton.selected = NO;
+        
+        [self.view addSubview:filterView];
+        
+        filterView.frame = CGRectMake(0, functionView.frame.origin.y - filterView.frame.size.height, filterView.frame.size.width, filterView.frame.size.height);
+        
+        [filterView bringSubviewToFront:drawingView];
+        filterScrollView.contentSize = filterSubView.frame.size;
+        [filterScrollView addSubview:filterSubView];
+    }
+    else {
+        
+    }
 }
 
 -(IBAction)filterButtonClicked:(UIButton *)button
@@ -214,7 +228,6 @@
 -(void)removeAllToolView
 {
     [colorView removeFromSuperview];
-    [sizeView removeFromSuperview];
     [filterView removeFromSuperview];
     [statementView removeFromSuperview];
 }
