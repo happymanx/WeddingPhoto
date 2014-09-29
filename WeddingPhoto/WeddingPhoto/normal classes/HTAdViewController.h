@@ -18,6 +18,8 @@
     
     HTAdType adType;
     NSInteger selectedIndex;
+    
+    NSMutableArray *adImageViewArr;
 }
 
 - (id)initWithAdArr:(NSArray *)array adType:(HTAdType)type;
