@@ -55,8 +55,9 @@
 
 -(void)createTestEventFolder
 {
-    NSArray *folderNameArr = @[@"Folder1",@"Folder2",@"Folder3",@"Folder4",@"Folder5"];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:[HTFileManager  eventsPath]]) {
+//    NSArray *folderNameArr = @[@"Dannys Event1", @"Dannys Event2", @"Dannys Event3"];
+    NSArray *folderNameArr = @[];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[HTFileManager eventsPath]]) {
         
         for (int i = 0; i < [folderNameArr count]; i++) {
             NSString *folderPath = [[HTFileManager  eventsPath] stringByAppendingPathComponent:folderNameArr[i]];

@@ -17,4 +17,12 @@
 
 + (HTNetworkManager *)requestWithFinishBlock:(void (^)(NSObject *objcet))finishBlockToRun failBlock:(void (^)(NSString *errStr, NSInteger errCode))failBlockToRun;
 
+-(void)getDownloadKey:(NSString *)codeStr;
+
+-(void)getProject:(NSString *)keyStr;
+
+-(void)getSharedFile:(NSString *)keyStr;
+
+-(void)getDemoAd;
+
 @end

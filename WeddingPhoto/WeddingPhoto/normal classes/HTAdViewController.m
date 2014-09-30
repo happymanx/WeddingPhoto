@@ -7,6 +7,7 @@
 //
 
 #import "HTAdViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface HTAdViewController ()
 
@@ -28,7 +29,7 @@
         if (adType == HTAdTypeTrial) {
             adTypeTrialArr = array;
             // 測試
-            adTypeTrialArr = @[@"a1", @"b2", @"c3"];
+//            adTypeTrialArr = @[@"a1", @"b2", @"c3"];
         }
         if (adType == HTAdTypeEvent) {
             adTypeEventArr = array;
@@ -76,11 +77,16 @@
     adImageViewArr = [NSMutableArray array];
     for (int i = 0; i < [contentArr count]; i++) {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        if (i % 2 == 0) {
-            imageView.backgroundColor = [UIColor greenColor];
+        if (adType == HTAdTypeTrial) {
+            [imageView setImageWithURL:[NSURL URLWithString:contentArr[i][@"File"]]];
         }
-        else {
-            imageView.backgroundColor = [UIColor yellowColor];
+        if (adType == HTAdTypeEvent) {
+            if (i % 2 == 0) {
+                imageView.backgroundColor = [UIColor yellowColor];
+            }
+            else {
+                imageView.backgroundColor = [UIColor greenColor];
+            }
         }
         
         // 貼上關閉按鈕
@@ -129,6 +135,40 @@
     }
     if (adType == HTAdTypeTrial) {
         // 透過密碼下載
+        // 開始下載程序
+        [self.view makeToast:adTypeTrialArr[[adImageViewArr count] - 1][@"DownloadKey"]];
+        
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        // 以暫時碼取得真實碼
+        [[HTNetworkManager requestWithFinishBlock:^(NSObject *objcet) {
+            DLog(@"objcet: %@", objcet);
+            NSDictionary *resultDict = (NSDictionary *)objcet;
+            
+            // 以真實碼取得專案
+            [[HTNetworkManager requestWithFinishBlock:^(NSObject *objcet) {
+                DLog(@"objcet: %@", objcet);
+                NSDictionary *resultDict2 = (NSDictionary *)objcet;
+                // 儲存取得結果為檔案（在Documents中）
+                NSString *targetPath = [[HTFileManager documentsPath] stringByAppendingPathComponent:[resultDict[@"RealDownloadKey"] description]];
+                [resultDict2 writeToFile:targetPath atomically:YES];
+                // 創立同名的資料夾（在Documents -> Events中）
+                targetPath = [[HTFileManager eventsPath] stringByAppendingPathComponent:[resultDict[@"RealDownloadKey"] description]];
+                if (![[NSFileManager defaultManager] fileExistsAtPath:targetPath]) {
+                    [[NSFileManager defaultManager] createDirectoryAtPath:targetPath withIntermediateDirectories:NO attributes:nil error:nil];
+                }
+                UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"恭喜" message:@"你成功了！" delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
+                [av show];
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+            } failBlock:^(NSString *errStr, NSInteger errCode) {
+                DLog(@"errStr: %@", errStr);
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+            }] getProject:resultDict[@"RealDownloadKey"]];
+        } failBlock:^(NSString *errStr, NSInteger errCode) {
+            DLog(@"errStr: %@", errStr);
+            UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"注意" message:@"沒有此密碼喔！" delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
+            [av show];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        }] getDownloadKey:adTypeTrialArr[[adImageViewArr count] - 1][@"DownloadKey"]];
     }
 }
 

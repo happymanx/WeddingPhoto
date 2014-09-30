@@ -19,5 +19,7 @@
 #import "HTBasicViewController.h"
 #import <AFNetworking.h>
 #import "HTAppDelegate.h"
+#import "UIView+Toast.h"
+#import "MBProgressHUD.h"
 
 #endif

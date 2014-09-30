@@ -146,7 +146,7 @@
         CGFloat newY = CGRectGetMaxY( IS_RETINA_4 ? previewFrameRetina_4 : previewFrameRetina );
         _bottomContainerBar = [[UIView alloc] initWithFrame:(CGRect){ 0, newY, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) - newY }];
         [_bottomContainerBar setUserInteractionEnabled:YES];
-        [_bottomContainerBar setBackgroundColor:[UIColor blueColor]];
+        [_bottomContainerBar setBackgroundColor:[UIColor blackColor]];
     }
     return _bottomContainerBar;
 }

@@ -37,6 +37,49 @@
 
 -(IBAction)downloadButtonClicked:(UIButton *)button
 {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    // 以暫時碼取得真實碼
+    [[HTNetworkManager requestWithFinishBlock:^(NSObject *objcet) {
+        DLog(@"objcet: %@", objcet);
+        NSDictionary *resultDict = (NSDictionary *)objcet;
+        
+        // 以真實碼取得專案
+        [[HTNetworkManager requestWithFinishBlock:^(NSObject *objcet) {
+            DLog(@"objcet: %@", objcet);
+            NSDictionary *resultDict2 = (NSDictionary *)objcet;
+            // 儲存取得結果為檔案（在Documents中）
+            NSString *targetPath = [[HTFileManager documentsPath] stringByAppendingPathComponent:[resultDict[@"RealDownloadKey"] description]];
+            [resultDict2 writeToFile:targetPath atomically:YES];
+            // 創立同名的資料夾（在Documents -> Events中）
+            targetPath = [[HTFileManager eventsPath] stringByAppendingPathComponent:[resultDict[@"RealDownloadKey"] description]];
+            if (![[NSFileManager defaultManager] fileExistsAtPath:targetPath]) {
+                [[NSFileManager defaultManager] createDirectoryAtPath:targetPath withIntermediateDirectories:NO attributes:nil error:nil];
+            }
+            UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"恭喜" message:@"你成功了！" delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
+            [av show];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        } failBlock:^(NSString *errStr, NSInteger errCode) {
+            DLog(@"errStr: %@", errStr);
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        }] getProject:resultDict[@"RealDownloadKey"]];
+
+        
+    } failBlock:^(NSString *errStr, NSInteger errCode) {
+        DLog(@"errStr: %@", errStr);
+        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"注意" message:@"沒有此密碼喔！" delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
+        [av show];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    }] getDownloadKey:passwordTextField.text];
+    
+
+//    [[HTNetworkManager requestWithFinishBlock:^(NSObject *objcet) {
+//        DLog(@"objcet: %@", objcet);
+//        NSDictionary *resultDit = (NSDictionary *)objcet;
+//        
+//    } failBlock:^(NSString *errStr, NSInteger errCode) {
+//        DLog(@"errStr: %@", errStr);
+//    }] getSharedFile:@"2"];
+
 }
 
 -(IBAction)eventButtonClicked:(UIButton *)button
@@ -47,8 +90,17 @@
 
 -(IBAction)trailButtonClicked:(UIButton *)button
 {
-    HTTrialListViewController *vc = [[HTTrialListViewController alloc] initWithTrialArr:@[]];
-    [self.navigationController pushViewController:vc animated:YES];
+    [[HTNetworkManager requestWithFinishBlock:^(NSObject *objcet) {
+        DLog(@"objcet: %@", objcet);
+        NSDictionary *resultDit = (NSDictionary *)objcet;
+        
+        HTTrialListViewController *vc = [[HTTrialListViewController alloc] initWithTrialArr:resultDit[@"Files"]];
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    } failBlock:^(NSString *errStr, NSInteger errCode) {
+        DLog(@"errStr: %@", errStr);
+    }] getDemoAd];
+
     
 //    DBCameraContainerViewController *cameraContainer = [[DBCameraContainerViewController alloc] initWithDelegate:self];
 //    [cameraContainer setFullScreenMode];

@@ -26,6 +26,9 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6b-DD-X7z">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                     <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_nav.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kgq-8b-Gjg">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yB-ZW-eaI">
                             <rect key="frame" x="0.0" y="20" width="50" height="44"/>
                             <state key="normal" title="返回">
@@ -48,6 +51,7 @@
         </view>
     </objects>
     <resources>
+        <image name="bg_nav.png" width="640" height="128"/>
         <image name="icon156.png" width="156" height="156"/>
     </resources>
 </document>

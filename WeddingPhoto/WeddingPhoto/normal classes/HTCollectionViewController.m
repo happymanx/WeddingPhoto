@@ -10,6 +10,9 @@
 #import "HTCollectionCell.h"
 #import "HTEditPhotoViewController.h"
 #import "HTFullscreenImageViewController.h"
+#import "UIImageView+AFNetworking.h"
+#import <XCDYouTubeKit/XCDYouTubeKit.h>
+
 
 @interface HTCollectionViewController ()
 
@@ -23,23 +26,10 @@
     if (self) {
         collectionType = type;
         if (collectionType == HTCollectionTypeSelfWork) {// 自己的作品
-            // Documents -> Events -> xxx -> Works -> zzz.jpg
-            NSString *eventPath = [HTFileManager eventsPath];
-            workPath = [[eventPath stringByAppendingPathComponent:[HTAppDelegate sharedDelegate].eventName] stringByAppendingPathComponent:@"Works"];
-            if (![[NSFileManager defaultManager] fileExistsAtPath:workPath]) {
-                [[NSFileManager defaultManager] createDirectoryAtPath:workPath withIntermediateDirectories:NO attributes:nil error:nil];
-            }
-            itemArr = [[HTFileManager sharedManager] listFileAtPath:workPath];
-            
-            collectionType = type;
-            
-            uploadArr = [NSMutableArray array];
+
         }
         if (collectionType == HTCollectionTypeNetWork) {// 他人的作品
-
             itemArr = arr;
-            // 測試
-            itemArr = @[@"", @"", @""];
         }
     }
     return self;
@@ -54,6 +44,29 @@
     if (collectionType == HTCollectionTypeNetWork) {
         uploadButton.hidden = YES;
     }
+    
+    // 註冊觀察Youtube播放影片
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(youTubeStarted:) name:MPMoviePlayerNowPlayingMovieDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(youTubeFinished:) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    if (collectionType == HTCollectionTypeSelfWork) {// 自己的作品
+        // Documents -> Events -> xxx -> Works -> zzz.jpg
+        NSString *eventPath = [HTFileManager eventsPath];
+        workPath = [[eventPath stringByAppendingPathComponent:[HTAppDelegate sharedDelegate].eventName] stringByAppendingPathComponent:@"Works"];
+        if (![[NSFileManager defaultManager] fileExistsAtPath:workPath]) {
+            [[NSFileManager defaultManager] createDirectoryAtPath:workPath withIntermediateDirectories:NO attributes:nil error:nil];
+        }
+        itemArr = [[HTFileManager sharedManager] listFileAtPath:workPath];
+
+        uploadArr = [NSMutableArray array];
+    }
+    if (collectionType == HTCollectionTypeNetWork) {// 他人的作品
+    }
+    
+    [displayCollectionView reloadData];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -71,7 +84,16 @@
         [cell.checkButton addTarget:self action:@selector(checkButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     if (collectionType == HTCollectionTypeNetWork) {
-        [cell.photoImageView setImage:[UIImage imageNamed:@"HappyMan.jpg"]];
+        NSString *fileStr = itemArr[indexPath.row][@"File"];
+        if ([fileStr rangeOfString:@"youtube"].location != NSNotFound) {
+            NSRange range = [fileStr rangeOfString:@"="];
+            NSString *youtubeIDStr = [fileStr substringFromIndex:range.location + 1];
+            NSURL *youtubeURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.youtube.com/vi/%@/0.jpg", youtubeIDStr]];
+            [cell.photoImageView setImageWithURL:youtubeURL];
+        }
+        else {
+            [cell.photoImageView setImageWithURL:[NSURL URLWithString:itemArr[indexPath.row][@"File"]]];
+        }
         cell.checkButton.hidden = YES;
     }
     
@@ -90,9 +112,27 @@
         [self.navigationController pushViewController:vc animated:YES];
     }
     if (collectionType == HTCollectionTypeNetWork) {
-        // 全螢幕顯示相片
-        UIImage *image = [UIImage imageNamed:@"HappyMan.jpg"];HTFullscreenImageViewController *vc = [[HTFullscreenImageViewController alloc] initWithImage:image];
-        [self presentViewController:vc animated:YES completion:nil];
+        NSString *fileStr = itemArr[indexPath.row][@"File"];
+        if ([fileStr rangeOfString:@"youtube"].location != NSNotFound) {
+            NSRange range = [fileStr rangeOfString:@"="];
+            NSString *youtubeIDStr = [fileStr substringFromIndex:range.location + 1];
+
+            XCDYouTubeVideoPlayerViewController *videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:youtubeIDStr];
+//            videoPlayerViewController.delegate = self;
+            [self presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
+
+        }
+        else {
+            UIImageView *imageView = [[UIImageView alloc] init];
+            [imageView setImageWithURL:[NSURL URLWithString:itemArr[indexPath.row][@"File"]]];
+            UIImage *image = imageView.image;
+            // 全螢幕顯示相片
+            HTFullscreenImageViewController *vc = [[HTFullscreenImageViewController alloc] initWithImage:image];
+            [self presentViewController:vc animated:YES completion:nil];
+        }
+
+//        // 全螢幕顯示相片
+//        UIImage *image = [UIImage imageNamed:@"HappyMan.jpg"];HTFullscreenImageViewController *vc = [[HTFullscreenImageViewController alloc] initWithImage:image];
     }
 }
 
@@ -134,4 +174,16 @@
     }
     DLog(@"uploadArr: %@", uploadArr);
 }
+
+-(void)youTubeStarted:(NSNotification *)notification
+{
+    HTAppDelegate *appDelegate = (HTAppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.fullScreenVideoIsPlaying = YES;
+}
+-(void)youTubeFinished:(NSNotification *)notification
+{
+    HTAppDelegate *appDelegate = (HTAppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.fullScreenVideoIsPlaying = NO;
+}
+
 @end

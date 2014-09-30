@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #ifndef HT_CONSTANT
+#define HT_CONSTANT
 
 #ifdef DEBUG
 #   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
@@ -18,7 +19,7 @@
 // ALog always displays output regardless of the DEBUG setting
 #define ALog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 
-#endif
+static NSString *const HTAPISiteBase = @"http://happymanx.com/api/service/";
 
 typedef enum {
     HTAdTypeTrial = 0,
@@ -29,3 +30,5 @@ typedef enum {
     HTCollectionTypeSelfWork = 0,
     HTCollectionTypeNetWork
 } HTCollectionType;
+
+#endif

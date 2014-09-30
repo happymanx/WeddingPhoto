@@ -52,7 +52,11 @@
 {
     HTEventCell *cell = [HTEventCell cell];
     
-    cell.titleLabel.text = eventArr[indexPath.row];
+    // 標題從API回傳的檔案中找事件標題
+    NSString *targetPath = [[HTFileManager documentsPath] stringByAppendingPathComponent:eventArr[indexPath.row]];
+    NSDictionary *fileDict = [[NSDictionary alloc] initWithContentsOfFile:targetPath];
+    cell.titleLabel.text = fileDict[@"ProjectName"];
+    
     cell.deleteButton.tag = indexPath.row;
     [cell.deleteButton addTarget:self action:@selector(deleteButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [cell.albumButton addTarget:self action:@selector(albumButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
@@ -124,8 +128,19 @@
     [HTAppDelegate sharedDelegate].eventName = eventArr[button.tag];
 
 #pragma mark - 開啓自己的作品
-    HTCollectionViewController *vc = [[HTCollectionViewController alloc] initWithWorkArr:@[] collectionType:HTCollectionTypeNetWork];
-    [self.navigationController pushViewController:vc animated:YES];
+    NSString *keyStr = eventArr[button.tag];
+    [[HTNetworkManager requestWithFinishBlock:^(NSObject *objcet) {
+        DLog(@"objcet: %@", objcet);
+        NSDictionary *resultDit = (NSDictionary *)objcet;
+
+        HTCollectionViewController *vc = [[HTCollectionViewController alloc] initWithWorkArr:resultDit[@"Files"] collectionType:HTCollectionTypeNetWork];
+        [self.navigationController pushViewController:vc animated:YES];
+
+    } failBlock:^(NSString *errStr, NSInteger errCode) {
+        DLog(@"errStr: %@", errStr);
+    }] getSharedFile:keyStr];
+    
+    
 }
 
 #pragma mark - DBCameraViewControllerDelegate
