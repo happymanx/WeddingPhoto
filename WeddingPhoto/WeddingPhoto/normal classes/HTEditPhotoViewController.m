@@ -24,10 +24,14 @@
         previewImage = [self returnPreviewImage:image withSize:CGSizeMake(320 * scale, 480 * scale)];
         
         filterParameterArr = @[@[[NSNull null],[NSNull null],[NSNull null]],
-                               @[@(1.0),@(1.0),@(0.1)],
-                               @[@(1.3),@(1.5),@(0.2)],
-                               @[@(1.0),@(1.0),@(0.3)],
-                               @[@(0.5),@(1.7),@(0.4)]];
+                               @[@(1.2),@(1.1),@(0.1)],
+                               @[@(1.3),@(1.5),@(0.1)],
+                               @[@(1.4),@(1.3),@(0.1)],
+                               @[@(1.5),@(1.7),@(0.1)],
+                               @[@(1.6),@(1.3),@(0.1)],
+                               @[@(1.7),@(1.3),@(0.1)],
+                               @[@(1.8),@(0.7),@(0.1)]
+                               ];
     }
     return self;
 }
@@ -41,6 +45,7 @@
     drawingView.delegate = self;
     
     [self setupColorButton];
+    [self setupFilterButton];
 }
 
 -(void)setupColorButton
@@ -55,7 +60,19 @@
     color8Button.layer.cornerRadius = color8Button.frame.size.width/2;
     color9Button.layer.cornerRadius = color9Button.frame.size.width/2;
     color10Button.layer.cornerRadius = color10Button.frame.size.width/2;
-    
+}
+
+-(void)setupFilterButton
+{
+    [filter1Button setImage:[UIImage imageNamed:@"pic_thumb.png"] forState:UIControlStateNormal];
+    [filter2Button setImage:[self filterWithImage:[UIImage imageNamed:@"pic_thumb.png"] saturation:[filterParameterArr[1][0] floatValue] contrast:[filterParameterArr[1][1] floatValue] brightness:[filterParameterArr[1][2] floatValue]] forState:UIControlStateNormal];
+    [filter3Button setImage:[self filterWithImage:[UIImage imageNamed:@"pic_thumb.png"] saturation:[filterParameterArr[2][0] floatValue] contrast:[filterParameterArr[2][1] floatValue] brightness:[filterParameterArr[2][2] floatValue]] forState:UIControlStateNormal];
+    [filter4Button setImage:[self filterWithImage:[UIImage imageNamed:@"pic_thumb.png"] saturation:[filterParameterArr[3][0] floatValue] contrast:[filterParameterArr[3][1] floatValue] brightness:[filterParameterArr[3][2] floatValue]] forState:UIControlStateNormal];
+    [filter5Button setImage:[self filterWithImage:[UIImage imageNamed:@"pic_thumb.png"] saturation:[filterParameterArr[4][0] floatValue] contrast:[filterParameterArr[4][1] floatValue] brightness:[filterParameterArr[4][2] floatValue]] forState:UIControlStateNormal];
+    [filter6Button setImage:[self filterWithImage:[UIImage imageNamed:@"pic_thumb.png"] saturation:[filterParameterArr[5][0] floatValue] contrast:[filterParameterArr[5][1] floatValue] brightness:[filterParameterArr[5][2] floatValue]] forState:UIControlStateNormal];
+    [filter7Button setImage:[self filterWithImage:[UIImage imageNamed:@"pic_thumb.png"] saturation:[filterParameterArr[6][0] floatValue] contrast:[filterParameterArr[6][1] floatValue] brightness:[filterParameterArr[6][2] floatValue]] forState:UIControlStateNormal];
+    [filter8Button setImage:[self filterWithImage:[UIImage imageNamed:@"pic_thumb.png"] saturation:[filterParameterArr[7][0] floatValue] contrast:[filterParameterArr[7][1] floatValue] brightness:[filterParameterArr[7][2] floatValue]] forState:UIControlStateNormal];
+
 }
 
 // 回傳預覽相片
@@ -188,8 +205,6 @@
     }
     
     photoImageView.image = filterImage;
-    
-    [filterView removeFromSuperview];
 }
 
 -(UIImage *)filterWithImage:(UIImage *)image saturation:(float)saturation contrast:(float)contrast brightness:(float)brightness

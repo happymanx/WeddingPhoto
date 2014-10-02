@@ -7,6 +7,7 @@
 //
 
 #import "HTFullscreenImageViewController.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface HTFullscreenImageViewController ()
 
@@ -14,11 +15,12 @@
 
 @implementation HTFullscreenImageViewController
 
-- (id)initWithImage:(UIImage *)image
+- (id)initWithImage:(UIImage *)image commentStr:(NSString *)str
 {
     self = [super initWithNibName:@"HTFullscreenImageViewController" bundle:nil];
     if (self) {
         originalImage = image;
+        commentStr = str;
     }
     return self;
 }
@@ -27,6 +29,7 @@
     [super viewDidLoad];
     
     [self setupScrollView];
+    commentLabel.text = commentStr;
 }
 
 -(void)setupScrollView
@@ -53,5 +56,23 @@
 
 - (void) onDismiss {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Button Methods
+
+-(IBAction)saveButtonClicked:(UIButton *)button
+{
+#pragma mark - 儲存影像到相簿
+    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+    
+    [library writeImageToSavedPhotosAlbum:[happyImageView.image CGImage] orientation:(ALAssetOrientation)[happyImageView.image imageOrientation] completionBlock:^(NSURL *assetURL, NSError *error){
+        if (error) {
+            // TODO: error handling
+            [self.view makeToast:@"發生錯誤"];
+        } else {
+            // TODO: success handling
+            [self.view makeToast:@"已儲存到相簿"];
+        }
+    }];
 }
 @end

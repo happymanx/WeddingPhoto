@@ -29,6 +29,7 @@
 
         }
         if (collectionType == HTCollectionTypeNetWork) {// 他人的作品
+            // 儲存檔案URL與意見
             itemArr = arr;
         }
     }
@@ -59,6 +60,7 @@
         if (![[NSFileManager defaultManager] fileExistsAtPath:workPath]) {
             [[NSFileManager defaultManager] createDirectoryAtPath:workPath withIntermediateDirectories:NO attributes:nil error:nil];
         }
+        // 儲存檔案名稱（非路徑）
         itemArr = [[HTFileManager sharedManager] listFileAtPath:workPath];
 
         uploadArr = [NSMutableArray array];
@@ -82,6 +84,7 @@
         NSString *targetPath = [workPath stringByAppendingPathComponent:itemArr[indexPath.row]];
         [cell.photoImageView setImage:[UIImage imageWithContentsOfFile:targetPath]];
         [cell.checkButton addTarget:self action:@selector(checkButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        cell.checkButton.tag = indexPath.row;
     }
     if (collectionType == HTCollectionTypeNetWork) {
         NSString *fileStr = itemArr[indexPath.row][@"File"];
@@ -126,8 +129,9 @@
             UIImageView *imageView = [[UIImageView alloc] init];
             [imageView setImageWithURL:[NSURL URLWithString:itemArr[indexPath.row][@"File"]]];
             UIImage *image = imageView.image;
+            NSString *commentStr = itemArr[indexPath.row][@"UserComments"];
             // 全螢幕顯示相片
-            HTFullscreenImageViewController *vc = [[HTFullscreenImageViewController alloc] initWithImage:image];
+            HTFullscreenImageViewController *vc = [[HTFullscreenImageViewController alloc] initWithImage:image commentStr:commentStr];
             [self presentViewController:vc animated:YES completion:nil];
         }
 
@@ -160,7 +164,7 @@
 
 -(IBAction)uploadButtonClicked:(UIButton *)button
 {
-    DLog(@"uploadArr: %@", uploadArr);
+
 }
 
 -(void)checkButtonClicked:(UIButton *)button

@@ -92,13 +92,20 @@
     [self addSubview:exposeView];
     
 #pragma mark - 相框
+    NSString *framePath = [[[HTFileManager eventsPath] stringByAppendingPathComponent:[HTAppDelegate sharedDelegate].eventName] stringByAppendingPathComponent:@"Frames"];
+    self.frameArr = [[HTFileManager sharedManager] listFileAtPath:framePath];
     
-    self.frameArr = [HTFrameImage defautFrameArr];
+    
+//    self.frameArr = [HTFrameImage defautFrameArr];
     self.frameNumber = 0;
-    [HTFrameImage sharedInstance].frameName = self.frameArr[self.frameNumber];
+//    [HTFrameImage sharedInstance].frameName = self.frameArr[self.frameNumber];
     
     self.frameImageView = [[UIImageView alloc] initWithFrame:previewFrameRetina_4];
-    self.frameImageView.image = [UIImage imageNamed:self.frameArr[self.frameNumber]];
+//    self.frameImageView.image = [UIImage imageNamed:self.frameArr[self.frameNumber]];
+    NSString *targetPath = [framePath stringByAppendingPathComponent:self.frameArr[self.frameNumber]];
+    // 記錄相框路徑，拍照合成用
+    [HTFrameImage sharedInstance].framePath = targetPath;
+    self.frameImageView.image = [UIImage imageWithContentsOfFile:targetPath];
     self.frameImageView.userInteractionEnabled = YES;
     
     [self addSubview:self.frameImageView];
@@ -502,6 +509,7 @@
     }
 }
 
+#pragma mark - 左右滑更換相框
 -(void)handleSwipe:(UISwipeGestureRecognizer *)recogniser
 {
     if (recogniser.direction == UISwipeGestureRecognizerDirectionRight)
@@ -523,8 +531,16 @@
     self.frameImageView.alpha = 0.0;
     [UIView animateWithDuration:0.7 animations:^{
         self.frameImageView.alpha = 1.0;
-        self.frameImageView.image = [UIImage imageNamed:self.frameArr[self.frameNumber]];
-        [HTFrameImage sharedInstance].frameName = self.frameArr[self.frameNumber];
+        
+        NSString *framePath = [[[HTFileManager eventsPath] stringByAppendingPathComponent:[HTAppDelegate sharedDelegate].eventName] stringByAppendingPathComponent:@"Frames"];
+        NSString *targetPath = [framePath stringByAppendingPathComponent:self.frameArr[self.frameNumber]];
+        // 記錄相框路徑，拍照合成用
+        [HTFrameImage sharedInstance].framePath = targetPath;
+
+        self.frameImageView.image = [UIImage imageWithContentsOfFile:targetPath];
+
+//        self.frameImageView.image = [UIImage imageNamed:self.frameArr[self.frameNumber]];
+//        [HTFrameImage sharedInstance].frameName = self.frameArr[self.frameNumber];
     } completion:^(BOOL finished) {
         ;
     }];

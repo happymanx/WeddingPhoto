@@ -15,7 +15,8 @@
 
 @property (nonatomic, strong) NSString *eventName;
 @property (nonatomic, strong) NSArray *frameArr;
-@property (nonatomic, strong) NSString *frameName;
+//@property (nonatomic, strong) NSString *frameName;
+@property (nonatomic, strong) NSString *framePath;
 
 +(HTFrameImage *)sharedInstance;
 

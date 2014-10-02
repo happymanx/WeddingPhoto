@@ -41,14 +41,118 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WeddingPhoto/normal classes/HTEventListViewController.m"
-            timestampString = "433791508.418939"
+            filePath = "WeddingPhoto/common classes/HTFileManager.m"
+            timestampString = "433954783.126669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "-albumButtonClicked:"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "+saveAdImageWithEventKey:infoArr:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__49+[HTFileManager saveAdImageWithEventKey:infoArr:]_block_invoke"
+                  moduleName = "WeddingPhoto"
+                  urlString = "file:///Users/jason/Test/WeddingPhoto/WeddingPhoto/WeddingPhoto/common%20classes/HTFileManager.m"
+                  timestampString = "433958644.349927"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "175"
+                  endingLineNumber = "175"
+                  offsetFromSymbolStart = "314">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__49+[HTFileManager saveAdImageWithEventKey:infoArr:]_block_invoke"
+                  moduleName = "WeddingPhoto"
+                  urlString = "file:///Users/jason/Test/WeddingPhoto/WeddingPhoto/WeddingPhoto/common%20classes/HTFileManager.m"
+                  timestampString = "433958644.350244"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "175"
+                  endingLineNumber = "175"
+                  offsetFromSymbolStart = "338">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__49+[HTFileManager saveAdImageWithEventKey:infoArr:]_block_invoke107"
+                  moduleName = "WeddingPhoto"
+                  urlString = "file:///Users/jason/Test/WeddingPhoto/WeddingPhoto/WeddingPhoto/common%20classes/HTFileManager.m"
+                  timestampString = "433958644.350472"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "175"
+                  endingLineNumber = "175"
+                  offsetFromSymbolStart = "58">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeddingPhoto/common classes/HTFileManager.m"
+            timestampString = "433954787.364725"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "+saveFrameImageWithEventKey:infoArr:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__52+[HTFileManager saveFrameImageWithEventKey:infoArr:]_block_invoke"
+                  moduleName = "WeddingPhoto"
+                  urlString = "file:///Users/jason/Test/WeddingPhoto/WeddingPhoto/WeddingPhoto/common%20classes/HTFileManager.m"
+                  timestampString = "433958644.351756"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "552">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__52+[HTFileManager saveFrameImageWithEventKey:infoArr:]_block_invoke"
+                  moduleName = "WeddingPhoto"
+                  urlString = "file:///Users/jason/Test/WeddingPhoto/WeddingPhoto/WeddingPhoto/common%20classes/HTFileManager.m"
+                  timestampString = "433958644.351945"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "576">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__52+[HTFileManager saveFrameImageWithEventKey:infoArr:]_block_invoke90"
+                  moduleName = "WeddingPhoto"
+                  urlString = "file:///Users/jason/Test/WeddingPhoto/WeddingPhoto/WeddingPhoto/common%20classes/HTFileManager.m"
+                  timestampString = "433958644.352103"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "58">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

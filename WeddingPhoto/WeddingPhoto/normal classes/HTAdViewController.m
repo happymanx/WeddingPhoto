@@ -8,6 +8,7 @@
 
 #import "HTAdViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "HTAppDelegate.h"
 
 @interface HTAdViewController ()
 
@@ -32,9 +33,15 @@
 //            adTypeTrialArr = @[@"a1", @"b2", @"c3"];
         }
         if (adType == HTAdTypeEvent) {
-            adTypeEventArr = array;
+//            adTypeEventArr = array;
+            NSString *jsonFilePath = [[HTFileManager documentsPath] stringByAppendingPathComponent:[HTAppDelegate sharedDelegate].eventName];
+            NSDictionary *eventDict = [[NSDictionary alloc] initWithContentsOfFile:jsonFilePath];
+            NSArray *adInfoArr = eventDict[@"AdFiles"];
             // 測試
-            adTypeEventArr = @[@"http://www.google.com.tw/", @"https://www.facebook.com/", @"http://www.plurk.com/"];
+            adTypeEventArr = [NSMutableArray array];
+            for (int i = 0; i < [adInfoArr count]; i++) {
+                [adTypeEventArr addObject:adInfoArr[i][@"Url"]];
+            }
         }
         
     }
@@ -49,6 +56,10 @@
     NSArray *contentArr;
     if (adType == HTAdTypeEvent) {
         contentArr = adTypeEventArr;
+        
+        NSString *projectPath = [[HTFileManager eventsPath] stringByAppendingPathComponent:[HTAppDelegate sharedDelegate].eventName];
+        NSString *adPath = [projectPath stringByAppendingPathComponent:@"Ads"];
+        adTypeEventAdNameArr = [[HTFileManager sharedManager] listFileAtPath:adPath];
     }
     if (adType == HTAdTypeTrial) {
         contentArr = adTypeTrialArr;
@@ -77,16 +88,14 @@
     adImageViewArr = [NSMutableArray array];
     for (int i = 0; i < [contentArr count]; i++) {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        if (adType == HTAdTypeTrial) {
+        if (adType == HTAdTypeTrial) {// 試用
             [imageView setImageWithURL:[NSURL URLWithString:contentArr[i][@"File"]]];
         }
-        if (adType == HTAdTypeEvent) {
-            if (i % 2 == 0) {
-                imageView.backgroundColor = [UIColor yellowColor];
-            }
-            else {
-                imageView.backgroundColor = [UIColor greenColor];
-            }
+        if (adType == HTAdTypeEvent) {// 事件
+            NSString *projectPath = [[HTFileManager eventsPath] stringByAppendingPathComponent:[HTAppDelegate sharedDelegate].eventName];
+            NSString *adPath = [projectPath stringByAppendingPathComponent:@"Ads"];
+            NSString *targetPath = [adPath stringByAppendingPathComponent:adTypeEventAdNameArr[i]];
+            [imageView setImage:[UIImage imageWithContentsOfFile:targetPath]];
         }
         
         // 貼上關閉按鈕
@@ -156,6 +165,13 @@
                 if (![[NSFileManager defaultManager] fileExistsAtPath:targetPath]) {
                     [[NSFileManager defaultManager] createDirectoryAtPath:targetPath withIntermediateDirectories:NO attributes:nil error:nil];
                 }
+                // 儲存Frame Image
+                [HTFileManager saveFrameImageWithEventKey:[resultDict[@"RealDownloadKey"] description] infoArr:resultDict2[@"ImageFiles"]];
+                
+                // 儲存Ad Image
+                [HTFileManager saveAdImageWithEventKey:[resultDict[@"RealDownloadKey"] description] infoArr:resultDict2[@"AdFiles"]];
+                
+                // 提示成功訊息
                 UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"恭喜" message:@"你成功了！" delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
                 [av show];
                 [MBProgressHUD hideHUDForView:self.view animated:YES];

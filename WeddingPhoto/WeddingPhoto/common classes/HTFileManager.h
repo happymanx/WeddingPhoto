@@ -18,4 +18,10 @@
 
 -(NSArray *)listFileAtPath:(NSString *)path;
 
+// 儲存Event的Frame Image
++ (void)saveFrameImageWithEventKey:(NSString *)key infoArr:(NSArray *)arr;
+
+// 儲存Event的Ad Image
++ (void)saveAdImageWithEventKey:(NSString *)key infoArr:(NSArray *)arr;
+
 @end

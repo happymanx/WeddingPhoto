@@ -44,14 +44,15 @@
     IBOutlet UIButton *size4Button;
     IBOutlet UIButton *eraserButton;
     
-    IBOutlet UIView *sizeView;
-    
     // Filter Button
     IBOutlet UIButton *filter1Button;
     IBOutlet UIButton *filter2Button;
     IBOutlet UIButton *filter3Button;
     IBOutlet UIButton *filter4Button;
     IBOutlet UIButton *filter5Button;
+    IBOutlet UIButton *filter6Button;
+    IBOutlet UIButton *filter7Button;
+    IBOutlet UIButton *filter8Button;
 
     IBOutlet UIView *filterView;
     IBOutlet UIScrollView *filterScrollView;

@@ -11,11 +11,14 @@
 @interface HTFullscreenImageViewController : HTBasicViewController <UIScrollViewDelegate>
 {
     UIImage *originalImage;
+    NSString *commentStr;
+    
     UIImageView *happyImageView;
+    IBOutlet UILabel *commentLabel;
     
     IBOutlet UIScrollView *displayScrollView;
 }
 
-- (id)initWithImage:(UIImage *)image;
+- (id)initWithImage:(UIImage *)image commentStr:(NSString *)str;
 
 @end

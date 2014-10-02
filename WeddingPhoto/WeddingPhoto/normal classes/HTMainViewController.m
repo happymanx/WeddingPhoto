@@ -55,6 +55,13 @@
             if (![[NSFileManager defaultManager] fileExistsAtPath:targetPath]) {
                 [[NSFileManager defaultManager] createDirectoryAtPath:targetPath withIntermediateDirectories:NO attributes:nil error:nil];
             }
+            // 儲存Frame Image
+            [HTFileManager saveFrameImageWithEventKey:[resultDict[@"RealDownloadKey"] description] infoArr:resultDict2[@"ImageFiles"]];
+            
+            // 儲存Ad Image
+            [HTFileManager saveAdImageWithEventKey:[resultDict[@"RealDownloadKey"] description] infoArr:resultDict2[@"AdFiles"]];
+            
+            // 提示成功訊息
             UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"恭喜" message:@"你成功了！" delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
             [av show];
             [MBProgressHUD hideHUDForView:self.view animated:YES];
