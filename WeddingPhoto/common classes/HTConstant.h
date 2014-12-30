@@ -19,7 +19,7 @@
 // ALog always displays output regardless of the DEBUG setting
 #define ALog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 
-static NSString *const HTAPISiteBase = @"http://www.woshot.com/api/";
+static NSString *const HTAPISiteBase = @"http://www.woshot.com/api/service/";
 //static NSString *const HTAPISiteBase = @"http://www.happymanx.com/api/";
 
 typedef enum {
