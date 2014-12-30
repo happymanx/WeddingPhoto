@@ -1,1 +1,0 @@
-../../GGFullscreenImageViewController/GGFullscreenImageViewController/GGFullScreenImageViewController.h

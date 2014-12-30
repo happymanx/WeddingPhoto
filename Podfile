@@ -1,0 +1,11 @@
+ source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '7.0'
+pod 'AFNetworking', '~> 2.3.1'
+pod 'MBProgressHUD'
+pod 'Toast'
+pod 'ZipArchive'
+pod 'XCDYouTubeKit'
+pod 'ACEDrawingView'
+pod 'GGFullscreenImageViewController'
+pod 'Haneke', '~> 1.0'

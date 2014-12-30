@@ -1,0 +1,46 @@
+/* 
+  Localizable.strings
+  WeddingPhoto
+
+  Created by Jason on 2014/9/10.
+  Copyright (c) 2014年 HappyMan. All rights reserved.
+*/
+
+"請輸入下載密碼" = "Enter download code";
+"注意" = "Attention";
+"提醒" = "Reminder";
+"恭喜" = "Congratulation";
+"確認" = "Confirm";
+"取消" = "Cancel";
+"好" = "OK";
+"不" = "NO";
+"完成" = "Complete";
+"編輯" = "Edit";
+"返回" = "Back";
+"上傳" = "Upload";
+"你成功了！" = "Download succeeded!!";
+"沒有此密碼喔！" = "No download code";
+"此下載密碼不存在" = "No download code";
+"上傳本張相片？" = "Upload the photo?";
+"上傳成功" = "Upload succeeded!!";
+"上傳失敗" = "Upload failed!!";
+"確定要刪除？" = "Are you sure?";
+"刪除成功" = "Delete succeeded!!";
+"刪除失敗" = "Delete failed";
+"發生錯誤" = "Error occurred";
+"已儲存到相簿" = "Save to photo album";
+"此相簿為空" = "Empty photo album";
+"刪掉本張相片？" = "Delete this photo?";
+"請留下您想說的話" = "what’s on your mind";
+"下載檔案中" = "Downloading...";
+"更新檔案中" = "Updating...";
+"請選擇相片" = "Please select photos";
+"此密碼已下載" = "Already downloaded";
+"請開啟網路" = "Turn on Internet";
+"哈囉! 這是我用Woshot App所出來拍的照片，快來免費下載使用^^ http://www.woshot.com/app" = "Hello! I took this photo with Woshot App, and it’s free for download^^ http://www.woshot.com/app";
+
+// File Name
+"bg_landing_tc.jpg" = "bg_landing_en.jpg";
+"but_demo_tc.png" = "but_demo_en.png";
+"but_about_tc.png" = "but_about_en.png";
+"but_folder_tc.png" = "but_folder_en.png";
